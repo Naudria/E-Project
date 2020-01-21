@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Lato:300,400,700,900&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+    
+    <!-- app.css combines bootstrap, engie fluid design, and custom styles -->
+    <link rel="stylesheet" href="css/app.css">
+    <title>Sign in to Account - Existing User</title>
+</head>
+
+<!-- body -->
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="container" id="login">
+        <!-- Column with login form -->
+        <div class="col">
+          <div class="nj-card p-5">
+            <div class="engie-logo"><a href="#"><img id="blue-logo" src="/images/logo-engie-blue.svg"></a></div>
+            <form action="">
+              <h4 class="secondary-header">Sign in to My Account</h4>
+              <div class="nj-form-group">
+                <input type="email" class="nj-form-control" id="email">
+                <label for="email" class="nj-label-floating">Email Address</label>
+              </div>
+              <div class="nj-form-group">
+                <input type="password" class="nj-form-control" id="password" minlength="5">
+                <label for="password" class="nj-label-floating">Password</label>
+              </div>
+              <div class="nj-form-group">
+                <a href="forgot-password.html" class="nj-link">Forgot password?</a>
+              </div>
+              <div class="nj-form-group">
+                <div class="nj-checkbox">
+                  <label><input type="checkbox">Remember me</label>
+                </div>
+              </div>
+              <div class="nj-form-group">
+                <button type="submit" class="nj-btn nj-btn--primary" id="wide-button">Sign in</button>
+              </div>
+              <div class="small-stuff">Just need to make a payment? <a href="/payment.html">Continue without signing in</a></div>
+            </form>
+            <!-- end form -->
+          </div>
+          <!-- end card -->
+        </div>
+        <!-- end first column -->
+      </div>
+       <!-- end login container -->
+       <!-- begin second column -->
+      <div class="col" id="login-bg" style="background-image: url('images/login-bg.jpg');"></div>
+    </div>
+    <!-- end row -->
+  </div>
+  <!-- end page container -->
+
+<!-- Scripts -->
+<script src="/js/fluid-design-system.js"></script>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/popper.min.js"></script>
+<!-- Engie fluid design js -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function(event) {
+      NJ.AutoInit();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Lato:300,400,700,900&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+    
+    <!-- app.css combines bootstrap, engie fluid design, and custom styles -->
+    <link rel="stylesheet" href="css/app.css">
+    <title>Make a Payment</title>
+</head>
+
+<!-- body -->
+<body>
+    <div class="container-fluid">
+        <div class="container" id="login">
+            <div class="nj-card p-5">
+                <div class="engie-logo"><a href="index.html"><img id="blue-logo" src="/images/logo-engie-blue.svg" alt="Engie logo"></a></div>
+                <form action="">
+                    <h4 class="secondary-header">Pay without Signing In</h4>
+                    <div class="nj-form-group">
+                        <input type="" class="nj-form-control">
+                        <label for="" class="nj-label-floating">Statement #</label>
+                    </div>
+                    <div class="nj-form-group">
+                        <select name="" id="" class="nj-form-control">
+                            <option>534673</option>
+                            <option>435642</option>
+                            <option>327825</option>
+                        </select>
+                        <label for="account" class="nj-label-static">Bill Account Number</label>
+                        <i class="material-icons">keyboard_arrow_down</i>
+                    </div>
+                    <div class="nj-form-group">
+                        <input type="" class="nj-form-control" id="">
+                        <label for="" class="nj-label-floating">Billing Zip Code</label>
+                    </div>
+                    <div class="nj-form-group">
+                        <select class="nj-form-control" id="" >
+                            <option>$</option>
+                        </select>
+                        <label for="password" class="nj-label-static">Amount</label>
+                        <i class="material-icons">keyboard_arrow_down</i>
+                    </div>
+                    <!-- recaptcha placeholder - replace with actual recaptcha code -->
+                    <div class="captcha">
+                        <div class="spinner">
+                            <label>
+                                <input type="checkbox" onclick="$(this).attr('disabled','disabled');">
+                                <span class="checkmark"><span>&nbsp;</span></span>
+                            </label>
+                        </div>
+                        <div class="text">
+                            I'm not a robot
+                        </div>
+                        <div class="logo">
+                            <img src="https://forum.nox.tv/core/index.php?media/9-recaptcha-png/"/>
+                            <p>reCAPTCHA</p>
+                            <small>Privacy - Terms</small>
+                        </div>
+                      </div>
+                    <!-- repcaptcha end -->
+                    <div class="nj-form-group">
+                        <button type="submit" class="nj-btn nj-btn--primary" id="continue">Continue</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+<!-- Scripts -->
+<script src="/js/fluid-design-system.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+  integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+  crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js" 
+  integrity="sha256-x3YZWtRjM8bJqf48dFAv/qmgL68SI4jqNWeSLMZaMGA=" 
+  crossorigin="anonymous"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function(event) {
+      NJ.AutoInit();
+    });
+  </script>
+</body>
+</html>

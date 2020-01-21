@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Lato:300,400,700,900&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+    
+    <!-- app.css combines bootstrap, engie fluid design, and custom styles -->
+    <link rel="stylesheet" href="css/app.css">
+    <title>Create an Account - Existing User</title>
+</head>
+
+<!-- body -->
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="container" id="login">
+                <div class="col">
+                    <div class="nj-card p-5">
+                        <div class="engie-logo"><a href="index.html"><img id="blue-logo" src="/images/logo-engie-blue.svg" alt="Engie logo"></a></div>
+                        <h4 class="secondary-header">Create an Account</h4>
+                        <form action="">
+                            <div class="nj-form-group">
+                                <input type="text" class="nj-form-control" id="" placeholder="test@test.com">
+                                <label for="" class="nj-label-static">Email Address</label>
+                                <span class="nj-help">We'll never share your email with anyone else.</span>
+                            </div>
+                            <div class="nj-form-group nj-form-input-password nj-form-group--icon-right">
+                                <input type="password" class="nj-form-control is-prepended" id="PwWidget1" autocomplete="password" minlength="5">
+                                <i class="material-icons nj-form-control__password-off">visibility_off</i>
+                                <i class="material-icons nj-form-control__password-on">visibility</i>
+                                <label for="PasswordWidget" class="nj-label-floating">Password</label>
+                            </div>
+                            <!-- Password Reqs -->
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col">
+                                        <div id="password-reqs">One lowercase character</div>
+                                        <div id="password-reqs">One uppercase character</div>
+                                        <div id="password-reqs">One number</div>
+                                    </div>
+                                    <div class="col">
+                                        <div id="password-reqs">One special character</div>
+                                        <div id="password-reqs">8 characters minimum</div>
+                                    </div>
+                                </div>  
+                            </div>
+                            <!-- end password reqs -->
+                            <div class="nj-form-group nj-form-input-password nj-form-group--icon-right">
+                                <input type="password" class="nj-form-control is-prepended" id="pwWidget2" autocomplete="password" minlength="5">
+                                <i class="material-icons nj-form-control__password-off">visibility_off</i>
+                                <i class="material-icons nj-form-control__password-on">visibility</i>
+                                <label for="PasswordWidget" class="nj-label-floating">Confirm Password</label>
+                            </div>
+                            <div class="nj-form-group text-right">
+                              <button type="submit" class="nj-btn nj-btn--primary" id="wide-button">Submit</button>
+                            </div>
+                        </form>
+                        <div class="terms">By creating an account, you agree to our <a href="#" class="nj-link">Terms and Conditions</a> and <a href="#" class="nj-link">Privacy Policy</a>.
+                        If you have any questions contact Customer Service at 888-232-6206 or <a class="email-link" href="mailto:custserv@na.engie.com">custserv@na.engie.com</a>.
+                        </div>
+                    </div>
+                </div>
+                <!-- end first column -->
+            </div>
+            <!-- end login container -->
+            <!-- begin second column -->
+            <div class="col" id="login-bg" style="background-image: url('images/login-bg.jpg');"></div>
+        </div>
+        <!-- end row -->
+    </div>
+    <!-- end page container -->
+
+<!-- Scripts -->
+<script src="/js/fluid-design-system.js"></script>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/popper.min.js"></script>
+<!-- Engie fluid design js -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function(event) {
+      NJ.AutoInit();
+    });
+  </script>
+</body>
+</html>
