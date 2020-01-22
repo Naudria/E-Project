@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
     <link href="https://fonts.googleapis.com/css?family=Material+Icons|Lato:300,400,700,900&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
     
     <!-- app.css combines bootstrap, engie fluid design, and custom styles -->
     <link rel="stylesheet" href="css/app.css">
     <!-- <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.15.5/dist/bootstrap-table.min.css"> -->
-    <title>Sign in to Account - Existing User</title>
+    <title>My Account List</title>
 </head>
 
 <!-- body -->
@@ -19,17 +20,19 @@
     <table data-toggle="table"
     data-pagination="true"
     data-search="true"
+    data-click-to-select="true"
     data-url="https://jsonplaceholder.typicode.com/users/">
         <thead>
           <tr>
+            <th data-checkbox="true" ></th>
             <th data-sortable="true" data-field="id">Item ID</th>
-            <th data-sortable="true" data-field="name">Item Name</th>
+            <th data-sortable="true" data-field="name">Customer Name</th>
             <th data-field="username" data-field="username">Username</th>
             <th data-field="email" data-field="email">Email</th>
             <th data-field="phone" data-field="phone">Phone</th>
           </tr>
         </thead>
-        <tbody>
+        <!-- <tbody>
           <tr>
             <td>1</td>
             <td>Item 1</td>
@@ -40,7 +43,7 @@
             <td>Item 2</td>
             <td>$2</td>
           </tr>
-        </tbody>
+        </tbody> -->
       </table>
     </div>
 <!-- Scripts -->
