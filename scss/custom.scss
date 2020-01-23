@@ -30,11 +30,20 @@
 #wide-button {
     width:100%;
 }
-
+.login-header {
+	text-align: left;
+}
 .secondary-header {
     text-align: center;
 }
-
+#less-padding {
+	padding:.5rem;
+	margin-bottom:1rem;
+}
+#no-padding {
+	padding:0;
+	margin:0;
+}
 .small-stuff {
     font-size: .8rem;
 }
@@ -61,7 +70,16 @@ margin-top: 3px;
 .terms {
     text-align: center;
     margin-top: 50px;
-    font-size: .6rem;
+    color: #C9C9C9;
+}
+
+.terms-link {
+	color: #C9C9C9;
+}
+
+.terms-link:hover {
+	color: #C9C9C9;
+	text-decoration: underline;
 }
 
 .email-link {
@@ -77,6 +95,9 @@ margin-top: 3px;
     margin-top: 20px;
 }
 
+#modal-center {
+	align-items: center;
+}
 /* Additional Responsive Styles */
 @media (min-width: 1200px) {
    
