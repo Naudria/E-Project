@@ -13,23 +13,44 @@
     <title>Activate Account</title>
 </head>
 
-<!-- body -->
+<!-- BODY -->
 <body>
-  <!-- navbar -->
+  <!-- NAVBAR -->
   <header>
     <nj-navbar>
       <nav class="nj-navbar nj-navbar--blue nj-navbar--expand-xl">
         <a class="nj-navbar__brand" href="#"><svg class="nj-navbar__logo"><use href="/images/logo-engie-white.svg#logo-engie-white" /></svg></a>
-        <!-- <button class="nj-navbar__toggler" type="button" data-toggle="collapse" data-target="#navbarExample02">
-          <i class="nj-navbar__toggler-icon material-icons">menu</i>
-        </button> -->
-        <!-- <div class="nj-navbar--collapse nj-collapse" id="navbarExample02">
+        
+          <!-- COMMENTED OUT FOR THIS PAGE -- HEADER LINKS -->
+        <!-- <div class="nj-navbar--collapse nj-collapse" id="navbarHeader">
           <ul class="nj-navbar__nav ml-auto">
-            <li class="nj-navbar__nav-item active"><a class="nj-navbar__nav-link" href="#">Nav item</a></li>
-            <li class="nj-navbar__nav-item"><a class="nj-navbar__nav-link" href="#">Nav item</a></li>
-            <li class="nj-navbar__nav-item"><a class="nj-navbar__nav-link" href="#">Nav item</a></li>
-            <li class="nj-navbar__nav-item"><a class="nj-navbar__nav-link nj-navbar__nav-link--icon" href="#"><i class="material-icons md--white">network_check</i></a></li>
+            <li class="nj-navbar__nav-item">
+              <a class="nj-navbar__nav-link nj-navbar__nav-link--icon" href="#">
+                <i class="material-icons md--white">notifications</i>
+                
+              </a>
+            </li>
+            <li class="nj-navbar__nav-item">
+              <a class="nj-navbar__nav-link nj-navbar__nav-link--icon" href="#">
+                <i class="material-icons md--white">person</i>
+                
+              </a>
+            </li>
+            <li class="nj-navbar__nav-item">
+              <a class="nj-navbar__nav-link nj-navbar__nav-link--icon" data-toggle="collapse" href="#collapse-search-bar-example" aria-expanded="false" aria-controls="collapse-search-bar-example">
+                <i class="material-icons md--white">search</i>
+              </a>
+            </li>
+            
           </ul>
+          <form class="nj-navbar__search nj-collapse" id="collapse-search-bar-example">
+            <input class="nj-form-control mr-3" type="text" id="search-href" placeholder="Enter your query...">
+            <button type="submit" class="nj-btn nj-btn--primary flex-keep">Search</button>
+            <a href="#" class="nj-navbar__nav-link nj-navbar__nav-link--icon nj-collapse-inline__close" aria-label="Close"
+              data-dismiss="#collapse-search-bar-example">
+              <i class="material-icons md--blue-corporate">close</i>
+            </a>
+          </form>
         </div> -->
       </nav>
     </nj-navbar>
@@ -80,15 +101,16 @@
             <div class="nj-form-group text-right">
               <button type="button" class="nj-btn nj-btn--primary" data-toggle="modal" data-target="#accountCreatedModal">Submit</button>
             </div>
-            
         </form>
+        <!-- end form -->
+        <!-- MODAL -->
         <nj-modal >
             <div class="nj-modal fade" tabindex="-1" id="accountCreatedModal" role="dialog">
               <div class="nj-modal__dialog nj-modal--sm" role="document">
                 <div class="nj-modal__content" id="modal-center">
                     <nj-alert>
-                        <div class="circle-alert--success" role="alert">
-                          <i class="material-icons" id="icon-success">check</i>
+                        <div class="circle-alert--success">
+                          <i class="material-icons md-48 md--white" >done</i>
                         </div>
                       </nj-alert>
                   <div class="nj-modal__header" id="modal-center">
@@ -100,8 +122,8 @@
                   <div class="nj-modal__body text-center" >
                     Your account has been created.
                   </div>
-                  <div class="nj-modal__footer">
-                    <button type="button" class="nj-btn nj-btn--primary">Return to login </button>
+                  <div class="nj-modal__footer" id="modal-footer">
+                    <button type="button" class="nj-btn nj-btn--primary btn-link"><a onmouseover='this.style.textDecoration="none"' style="color:white;" href="index.html">Return to login</a> </button>
                   </div>
                 </div>
               </div>
@@ -118,7 +140,8 @@
       <div class="col" id="login-bg" style="background-image: url('images/login-bg.jpg');"></div>
     </div>
     <!-- end row -->
-    <!-- begin footer -->
+
+    <!-- FOOTER -->
     <div class="container">
       <footer class="nj-footer">
         <hr id="no-padding">
@@ -151,41 +174,46 @@
           </div>
           <div class="col-md">
             <h5 class="nj-footer__title">Connect with Us</h5>
-            <ul class="list-unstyled">
+            <ul class="list-unstyled" id="remove-underline">
               <li>
                 <!-- <a href="#" class="nj-footer__link"><i class="material-icons md--blue-corporate">facebook</i></a>
                 <a href="#" class="nj-footer__link"><i class="material-icons md--blue-corporate">email</i></a>
                 <a href="#" class="nj-footer__link"><i class="material-icons md--blue-corporate">rss_feed</i></a> -->
-                <a href="https://www.facebook.com/ENGIENorthAmerica/">
+                <a class="remove-underline" href="https://www.facebook.com/ENGIENorthAmerica/">
                   <span class="fa-stack fa-lg">
                     <i class="fa fa-facebook-f fa-stack-1x"></i>
                   </span>
                 </a>
-                <a href="https://twitter.com/EngieNorthAM">
+                <a class="remove-underline" href="https://twitter.com/EngieNorthAM">
                   <span class="fa-stack fa-lg">
                   <i class="fa fa-twitter fa-stack-1x"></i>
                   </span>
                 </a>
-                <a href="https://www.linkedin.com/company/engie-north-america-inc">
+                <a class="remove-underline" href="https://www.linkedin.com/company/engie-north-america-inc">
                   <span class="fa-stack fa-lg">
                     <i class="fa fa-linkedin fa-stack-1x"></i>
                   </span>
                 </a>
               </li>
-              <li><a href="#" class="nj-footer__link">Customer Care</a></li>
-              <li><a href="#" class="nj-footer__link">M-F 8 a.m. - 7 p.m. EST</a></li>
-              <li><a href="#" class="nj-footer__link">888-232-6206</a></li>
+              <li><a class="nj-footer__link">Customer Care</a></li>
+              <li><a class="nj-footer__link">M-F 8 a.m. - 7 p.m. EST</a></li>
+              <li><a class="nj-footer__link">888-232-6206</a></li>
               <li><a href="mailto:custserve@na.engie.com" class="nj-footer__link">custserve@na.engie.com</a></li>
             </ul>
           </div>
         </div>
         <hr>
         <div class="row nj-footer__bottom">
-          <div class="col-12">
+          <div class="col"  >
+              <span class="nj-footer__corp" id="copyright" style="font-size: .75rem; justify-content: start; color:#757575">&copy; <script type="text/javascript">
+              document.write(new Date().getFullYear());
+              </script> ENGIE Resources. All rights reserved.</span>
+            
+          </div>
+          <div class="col">
             <ul class="list-unstyled nj-footer__corp">
-              <li><a href="#" class="nj-footer__corp-link">Item 1</a></li>
-              <li><a href="#" class="nj-footer__corp-link">Item 2</a></li>
-              <li><a href="#" class="nj-footer__corp-link">Item 3</a></li>
+              <li><a href="#" class="nj-footer__corp-link">Terms</a></li>
+              <li><a href="#" class="nj-footer__corp-link">Privacy</a></li>
             </ul>
           </div>
         </div>
@@ -199,6 +227,7 @@
 <script src="/js/fluid-design-system.js"></script>
 <script src="/js/jquery.min.js"></script>
 <script src="/js/popper.min.js"></script>
+
 <!-- Engie fluid design js -->
   <script>
     document.addEventListener('DOMContentLoaded', function(event) {
