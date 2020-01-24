@@ -69,76 +69,80 @@
                 <input type="text" class="nj-form-control" id="" placeholder="test@test.com">
                 <label for="" class="nj-label-static">Email Address</label>
                 <span class="nj-help">We'll never share your email with anyone else.</span>
-            </div>
-            <div class="nj-form-group nj-form-input-password nj-form-group--icon-right">
-                <input type="password" class="nj-form-control is-prepended" id="PwWidget1" autocomplete="password" minlength="8">
-                <i class="material-icons nj-form-control__password-off">visibility_off</i>
-                <i class="material-icons nj-form-control__password-on">visibility</i>
-                <label for="PasswordWidget" class="nj-label-floating">Password</label>
-                <span class="nj-help">Your password must be at least 8 characters in length.</span>
-            </div>
-            <!-- Password Reqs -->
-            <div class="container">
-                <div class="row">
-                    <!-- <div class="col">
-                        <div id="password-reqs">One lowercase character</div>
-                        <div id="password-reqs">One uppercase character</div>
-                        <div id="password-reqs">One number</div>
+              </div>
+              <div class="nj-form-group nj-form-input-password nj-form-group--icon-right">
+                  <input type="password" class="nj-form-control is-prepended" id="PwWidget1" autocomplete="password" minlength="8">
+                  <i class="material-icons nj-form-control__password-off">visibility_off</i>
+                  <i class="material-icons nj-form-control__password-on">visibility</i>
+                  <label for="PasswordWidget" class="nj-label-floating">Password</label>
+                  <span class="nj-help">Your password must be at least 8 characters in length.</span>
+              </div>
+              <!-- Password Reqs -->
+              <div class="container">
+                  <div class="row">
+                      <!-- <div class="col">
+                          <div id="password-reqs">One lowercase character</div>
+                          <div id="password-reqs">One uppercase character</div>
+                          <div id="password-reqs">One number</div>
+                      </div>
+                      <div class="col">
+                          <div id="password-reqs">One special character</div>
+                          <div id="password-reqs">8 characters minimum</div>
+                      </div> -->
+                  </div>  
+              </div>
+              <!-- end password reqs -->
+              <div class="nj-form-group nj-form-input-password nj-form-group--icon-right">
+                  <input type="password" class="nj-form-control is-prepended" id="pwWidget2" autocomplete="password" minlength="5">
+                  <i class="material-icons nj-form-control__password-off">visibility_off</i>
+                  <i class="material-icons nj-form-control__password-on">visibility</i>
+                  <label for="PasswordWidget" class="nj-label-floating">Confirm Password</label>
+              </div>
+              <div class="nj-form-group text-right">
+                <button type="button" class="nj-btn nj-btn--primary" data-toggle="modal" data-target="#accountCreatedModal">Submit</button>
+              </div>
+            </form>
+            <!-- end form -->
+            <!-- MODAL -->
+            <nj-modal >
+              <div class="nj-modal fade" tabindex="-1" id="accountCreatedModal" role="dialog">
+                <div class="nj-modal__dialog nj-modal--sm" role="document">
+                  <div class="nj-modal__content" id="modal-center">
+                      <nj-alert>
+                          <div class="circle-alert--success">
+                            <i class="material-icons md-48 md--white" >done</i>
+                          </div>
+                        </nj-alert>
+                    <div class="nj-modal__header" id="modal-center">
+                      <h4 class="nj-modal__title" id="accountCreatedModalLabel">Successfully Created</h4>
+                      <button type="button" class="nj-modal__close" data-dismiss="modal" aria-label="Close">
+                        <i class="material-icons close-icon">close</i>
+                      </button>
                     </div>
-                    <div class="col">
-                        <div id="password-reqs">One special character</div>
-                        <div id="password-reqs">8 characters minimum</div>
-                    </div> -->
-                </div>  
-            </div>
-            <!-- end password reqs -->
-            <div class="nj-form-group nj-form-input-password nj-form-group--icon-right">
-                <input type="password" class="nj-form-control is-prepended" id="pwWidget2" autocomplete="password" minlength="5">
-                <i class="material-icons nj-form-control__password-off">visibility_off</i>
-                <i class="material-icons nj-form-control__password-on">visibility</i>
-                <label for="PasswordWidget" class="nj-label-floating">Confirm Password</label>
-            </div>
-            <div class="nj-form-group text-right">
-              <button type="button" class="nj-btn nj-btn--primary" data-toggle="modal" data-target="#accountCreatedModal">Submit</button>
-            </div>
-        </form>
-        <!-- end form -->
-        <!-- MODAL -->
-        <nj-modal >
-            <div class="nj-modal fade" tabindex="-1" id="accountCreatedModal" role="dialog">
-              <div class="nj-modal__dialog nj-modal--sm" role="document">
-                <div class="nj-modal__content" id="modal-center">
-                    <nj-alert>
-                        <div class="circle-alert--success">
-                          <i class="material-icons md-48 md--white" >done</i>
-                        </div>
-                      </nj-alert>
-                  <div class="nj-modal__header" id="modal-center">
-                    <h4 class="nj-modal__title" id="accountCreatedModalLabel">Successfully Created</h4>
-                    <button type="button" class="nj-modal__close" data-dismiss="modal" aria-label="Close">
-                      <i class="material-icons close-icon">close</i>
-                    </button>
+                    <div class="nj-modal__body text-center" >
+                      Your account has been created.
+                    </div>
+                    <div class="nj-modal__footer" id="modal-footer">
+                      <button type="button" class="nj-btn nj-btn--primary btn-link"><a onmouseover='this.style.textDecoration="none"' style="color:white;" href="signin-existing-user.html">Return to login</a> </button>
+                    </div>
                   </div>
-                  <div class="nj-modal__body text-center" >
-                    Your account has been created.
-                  </div>
-                  <div class="nj-modal__footer" id="modal-footer">
-                    <button type="button" class="nj-btn nj-btn--primary btn-link"><a onmouseover='this.style.textDecoration="none"' style="color:white;" href="index.html">Return to login</a> </button>
-                  </div>
+                  <!-- end modal content -->
                 </div>
               </div>
-            </div>
-          </nj-modal>
-        <div class="terms">By creating an account, you agree to our <a href="#" class="terms-link">Terms and Conditions</a> and <a href="#" class="terms-link">Privacy Policy</a>.
-        </div>      
+            </nj-modal>
+            <!-- end modal -->
+            <div class="terms">By creating an account, you agree to our <a href="#" class="terms-link">Terms and Conditions</a> and <a href="#" class="terms-link">Privacy Policy</a>.
+          </div>  
+            
+        </div>
+      <!-- end card -->
+      </div>
+      <!-- end login container -->
     </div>
-</div>
-<!-- end first column -->
-</div>
-       <!-- end login container -->
-       <!-- begin second column -->
-      <div class="col" id="login-bg" style="background-image: url('images/login-bg.jpg');"></div>
-    </div>
+    <!-- end column-->
+    <!-- begin second column -->
+    <div class="col" id="login-bg" style="background-image: url('images/login-bg.jpg');"></div>
+  </div>
     <!-- end row -->
 
     <!-- FOOTER -->

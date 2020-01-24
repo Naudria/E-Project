@@ -10407,6 +10407,10 @@ a.remove-underline:hover {
   align-items: center;
   padding: 10px; }
 
+#modal-left {
+  padding-top: 15px;
+  padding-bottom: 15px; }
+
 #modal-footer {
   padding: 20px; }
 
