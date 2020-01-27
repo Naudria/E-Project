@@ -145,6 +145,15 @@ margin-top: 3px;
 	align-items: center;
 }
 
+.hoverable {
+	box-shadow: 0 5px 10px 0 rgba(0,0,0,0.1);
+	transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .hoverable:hover {
+	box-shadow: 0 8px 15px 3px rgba(0, 0, 0, 0.18);
+  }
+  
 
 /* Additional Responsive Styles */
 @media (max-width: 1200px) {
