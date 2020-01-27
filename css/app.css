@@ -10369,6 +10369,11 @@ a.remove-underline:hover {
   font-size: .7rem;
   min-width: 150px; }
 
+.subtitle {
+  font-size: 1.1rem;
+  font-weight: bold;
+  font-style: italic; }
+
 #password-reqs:before {
   content: "";
   position: relative;
@@ -10413,6 +10418,9 @@ a.remove-underline:hover {
 
 #modal-footer {
   padding: 20px; }
+
+.md-72 {
+  font-size: 6rem; }
 
 .circle-alert--success {
   margin-top: 2rem;
