@@ -176,7 +176,7 @@ box-shadow: 0 8px 15px 3px rgba(0, 0, 0, 0.18);
     max-width: 250px;
     height: 100%;
     float: left;
-    position: fixed;
+    // position: fixed;
     z-index: 1000;
 	display: block;
 	overflow-y: auto;
@@ -242,7 +242,7 @@ box-shadow: 0 8px 15px 3px rgba(0, 0, 0, 0.18);
 }
 
 #submenu a:hover {
-	background:#bdbdbd;
+	background:#eeeeee;
 	color:#fff;
     -webkit-transition: background 0.5s;
     transition: background 0.5s;

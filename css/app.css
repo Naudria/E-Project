@@ -10508,12 +10508,11 @@ a.remove-underline:hover {
   padding-left: 40px; }
 
 #submenu a {
-  font-size: 16px;
   text-decoration: none;
   color: #757575; }
 
 #submenu a:hover {
-  background: #bdbdbd;
+  background: #eeeeee;
   color: #fff;
   -webkit-transition: background 0.5s;
   transition: background 0.5s; }
