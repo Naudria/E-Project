@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Lato:300,400,700,900&display=swap" rel="stylesheet"/>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" 
+  rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    
+    <!-- app.css combines bootstrap, engie fluid design, and custom styles -->
+    <link rel="stylesheet" href="css/app.css">
+    <title>Help Center</title>
+</head>
+
+<!-- BODY -->
+<body>
+    
+  <!-- NAVBAR -->
+  <header>
+    <nj-navbar>
+      <nav class="nj-navbar nj-navbar--blue nj-navbar--expand-xl">
+        <a class="nj-navbar__brand" href="#"><svg class="nj-navbar__logo"><use href="/images/logo-engie-white.svg#logo-engie-white" /></svg></a>
+        
+        <!-- HEADER LINKS -->
+        <div class="nj-navbar--collapse nj-collapse" id="navbarHeader">
+          <ul class="nj-navbar__nav ml-auto">
+            <!-- <li class="nj-navbar__nav-item">
+              <a class="nj-navbar__nav-link nj-navbar__nav-link--icon" href="#">
+                <i class="material-icons md--white">notifications</i>
+                
+              </a>
+            </li> -->
+            <li class="nj-navbar__nav-item">
+              <a class="nj-navbar__nav-link nj-navbar__nav-link--icon" href="#">
+                <i class="material-icons md--white">person</i>
+                
+              </a>
+            </li>
+            <li class="nj-navbar__nav-item">
+              <a class="nj-navbar__nav-link nj-navbar__nav-link--icon" data-toggle="collapse" href="#collapse-search-bar-example" aria-expanded="false" aria-controls="collapse-search-bar-example">
+                <i class="material-icons md--white">search</i>
+              </a>
+            </li>
+            
+          </ul>
+          <form class="nj-navbar__search nj-collapse" id="collapse-search-bar-example">
+            <input class="nj-form-control mr-3" type="text" id="search-href" placeholder="Enter your query...">
+            <button type="submit" class="nj-btn nj-btn--primary flex-keep">Search</button>
+            <a href="#" class="nj-navbar__nav-link nj-navbar__nav-link--icon nj-collapse-inline__close" aria-label="Close"
+              data-dismiss="#collapse-search-bar-example">
+              <i class="material-icons md--blue-corporate">close</i>
+            </a>
+          </form>
+        </div>
+      </nav>
+    </nj-navbar>
+  </header>
+  <!-- end navbar -->
+
+ <!-- Vertical navbar -->
+ <div class="sidebar">
+
+  <ul class="sidebar-nav" >
+      <li id="navbar-toggle">
+          <a >Close <i class="fa fa-chevron-left menu-icon fa-1x" aria-hidden="true"></i></a>
+      </li>
+      <li>
+          <a href="#">Dashboard <i class="fa fa-home menu-icon fa-1x" aria-hidden="true"></i></a>
+      </li>
+      <li>
+          <a href="#">Account History<i class="fa fa-history menu-icon fa-1x" aria-hidden="true"></i></a>
+      </li>
+      <li>
+          <a href="#">Billing Options<i class="fa fa-file-text menu-icon fa-1x" aria-hidden="true"></i></a>
+      </li>
+      <li>
+        <a href="#">Reporting<i class="fa fa-bar-chart menu-icon fa-1x" aria-hidden="true"></i></a>
+    </li>
+      <nj-collapse>
+      <li>
+          <a data-toggle="collapse" href="#settingsDropdown">Settings<i class="fa fa-cog menu-icon fa-1x" aria-hidden="true"></i>
+              </a>
+      </li>
+      <div class="nj-collapse" id="settingsDropdown">
+        <ul class="sidebar-nav">
+          <li><a href="#" id="submenu">Personal Information</a></li>
+          <li><a href="#" id="submenu">Account Settings</a></li>
+          <li><a href="#" id="submenu">Payment Methods</a></li>
+          <li><a href="#" id="submenu">Notification Preferences</a></li>
+          <li><a href="#" id="submenu">Admin</a></li>
+        </ul>
+      </div>
+    </nj-collapse>
+
+  </ul>
+</div>
+<!-- end vertical navbar -->
+
+<!-- placeholder container for content; please remove -->
+<div class="container" style="min-height:500px;">
+
+</div>
+
+   <!-- begin footer -->
+   <div class="container">
+    <footer class="nj-footer">
+      <hr id="no-padding">
+      <div class="row nj-footer__content">
+        <div class="col-md">
+        <h5 class="nj-footer__title">Help Center</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="nj-footer__link">Contact Us</a></li>
+            <li><a href="#" class="nj-footer__link">How to Read Your Bill</a></li>
+          </ul>
+        </div>
+        <div class="col-md">
+          <h5 class="nj-footer__title">Company</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="nj-footer__link">About Us</a></li>
+            <li><a href="#" class="nj-footer__link">News & Events</a></li>
+            <li><a href="#" class="nj-footer__link">Market Monitor Blog</a></li>
+          </ul>
+        </div>
+        <div class="col-md">
+          <h5 class="nj-footer__title">Resources</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="nj-footer__link">ERCOT</a></li>
+            <li><a href="#" class="nj-footer__link">PJM</a></li>
+            <li><a href="#" class="nj-footer__link">NYISO</a></li>
+            <li><a href="#" class="nj-footer__link">ISO-NE</a></li>
+            <li><a href="#" class="nj-footer__link">NEPOOL</a></li>
+            <li><a href="#" class="nj-footer__link">MISO</a></li>
+          </ul>
+        </div>
+        <div class="col-md">
+          <h5 class="nj-footer__title">Connect with Us</h5>
+          <ul class="list-unstyled">
+            <li>
+              <!-- <a href="#" class="nj-footer__link"><i class="material-icons md--blue-corporate">facebook</i></a>
+              <a href="#" class="nj-footer__link"><i class="material-icons md--blue-corporate">email</i></a>
+              <a href="#" class="nj-footer__link"><i class="material-icons md--blue-corporate">rss_feed</i></a> -->
+              <a class="remove-underline" href="https://www.facebook.com/ENGIENorthAmerica/">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-facebook-f fa-stack-1x"></i>
+                </span>
+              </a>
+              <a class="remove-underline" href="https://twitter.com/EngieNorthAM">
+                <span class="fa-stack fa-lg">
+                <i class="fa fa-twitter fa-stack-1x"></i>
+                </span>
+              </a>
+              <a class="remove-underline" href="https://www.linkedin.com/company/engie-north-america-inc">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-linkedin fa-stack-1x"></i>
+                </span>
+              </a>
+            </li>
+            <li><a class="nj-footer__link">Customer Care</a></li>
+            <li><a class="nj-footer__link">M-F 8 a.m. - 7 p.m. EST</a></li>
+            <li><a class="nj-footer__link">888-232-6206</a></li>
+            <li><a href="mailto:custserve@na.engie.com" class="nj-footer__link">custserve@na.engie.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+        <div class="row nj-footer__bottom">
+          <div class="col"  >
+              <span class="nj-footer__corp" id="copyright" style="font-size: .75rem; justify-content: start; color:#757575">&copy; <script type="text/javascript">
+              document.write(new Date().getFullYear());
+              </script> ENGIE Resources. All rights reserved.</span>
+            
+          </div>
+          <div class="col">
+            <ul class="list-unstyled nj-footer__corp">
+              <li><a href="#" class="nj-footer__corp-link">Terms</a></li>
+              <li><a href="#" class="nj-footer__corp-link">Privacy</a></li>
+            </ul>
+          </div>
+        </div>
+    </footer>
+        <!-- end footer -->
+  </div>
+  
+
+<!-- Scripts -->
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script> -->
+<script src="/js/fluid-design-system.js"></script>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/popper.min.js"></script>
+<script src="/js/custom.js"></script>
+<!-- Engie fluid design js -->
+<script>
+  document.addEventListener('DOMContentLoaded', function(event) {
+    NJ.AutoInit();
+  });
+</script>
+<script>
+$(function() {
+    // Sidebar toggle behavior
+    $('#sidebarCollapse').on('click', function() {
+      $('#sidebar, #content').toggleClass('active');
+    });
+  });
+  </script> 
+</body>
+</html>
