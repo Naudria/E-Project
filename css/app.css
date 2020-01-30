@@ -10346,6 +10346,13 @@ a.remove-underline:hover {
 .login-header {
   text-align: left; }
 
+#languageSelect {
+  color: #fff;
+  text-decoration: none; }
+
+#languageSelectIcon {
+  padding-bottom: 1rem; }
+
 .secondary-header {
   text-align: center; }
 

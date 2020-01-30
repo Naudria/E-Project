@@ -20,27 +20,41 @@
     <nj-navbar>
       <nav class="nj-navbar nj-navbar--blue nj-navbar--expand-xl">
         <a class="nj-navbar__brand" href="#"><svg class="nj-navbar__logo"><use href="/images/logo-engie-white.svg#logo-engie-white" /></svg></a>
-        
-        <!-- COMMENTED OUT FOR THIS PAGE -- HEADER LINKS -->
-        <!-- <div class="nj-navbar--collapse nj-collapse" id="navbarHeader">
+        <!-- HEADER LINKS -->
+        <div class="nj-navbar--collapse nj-collapse" id="navbarHeader">
           <ul class="nj-navbar__nav ml-auto">
-            <li class="nj-navbar__nav-item">
+            <!-- <li class="nj-navbar__nav-item">
               <a class="nj-navbar__nav-link nj-navbar__nav-link--icon" href="#">
-                <i class="material-icons md--white">notifications</i>
-                
+                <i class="material-icons md--white">notifications</i>    
               </a>
+            </li> -->
+            <!-- Language dropdown -->
+            <li class="nj-navbar__nav-item" >
+            <p class="nj-navbar__nav-link nj-navbar__nav-link--icon" >
+              <i class="material-icons md--white">language</i>
+              </p>
             </li>
+            <div class="nj-form-group" style="background-image:none;" >
+              <nj-select >
+                <select class="nj-form-control" style="background-image:none;" id="languageSelect">
+                  <option>English</option>
+                  <option>Spanish</option>
+                </select>
+                <i id="languageSelectIcon" class="material-icons md--white">keyboard_arrow_down</i>
+              </nj-select>
+            </div>
+            <!-- end language dropdown -->
             <li class="nj-navbar__nav-item">
               <a class="nj-navbar__nav-link nj-navbar__nav-link--icon" href="#">
                 <i class="material-icons md--white">person</i>
                 
               </a>
             </li>
-            <li class="nj-navbar__nav-item">
+            <!-- <li class="nj-navbar__nav-item">
               <a class="nj-navbar__nav-link nj-navbar__nav-link--icon" data-toggle="collapse" href="#collapse-search-bar-example" aria-expanded="false" aria-controls="collapse-search-bar-example">
                 <i class="material-icons md--white">search</i>
               </a>
-            </li>
+            </li> -->
             
           </ul>
           <form class="nj-navbar__search nj-collapse" id="collapse-search-bar-example">
@@ -51,7 +65,7 @@
               <i class="material-icons md--blue-corporate">close</i>
             </a>
           </form>
-        </div> -->
+        </div>
       </nav>
     </nj-navbar>
   </header>
