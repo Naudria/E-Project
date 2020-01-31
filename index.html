@@ -15,61 +15,111 @@
 
 <!-- BODY -->
 <body>
-  <!-- NAVBAR -->
-  <header>
-    <nj-navbar>
-      <nav class="nj-navbar nj-navbar--blue nj-navbar--expand-xl">
-        <a class="nj-navbar__brand" href="#"><svg class="nj-navbar__logo"><use href="/images/logo-engie-white.svg#logo-engie-white" /></svg></a>
-        <!-- HEADER LINKS -->
-        <div class="nj-navbar--collapse nj-collapse" id="navbarHeader">
-          <ul class="nj-navbar__nav ml-auto">
-            <!-- <li class="nj-navbar__nav-item">
-              <a class="nj-navbar__nav-link nj-navbar__nav-link--icon" href="#">
-                <i class="material-icons md--white">notifications</i>    
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link href="https://fonts.googleapis.com/css?family=Material+Icons|Lato:300,400,700,900&display=swap" rel="stylesheet"/>
+      <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" 
+    rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+      
+      <!-- app.css combines bootstrap, engie fluid design, and custom styles -->
+      <link rel="stylesheet" href="../css/app.css">
+      <title>Header Nav Before Login </title><!-- Scripts -->
+      <script src="/js/fluid-design-system.js"></script>
+      <script src="/js/jquery.min.js"></script>
+      <script src="/js/popper.min.js"></script>
+      <!-- Engie fluid design js -->
+        <script>
+          document.addEventListener('DOMContentLoaded', function(event) {
+            NJ.AutoInit();
+          });
+        </script>
+      </body>
+      </html>
+  </head>
+  
+  <!-- BODY -->
+  <body>
+    <!-- NAVBAR -->
+    <header>
+      <nj-navbar>
+        <nav class="nj-navbar nj-navbar--blue nj-navbar--expand-xl">
+          <a class="nj-navbar__brand" href="#"><svg class="nj-navbar__logo"><use href="/images/logo-engie-white.svg#logo-engie-white" /></svg></a>
+          <!-- HEADER LINKS -->
+          <div class="nj-navbar--collapse nj-collapse" id="navbarHeader">
+            <ul class="nj-navbar__nav ml-auto">
+              <!-- <li class="nj-navbar__nav-item">
+                <a class="nj-navbar__nav-link nj-navbar__nav-link--icon" href="#">
+                  <i class="material-icons md--white">notifications</i>    
+                </a>
+              </li> -->
+              <!-- Language dropdown DISABLED FOR NOW -->
+              <!-- <li class="nj-navbar__nav-item" >
+                <nj-collapse >
+                  <nj-dropdown >
+                <a style="background-image:none;" href="#language-dropdown" class="nj-navbar__nav-link nj-navbar__nav-link--icon nj-dropdown" data-toggle="collapse">
+                  <i class="material-icons md--white">language</i>
+                </a>
+                <div class="nj-dropdown__list nj-collapse" id="language-dropdown">
+                  <div class="nj-card border">
+                    <div class="nj-list-group nj-list-group--no-border nj-list-group--sm my-1">
+                      <button type="button" class="nj-list-group__item" data-value="login">English</button>
+                      <button type="button" class="nj-list-group__item" data-value="logout">Spanish</button>
+                    </div>
+                  </div>
+                </div>
+              </nj-dropdown>
+              </nj-collapse> -->
+              <!-- Login dropdown -->
+              </li>
+              <li class="nj-navbar__nav-item" >
+                <nj-collapse >
+                  <nj-dropdown >
+                <a style="background-image:none;" href="#login-dropdown" class="nj-navbar__nav-link nj-navbar__nav-link--icon nj-dropdown" data-toggle="collapse">
+                  <i class="material-icons md--white">person</i>
+                </a>
+                <div class="nj-dropdown__list nj-collapse" id="login-dropdown">
+                  <div class="nj-card border">
+                    <div class="nj-list-group nj-list-group--no-border nj-list-group--sm my-1">
+                      <button type="button" class="nj-list-group__item" data-value="login">Login</button>
+                      <button type="button" class="nj-list-group__item" data-value="logout">Logout</button>
+                    </div>
+                  </div>
+                </div>
+              </nj-dropdown>
+              </nj-collapse>
+  
+              </li>
+              <!-- <li class="nj-navbar__nav-item">
+                <a class="nj-navbar__nav-link nj-navbar__nav-link--icon" href="#">
+                  <i class="material-icons md--white">person</i>
+                  
+                </a>
+              </li> -->
+              <li class="nj-navbar__nav-item">
+                <a class="nj-navbar__nav-link nj-navbar__nav-link--icon" data-toggle="collapse" 
+                href="#collapse-search-bar-example" aria-expanded="false" aria-controls="collapse-search-bar-example">
+                  <i class="material-icons md--white">search</i>
+                </a>
+              </li>
+              
+            </ul>
+            <form class="nj-navbar__search nj-collapse" id="collapse-search-bar-example">
+              <input class="nj-form-control mr-3" type="text" id="search-href" placeholder="Enter your query...">
+              <button type="submit" class="nj-btn nj-btn--primary flex-keep">Search</button>
+              <a href="#" class="nj-navbar__nav-link nj-navbar__nav-link--icon nj-collapse-inline__close" aria-label="Close"
+                data-dismiss="#collapse-search-bar-example">
+                <i class="material-icons md--blue-corporate">close</i>
               </a>
-            </li> -->
-            <!-- Language dropdown -->
-            <li class="nj-navbar__nav-item" >
-            <p class="nj-navbar__nav-link nj-navbar__nav-link--icon" >
-              <i class="material-icons md--white">language</i>
-              </p>
-            </li>
-            <div class="nj-form-group" style="background-image:none;" >
-              <nj-select >
-                <select class="nj-form-control" style="background-image:none;" id="languageSelect">
-                  <option>English</option>
-                  <option>Spanish</option>
-                </select>
-                <i id="languageSelectIcon" class="material-icons md--white">keyboard_arrow_down</i>
-              </nj-select>
-            </div>
-            <!-- end language dropdown -->
-            <li class="nj-navbar__nav-item">
-              <a class="nj-navbar__nav-link nj-navbar__nav-link--icon" href="#">
-                <i class="material-icons md--white">person</i>
-                
-              </a>
-            </li>
-            <!-- <li class="nj-navbar__nav-item">
-              <a class="nj-navbar__nav-link nj-navbar__nav-link--icon" data-toggle="collapse" href="#collapse-search-bar-example" aria-expanded="false" aria-controls="collapse-search-bar-example">
-                <i class="material-icons md--white">search</i>
-              </a>
-            </li> -->
-            
-          </ul>
-          <form class="nj-navbar__search nj-collapse" id="collapse-search-bar-example">
-            <input class="nj-form-control mr-3" type="text" id="search-href" placeholder="Enter your query...">
-            <button type="submit" class="nj-btn nj-btn--primary flex-keep">Search</button>
-            <a href="#" class="nj-navbar__nav-link nj-navbar__nav-link--icon nj-collapse-inline__close" aria-label="Close"
-              data-dismiss="#collapse-search-bar-example">
-              <i class="material-icons md--blue-corporate">close</i>
-            </a>
-          </form>
-        </div>
-      </nav>
-    </nj-navbar>
-  </header>
-  <!-- end navbar -->
+            </form>
+          </div>
+        </nav>
+      </nj-navbar>
+    </header>
+    <!-- end navbar -->
   <div class="container-fluid">
     <div class="row">
       <div class="container" id="login">
@@ -88,7 +138,7 @@
                 <label for="password" class="nj-label-floating">Password</label>
               </div>
               <div  id="less-padding" class="nj-form-group text-right">
-                <button type="button" id="no-style-button" href="forgot-password.html"  class="nj-link" data-toggle="modal" data-target="#forgotPasswordModal">Forgot password?</button>
+                <button type="button" id="no-style-button"  class="nj-link" data-toggle="modal" data-target="#forgotPasswordModal">Forgot password?</button>
               </div>
               <div id="less-padding" class="nj-form-group">
                 <div class="nj-checkbox">
@@ -101,7 +151,7 @@
               <div class="small-stuff">Just need to make a payment? <a href="/payment.html">Continue without signing in</a></div>
             </form>
             <!-- end form -->
-            <!-- MODAL -->
+            <!-- FORGOT PASSWORD MODAL -->
             <nj-modal >
               <div class="nj-modal fade" tabindex="-1" id="forgotPasswordModal" role="dialog">
                 <div class="nj-modal__dialog nj-modal--sm" role="document">
@@ -120,21 +170,52 @@
                       <div class="nj-form-group">
                         <input type="email" class="nj-form-control" id="email">
                         <label for="email" class="nj-label-floating">Email Address</label>
+                      </div>
                       </form>
                     </div>
-                  </div>
                     <div class="nj-modal__footer" id="modal-footer">
-                      <button type="button" class="nj-btn nj-btn--outline-primary btn-link"><a onmouseover='this.style.textDecoration="none"; this.style.color="white"' onmouseout='this.style.color="#009de9"' href="index.html">Return to login</a> </button>
-                      <button type="button" class="nj-btn nj-btn--primary">Reset password</button>
+                      <button type="button" class="nj-btn nj-btn--outline-primary btn-link">
+                        <a onmouseover='this.style.textDecoration="none"; this.style.color="white"' onmouseout='this.style.color="#009de9"' href="/signin-existing-user.html">Return to login</a> </button>
+                      <button type="button" class="nj-btn nj-btn--primary" data-toggle="modal" data-target="#passwordEmailSentModal">Reset password</button>
                     </div>
                   </div>
+                  <!-- end modal content -->
                 </div>
               </div>
             </nj-modal>
-            <!-- end modal -->
-        </div>
+            <!-- end first modal -->
+            <!-- SECOND (PASSWORD EMAIL SENT) MODAL -->
+            <nj-modal >
+              <div class="nj-modal fade" tabindex="-1" id="passwordEmailSentModal" role="dialog">
+                <div class="nj-modal__dialog nj-modal--sm" role="document">
+                  <div class="nj-modal__content" id="modal-center">
+                      <nj-alert>
+                          <div class="circle-alert--success">
+                            <i class="material-icons md-48 md--white" >done</i>
+                          </div>
+                        </nj-alert>
+                    <div class="nj-modal__header" id="modal-center">
+                      <h4 class="nj-modal__title" id="accountCreatedModalLabel">Success</h4>
+                      <button type="button" class="nj-modal__close" data-dismiss="modal" aria-label="Close">
+                        <i class="material-icons close-icon">close</i>
+                      </button>
+                    </div>
+                    <div class="nj-modal__body text-center" >
+                      We've sent an email to ****@*****.com with password reset instructions. If the email doesn't show up soon, check your spam folder.
+                    </div>
+                    <div class="nj-modal__footer" id="modal-footer">
+                      <button type="button" class="nj-btn nj-btn--primary btn-link">
+                        <a onmouseover='this.style.textDecoration="none"' style="color:white;" href="signin-existing-user.html">Return to login</a> </button>
+                    </div>
+                  </div>
+                  <!-- end second modal content -->
+                </div>
+              </div>
+            </nj-modal>
+            <!-- end second modal -->
+          </div>
           <!-- end card -->
-      </div>
+        </div>
         <!-- end first column -->
       </div>
        <!-- end login container -->
@@ -219,9 +300,8 @@
             </div>
           </div>
       </footer>
-          <!-- end footer -->
     </div>
-    
+    <!-- end footer -->
   </div>
   <!-- end page container -->
 

@@ -30,11 +30,23 @@
                 
               </a>
             </li> -->
-            <li class="nj-navbar__nav-item">
-              <a class="nj-navbar__nav-link nj-navbar__nav-link--icon" href="#">
+            <li class="nj-navbar__nav-item" >
+              <nj-collapse >
+                <nj-dropdown >
+              <a style="background-image:none;" href="#login-dropdown" class="nj-navbar__nav-link nj-navbar__nav-link--icon nj-dropdown" data-toggle="collapse">
                 <i class="material-icons md--white">person</i>
-                
               </a>
+              <div class="nj-dropdown__list nj-collapse" id="login-dropdown">
+                <div class="nj-card border">
+                  <div class="nj-list-group nj-list-group--no-border nj-list-group--sm my-1">
+                    <button type="button" class="nj-list-group__item" data-value="login">Login</button>
+                    <button type="button" class="nj-list-group__item" data-value="logout">Logout</button>
+                  </div>
+                </div>
+              </div>
+            </nj-dropdown>
+            </nj-collapse>
+
             </li>
             <li class="nj-navbar__nav-item">
               <a class="nj-navbar__nav-link nj-navbar__nav-link--icon" data-toggle="collapse" href="#collapse-search-bar-example" aria-expanded="false" aria-controls="collapse-search-bar-example">
