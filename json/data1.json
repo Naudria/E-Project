@@ -1,0 +1,18 @@
+[
+    {
+        "utility account": 2510360006,
+        "bill account": 0834112006,
+        "name": "Verizon Sourcing LLC",
+        "utility": "ROCKLAND",
+        "service address": "600 E Crescent Ave, Upper Saddle RV, NJ 07458-0000",
+        "payment options": "ePay"
+    },
+    {
+        "utility account": 3883741001,
+        "bill account": 0834112006,
+        "name": "Verizon Sourcing LLC",
+        "utility": "ROCKLAND",
+        "service address": "Skyline Dr, Oakland, NJ 07458-0000",
+        "payment options": ""
+    }
+]

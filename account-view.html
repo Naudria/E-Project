@@ -17,19 +17,23 @@
 <!-- body -->
 <body>
   <div class="container">
-    <table data-toggle="table"
-    data-pagination="true"
+    
+    <table 
+    data-toggle="table"
+    
     data-search="true"
     data-checkbox="true"
-    data-url="https://jsonplaceholder.typicode.com/users/">
+    data-url="https://examples.wenzhixin.net.cn/examples/bootstrap_table/data">
         <thead>
           <tr>
             <th data-checkbox="true" ></th>
-            <th data-sortable="true" data-field="id">Item ID</th>
-            <th data-sortable="true" data-field="name">Customer Name</th>
-            <th data-field="username" data-field="username">Username</th>
-            <th data-field="email" data-field="email">Email</th>
-            <th data-field="phone" data-field="phone">Phone</th>
+            <th data-sortable="true" data-field="id">ID</th>
+            <th data-sortable="true" data-field="utility account">utility account</th>
+            <th data-field="bill account">bill account</th>
+            <th data-field="name">Customer Name</th>
+            <th data-field="utility">Utility</th>
+            <th data-field="service address">Service Address</th>
+            <th data-field="payment options">Payment Options</th>
           </tr>
         </thead>
         <!-- <tbody>
@@ -47,11 +51,18 @@
       </table>
     </div>
 <!-- Scripts -->
+<script>
+  function responseHandler(res) {
+    return JSON.parse(res)
+  }
+</script>
 <script src="/js/fluid-design-system.js"></script>
 <script src="/js/jquery.min.js"></script>
 <script src="/js/popper.min.js"></script>
-<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+<!-- Bootstrap Tables -->
 <script src="/js/bootstrap-table.min.js"></script>
+
+
 <!-- Engie fluid design js -->
   <script>
     document.addEventListener('DOMContentLoaded', function(event) {
