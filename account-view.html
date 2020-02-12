@@ -10,7 +10,7 @@
     
     <!-- app.css combines bootstrap, engie fluid design, and custom styles -->
     <link rel="stylesheet" href="css/app.css">
-    <!-- <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.15.5/dist/bootstrap-table.min.css"> -->
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.css">
     <title>My Account List</title>
 </head>
 
@@ -19,10 +19,11 @@
   <div class="container">
     
     <table 
+    id="table"
     data-toggle="table"
-    
     data-search="true"
     data-checkbox="true"
+    data-page-size="25"
     data-url="https://examples.wenzhixin.net.cn/examples/bootstrap_table/data">
         <thead>
           <tr>
@@ -49,6 +50,26 @@
           </tr>
         </tbody> -->
       </table>
+      <nav aria-label="Page navigation example">
+        <ul class="nj-pagination">
+          <li class="nj-pagination__item">
+            <a class="nj-pagination__link" href="#" aria-label="Previous">
+              <i class="nj-pagination__nav material-icons">chevron_left</i>
+            </a>
+          </li>
+          <li class="nj-pagination__item"><a class="nj-pagination__link" href="#" aria-label="Page 1">1</a></li>
+          <li class="nj-pagination__item"><a class="nj-pagination__link" href="#" aria-label="Page 2">2</a></li>
+          <li class="nj-pagination__item nj-pagination__item--active"><a class="nj-pagination__link" href="#" aria-label="Page 3">3</a></li>
+          <li class="nj-pagination__item"><a class="nj-pagination__link" href="#" aria-label="Page 4">4</a></li>
+          <li class="nj-pagination__item"><a class="nj-pagination__link" href="#" aria-label="Page 5">5</a></li>
+          <li class="nj-pagination__item">
+            <a class="nj-pagination__link" href="#" aria-label="Next">
+              <i class="nj-pagination__nav material-icons">chevron_right</i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      
     </div>
 <!-- Scripts -->
 <script>
@@ -56,11 +77,14 @@
     return JSON.parse(res)
   }
 </script>
+
 <script src="/js/fluid-design-system.js"></script>
 <script src="/js/jquery.min.js"></script>
 <script src="/js/popper.min.js"></script>
+<script src="/js/custom.js"></script>
 <!-- Bootstrap Tables -->
-<script src="/js/bootstrap-table.min.js"></script>
+<script src="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
 
 
 <!-- Engie fluid design js -->
@@ -69,5 +93,6 @@
       NJ.AutoInit();
     });
   </script>
+  
 </body>
 </html>

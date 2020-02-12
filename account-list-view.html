@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Lato:300,400,700,900&display=swap" rel="stylesheet"/>
+    
+    
+    <!-- app.css combines bootstrap, engie fluid design, and custom styles -->
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.css">
+    <title>My Account List</title>
+</head>
+
+<!-- body -->
+<body>
+  <div class="container">
+    <table class="nj-table"
+      data-checkbox="true"
+      id="table"
+      data-toggle="table"
+      data-search="true"
+      data-side-pagination="server"
+      data-url="https://jsonplaceholder.typicode.com/users">
+      <thead>
+        <tr>
+          <th data-checkbox="true"></th>
+          <th data-field="id">ID</th>
+          <th data-field="name">Item Name</th>
+          <th data-field="price">Item Price</th>
+        </tr>
+      </thead>
+    </table>
+    <nav aria-label="Page navigation example">
+      <ul class="nj-pagination">
+        <li class="nj-pagination__item">
+          <a class="nj-pagination__link" href="#" aria-label="Previous">
+            <i class="nj-pagination__nav material-icons">chevron_left</i>
+          </a>
+        </li>
+        <li class="nj-pagination__item"><a class="nj-pagination__link" href="#" aria-label="Page 1">1</a></li>
+        <li class="nj-pagination__item"><a class="nj-pagination__link" href="#" aria-label="Page 2">2</a></li>
+        <li class="nj-pagination__item nj-pagination__item--active"><a class="nj-pagination__link" href="#" aria-label="Page 3">3</a></li>
+        <li class="nj-pagination__item"><a class="nj-pagination__link" href="#" aria-label="Page 4">4</a></li>
+        <li class="nj-pagination__item"><a class="nj-pagination__link" href="#" aria-label="Page 5">5</a></li>
+        <li class="nj-pagination__item">
+          <a class="nj-pagination__link" href="#" aria-label="Next">
+            <i class="nj-pagination__nav material-icons">chevron_right</i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function(event) {
+      NJ.AutoInit();
+    });
+  </script>
+  
+  <script src="/js/fluid-design-system.js"></script>
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/popper.min.js"></script>
+  <script src="/js/custom.js"></script>
+  <!-- Bootstrap Tables -->
+  <script src="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.js"></script>
+</body>
+</html>
