@@ -1,0 +1,110 @@
+bill account
+960626603
+9534511002
+8925236002
+8754761001
+8109238000
+7758162003
+5195765000
+2059501005
+1098086000
+0834112006
+
+utility account
+0642083001
+08056883700007328599
+08058409600007266945
+08053496110006577950
+08058688250007200951
+08055342950006810635
+3125045000
+08051697640007195757
+3883741001
+2510360006
+
+account status
+Active
+Active
+Active
+Pending
+Finalized
+Finalized
+Pending
+Active
+Active
+Active
+
+supply start date
+03/4/2015
+03/4/2015
+03/4/2015
+03/4/2015
+03/4/2015
+03/4/2015
+03/4/2015
+03/4/2015
+03/4/2015
+03/4/2015
+
+PO Box 400
+Oakland, ME 04963-0400
+PO Box 400
+Oakland, ME 04963-0400
+PO Box 400
+Oakland, ME 04963-0400
+PO Box 400
+Oakland, ME 04963-0400
+PO Box 400
+Oakland, ME 04963-0400
+PO Box 400
+Oakland, ME 04963-0400
+PO Box 400
+Oakland, ME 04963-0400
+PO Box 400
+Oakland, ME 04963-0400
+PO Box 400
+Oakland, ME 04963-0400
+PO Box 400
+Oakland, ME 04963-0400
+Service Address
+
+utility
+West Penn 
+Power
+West Penn 
+Power
+West Penn 
+Power
+West Penn 
+Power
+Rockland 
+Electric
+West Penn 
+Power
+Rockland
+Electric
+Rockland 
+Electric
+Rockland 
+Electric
+Rockland 
+Electric
+
+$ 641.54
+$ 386.52
+$ 16,117.61
+$ 425.39
+$ 458.26
+$ 500.78
+$ 6,169.04
+
+02/29/2020
+02/28/2020
+02/28/2020
+02/28/2020
+02/21/2020
+02/21/2020
+02/18/2020
+02/17/2020
+01/15/2020
+02/11/2020

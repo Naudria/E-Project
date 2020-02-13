@@ -15,27 +15,44 @@
 </head>
 
 <!-- body -->
-<body>
-  <div class="container">
-    <table class="nj-table"
+<body class="table-page">
+  <div class="container" id="table-page">
+    <table class="nj-table nj-table--striped no-border"
       data-checkbox="true"
       id="table"
       data-toggle="table"
       data-search="true"
       data-side-pagination="server"
-      data-url="https://jsonplaceholder.typicode.com/users">
+      >
       <thead>
         <tr>
           <th data-checkbox="true" ></th>
-            <th data-sortable="true" data-field="id">ID</th>
+            <th data-sortable="true" data-field="bill account">bill account</th>
             <th data-sortable="true" data-field="utility account">utility account</th>
-            <th data-field="bill account">bill account</th>
-            <th data-field="name">Customer Name</th>
-            <th data-field="utility">Utility</th>
+            <th data-sortable="true" data-field="account status">Account Status</th>
+            <th data-field="supply start date">Supply Start Date</th>
             <th data-field="service address">Service Address</th>
-            <th data-field="payment options">Payment Options</th>
+            <th data-field="utility">Utility</th>
+            <th data-field="account balance">Account Balance</th>
+            <th data-field="due by">Due By</th>
+            <!-- <th data-field="payment options">Ownership</th>
+            <th data-field="payment options">Programs</th> -->
         </tr>
       </thead>
+      <tbody>
+        <tr>
+          <td></td>
+          <td>0834112006</td>
+          <td>0642083001</td>
+          <td>Active</td>
+          <td>03/4/2015</td>
+          <td>PO Box 400 Oakland, ME 04963-0400</td>
+          <td>West Penn Power</td>
+          <td>$ 641.54</td>
+          <td>02/29/2020</td>
+        </tr>
+        
+      </tbody>
     </table>
     <nav aria-label="Page navigation example">
       <ul class="nj-pagination">
