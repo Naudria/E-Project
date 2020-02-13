@@ -55,3 +55,22 @@ EDC
 Bill Account
 Account Balance
 Due By
+
+* Log in to the customer portal (successful & unsuccessful) 
+
+As a user, I want the ability to enter my email address and password on the login screen so 
+that I can log in to the customer self-service portal. 
+If log in attempt is unsuccessful, I will see the following message - "The email address/password combinations is not valid."
+If the system isn't able to successfully authenticate me twice, I will see the following message - "The email address/password combination is not valid. [Line Break]For security reasons, after 3 more failed login attempt(s) your account will be locked. Would you like to reset your password?"
+This should continue to count down as the system is not able to authenticate me each time. 
+As a user, when I login I want to be taken to the customer portal landing page when I click on the Sign In button (and sign in is successful) 
+
+Show/Hide Password (mask or unmask) 
+As a user I want to be able to click on "Show" in the password field so that I  can view the password as unmasked
+Show will toggle with Hide so that once the password is visible I can then mask the password again 
+Forgot Password 
+As a user I want to be able to click on Forgot password? and be taken to the Forgot password screen
+Initiate Payment without sign in 
+As a user I want to have the ability to initiate a payment without having to log into the customer portal.  
+As a user, I want to to be able to initiate a payment without having to log into the customer portal.  I will see the following text/link so that i can initiate a payment without signing in:  "Just need to make a payment?  Continue without signing in" 
+Clicking on the "Continue without signing in" will take me to the Forte Modal

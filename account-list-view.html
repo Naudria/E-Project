@@ -13,14 +13,94 @@
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.css">
     <title>My Account List</title>
 </head>
+<!-- NAVBAR -->
+<header>
+  <nj-navbar>
+    <nav class="nj-navbar nj-navbar--blue nj-navbar--expand-xl">
+      <a class="nj-navbar__brand" href="#"><svg class="nj-navbar__logo"><use href="/images/logo-engie-white.svg#logo-engie-white" /></svg></a>
+      <!-- HEADER LINKS -->
+      <div class="nj-navbar--collapse nj-collapse" id="navbarHeader">
+        <ul class="nj-navbar__nav ml-auto">
+          <!-- <li class="nj-navbar__nav-item">
+            <a class="nj-navbar__nav-link nj-navbar__nav-link--icon" href="#">
+              <i class="material-icons md--white">notifications</i>    
+            </a>
+          </li> -->
+          <!-- Language dropdown -->
+          <li class="nj-navbar__nav-item" >
+            <nj-collapse >
+              <nj-dropdown >
+            <a style="background-image:none;" href="#language-dropdown" class="nj-navbar__nav-link nj-navbar__nav-link--icon nj-dropdown" data-toggle="collapse">
+              <i class="material-icons md--white">language</i>
+            </a>
+            <div class="nj-dropdown__list nj-collapse" id="language-dropdown">
+              <div class="nj-card border">
+                <div class="nj-list-group nj-list-group--no-border nj-list-group--sm my-1">
+                  <button type="button" class="nj-list-group__item" data-value="login">English</button>
+                  <button type="button" class="nj-list-group__item" data-value="logout">Spanish</button>
+                </div>
+              </div>
+            </div>
+          </nj-dropdown>
+          </nj-collapse>
+          <!-- Login dropdown -->
+          </li>
+          <li class="nj-navbar__nav-item" >
+            <nj-collapse >
+              <nj-dropdown >
+            <a style="background-image:none;" href="#login-dropdown" class="nj-navbar__nav-link nj-navbar__nav-link--icon nj-dropdown" data-toggle="collapse">
+              <i class="material-icons md--white">person</i>
+            </a>
+            <div class="nj-dropdown__list nj-collapse" id="login-dropdown">
+              <div class="nj-card border">
+                <div class="nj-list-group nj-list-group--no-border nj-list-group--sm my-1">
+                  <button type="button" class="nj-list-group__item" data-value="login">My Profile & Preferences</button>
+                  <button type="button" class="nj-list-group__item" data-value="login">Admin Settings</button>
+                  <button type="button" class="nj-list-group__item" data-value="logout">Sign Out</button>
+                </div>
+              </div>
+            </div>
+          </nj-dropdown>
+          </nj-collapse>
+
+          </li>
+          <!-- <li class="nj-navbar__nav-item">
+            <a class="nj-navbar__nav-link nj-navbar__nav-link--icon" href="#">
+              <i class="material-icons md--white">person</i>
+              
+            </a>
+          </li> -->
+          <li class="nj-navbar__nav-item">
+            <a class="nj-navbar__nav-link nj-navbar__nav-link--icon" data-toggle="collapse" 
+            href="#collapse-search-bar-example" aria-expanded="false" aria-controls="collapse-search-bar-example">
+              <i class="material-icons md--white">search</i>
+            </a>
+          </li>
+          
+        </ul>
+        <form class="nj-navbar__search nj-collapse" id="collapse-search-bar-example">
+          <input class="nj-form-control mr-3" type="text" id="search-href" placeholder="Enter your query...">
+          <button type="submit" class="nj-btn nj-btn--primary flex-keep">Search</button>
+          <a href="#" class="nj-navbar__nav-link nj-navbar__nav-link--icon nj-collapse-inline__close" aria-label="Close"
+            data-dismiss="#collapse-search-bar-example">
+            <i class="material-icons md--blue-corporate">close</i>
+          </a>
+        </form>
+      </div>
+    </nav>
+  </nj-navbar>
+</header>
+<!-- end navbar -->
 
 <!-- body -->
 <body class="table-page">
+  <div class="container">
+  <h5 class="table-heading">Verizon Sourcing LLC - 11 Accounts</h5>
   <div class="container" id="table-page">
     <table class="nj-table nj-table--striped no-border"
+      data-toggle="table"
       data-checkbox="true"
       id="table"
-      data-toggle="table"
       data-search="true"
       data-side-pagination="server"
       >
@@ -48,10 +128,53 @@
           <td>03/4/2015</td>
           <td>PO Box 400 Oakland, ME 04963-0400</td>
           <td>West Penn Power</td>
-          <td>$ 641.54</td>
+          <td>$641.54</td>
           <td>02/29/2020</td>
         </tr>
-        
+        <tr>
+          <td></td>
+          <td>9534511002</td>
+          <td>08056883700007328599</td>
+          <td>Active</td>
+          <td>03/4/2015</td>
+          <td>PO Box 400 Oakland, ME 04963-0400</td>
+          <td>West Penn Power</td>
+          <td>$386.52</td>
+          <td>02/28/2020</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>8754761001</td>
+          <td>08053496110006577950</td>
+          <td>Pending</td>
+          <td>03/4/2015</td>
+          <td>PO Box 400 Oakland, ME 04963-0400</td>
+          <td>Rockland Electric</td>
+          <td>$16,117.61</td>
+          <td>02/17/2020</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>9534511002</td>
+          <td>08056883700007328599</td>
+          <td>Active</td>
+          <td>03/4/2015</td>
+          <td>PO Box 400 Oakland, ME 04963-0400</td>
+          <td>West Penn Power</td>
+          <td>$386.52</td>
+          <td>02/28/2020</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>9534511002</td>
+          <td>08056883700007328599</td>
+          <td>Active</td>
+          <td>03/4/2015</td>
+          <td>PO Box 400 Oakland, ME 04963-0400</td>
+          <td>West Penn Power</td>
+          <td>$386.52</td>
+          <td>02/28/2020</td>
+        </tr>
       </tbody>
     </table>
     <nav aria-label="Page navigation example">
@@ -74,6 +197,7 @@
       </ul>
     </nav>
   </div>
+  </div>
 
   <!-- Scripts -->
   <script>
@@ -88,5 +212,6 @@
   <script src="/js/custom.js"></script>
   <!-- Bootstrap Tables -->
   <script src="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.js"></script>
+  
 </body>
 </html>

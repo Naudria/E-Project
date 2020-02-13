@@ -444,7 +444,7 @@ bottom: .5em;
 
 #table-page {
 	background-color: #fff;
-	margin-top: 5rem;
+	margin-top: 2rem;
 	padding-top: 1rem;
 	padding-bottom: 1rem;
 	border-radius: .25rem;
@@ -452,7 +452,7 @@ bottom: .5em;
 
 th {
 	text-transform: uppercase;
-	font-size: .8rem;
+	font-size: .7rem;
 }
 
 td {
@@ -461,4 +461,8 @@ td {
 
 .no-border {
 	border: none;
+}
+
+.table-heading {
+	margin-top: 2rem;
 }
