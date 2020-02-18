@@ -9,8 +9,40 @@
     
     <!-- app.css combines bootstrap, engie fluid design, and custom styles -->
     <link rel="stylesheet" href="css/app.css">
-    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.css">
-    
+    <link rel="stylesheet" href="scss/styles.scss">
+    <script src="https://unpkg.com/ag-grid-community/dist/ag-grid-community.min.noStyle.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/ag-grid-community/dist/styles/ag-grid.css">
+    <link rel="stylesheet" href="https://unpkg.com/ag-grid-community/dist/styles/ag-theme-balham.css">
+    <style>
+        body, html {
+            height: 99%;
+            margin:2px;
+            background-color: #f5f5f5;
+            font-family: "Lato", -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+          }
+          
+         .container {
+            display: flex;
+            flex-direction: column;
+            margin-top:3rem;
+            height: 100%;
+          }
+          
+          
+      .container .ag-grid-angular {
+            flex-basis: 100%;
+            display: flex;
+            flex-grow: 1;
+          }
+        
+          ag-grid-angular{
+            height: 100%;
+          }
+
+          .ag-theme-balham .ag-header{
+              background-color: white;
+          }
+    </style>
     <title>My Account List</title>
 </head>
 <!-- NAVBAR -->
@@ -92,128 +124,58 @@
 </header>
 <!-- end navbar -->
 
-<!-- body -->
-<body class="table-page">
-  <div class="container">
-  <h5 class="table-heading">Verizon Sourcing LLC - 11 Accounts</h5>
-  <div class="container" id="table-page">
-    
-    <table class="nj-table nj-table--striped no-border"
-      data-toggle="table"
-      data-toolbar="#toolbar"
-      data-checkbox="true"
-      id="table"
-      data-sort-account="bill account"
-      data-sort-order="desc"
-      data-search="true"
-      data-side-pagination="server"
-      >
-      <thead>
-        <tr>
-          <th data-checkbox="true" ></th>
-            <th data-sortable="true" data-field="bill account">bill account</th>
-            <th data-sortable="true" data-field="utility account">utility account</th>
-            <th data-sortable="true" data-field="account status">Account Status</th>
-            <th data-field="supply start date">Supply Start Date</th>
-            <th data-field="service address">Service Address</th>
-            <th data-field="utility">Utility</th>
-            <th data-field="account balance">Account Balance</th>
-            <th data-field="due by">Due By</th>
-            <th data-field="pay"></th>
-            <!-- <th data-field="payment options">Ownership</th>
-            <th data-field="payment options">Programs</th> -->
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td></td>
-          <td>0834112006</td>
-          <td>0642083001</td>
-          <td>Active</td>
-          <td>03/4/2015</td>
-          <td>PO Box 400 Oakland, ME 04963-0400</td>
-          <td>West Penn Power</td>
-          <td>$641.54</td>
-          <td>02/29/2020</td>
-          <td><button type="button" class="nj-btn nj-btn--primary">Pay</button></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>9534511002</td>
-          <td>08056883700007328599</td>
-          <td>Active</td>
-          <td>03/4/2015</td>
-          <td>PO Box 400 Oakland, ME 04963-0400</td>
-          <td>West Penn Power</td>
-          <td>$386.52</td>
-          <td>02/28/2020</td>
-          <td><button type="button" class="nj-btn nj-btn--primary">Pay</button></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>8754761001</td>
-          <td>08053496110006577950</td>
-          <td>Pending</td>
-          <td>03/4/2015</td>
-          <td>PO Box 400 Oakland, ME 04963-0400</td>
-          <td>Rockland Electric</td>
-          <td>$16,117.61</td>
-          <td>02/17/2020</td>
-          <td><button type="button" class="nj-btn nj-btn--primary">Pay</button></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>9534511002</td>
-          <td>08056883700007328599</td>
-          <td>Active</td>
-          <td>03/4/2015</td>
-          <td>PO Box 400 Oakland, ME 04963-0400</td>
-          <td>West Penn Power</td>
-          <td>$386.52</td>
-          <td>02/28/2020</td>
-          <td><button type="button" class="nj-btn nj-btn--primary">Pay</button></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>9534511002</td>
-          <td>08056883700007328599</td>
-          <td>Active</td>
-          <td>03/4/2015</td>
-          <td>PO Box 400 Oakland, ME 04963-0400</td>
-          <td>West Penn Power</td>
-          <td>$386.52</td>
-          <td>02/28/2020</td>
-          <td><button type="button" class="nj-btn nj-btn--primary">Pay</button></td>
-        </tr>
-      </tbody>
-    </table>
-    <nav aria-label="Page navigation example">
-      <ul class="nj-pagination">
-        <li class="nj-pagination__item">
-          <a class="nj-pagination__link" href="#" aria-label="Previous">
-            <i class="nj-pagination__nav material-icons">chevron_left</i>
-          </a>
-        </li>
-        <li class="nj-pagination__item"><a class="nj-pagination__link" href="#" aria-label="Page 1">1</a></li>
-        <li class="nj-pagination__item"><a class="nj-pagination__link" href="#" aria-label="Page 2">2</a></li>
-        <li class="nj-pagination__item nj-pagination__item--active"><a class="nj-pagination__link" href="#" aria-label="Page 3">3</a></li>
-        <li class="nj-pagination__item"><a class="nj-pagination__link" href="#" aria-label="Page 4">4</a></li>
-        <li class="nj-pagination__item"><a class="nj-pagination__link" href="#" aria-label="Page 5">5</a></li>
-        <li class="nj-pagination__item">
-          <a class="nj-pagination__link" href="#" aria-label="Next">
-            <i class="nj-pagination__nav material-icons">chevron_right</i>
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-  </div>
-
+<body>
+    <div class="container">
+    <div id="myGrid" style="height:100%; width:100%;" class="ag-theme-balham"></div>
+</div>
   <!-- Scripts -->
   <script>
     document.addEventListener('DOMContentLoaded', function(event) {
       NJ.AutoInit();
     });
+  </script>
+  <script type="text/javascript" charset="utf-8">
+
+    // specify the columns
+    var columnDefs = [
+      {headerName: "Bill Account", field: "bill_account", sortable: true, filter: true},
+      {headerName: "Utility Account", field: "utility_account", sortable: true, filter: true},
+      {headerName: "Account Status", field: "account_status", sortable: true, filter: true},
+      {headerName: "Supply Start Date", field: "supply_start_date", sortable: true, filter: true},
+      {headerName: "Service Address", field: "service_address", sortable: true, filter: true},
+      {headerName: "Utility", field: "utility", sortable: true, filter: true},
+      {headerName: "Account Balance", field: "account_balance", sortable: true, filter: true},
+      {headerName: "Due By", field: "due_by", sortable: true, filter: true},
+      {headerName: "Ownership", field: "ownership", sortable: true, filter: true},
+      {headerName: "Programs", field: "programs", sortable: true, filter: true},
+      {headerName: "", field: "pay"}
+    ];
+
+    // specify the data
+    var rowData = [
+      {bill_account: 0834112006, utility_account: 0642083001, account_status: "active", 
+      supply_start_date: "04-MAR-2015", service_address: "PO Box 400 Oakland, ME 04963-0400", 
+      utility: "West Penn Tower", account_balance: "$641.54", due_by: "02/28/2020", },
+      {bill_account: 9534511002, utility_account: 08056883700007328599, account_status: "active", 
+      supply_start_date: "05-MAR-2015", service_address: "PO Box 400 Oakland, ME 04963-0400", 
+      utility: "West Penn Tower", account_balance: "$641.54", due_by: 02/28/2020, },
+      {bill_account: 0834112006, utility_account: 0642083001, account_status: "active", 
+      supply_start_date: 03/4/2015, service_address: "PO Box 400 Oakland, ME 04963-0400", 
+      utility: "West Penn Tower", account_balance: "$641.54", due_by: 02/28/2020, },
+    ];
+
+    // let the grid know which columns and what data to use
+    var gridOptions = {
+      columnDefs: columnDefs,
+      rowData: rowData
+    };
+
+  // lookup the container we want the Grid to use
+  var eGridDiv = document.querySelector('#myGrid');
+
+  // create the grid passing in the div to use together with the columns & data we want to use
+  new agGrid.Grid(eGridDiv, gridOptions);
+
   </script>
   <script src="/js/fluid-design-system.js"></script>
   <script src="/js/jquery.min.js"></script>
