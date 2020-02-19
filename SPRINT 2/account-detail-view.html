@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Material+Icons|Lato:300,400,700,900&display=swap" rel="stylesheet"/>
     
     <!-- app.css combines bootstrap, engie fluid design, and custom styles -->
-    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="../css/app.css">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" 
     rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     
@@ -18,7 +18,7 @@
 <header>
   <nj-navbar>
     <nav class="nj-navbar nj-navbar--blue nj-navbar--expand-xl">
-      <a class="nj-navbar__brand" href="#"><svg class="nj-navbar__logo"><use href="/images/logo-engie-white.svg#logo-engie-white" /></svg></a>
+      <a class="nj-navbar__brand" href="#"><svg class="nj-navbar__logo"><use href="../images/logo-engie-white.svg#logo-engie-white" /></svg></a>
       <!-- HEADER LINKS -->
       <div class="nj-navbar--collapse nj-collapse" id="navbarHeader">
         <ul class="nj-navbar__nav ml-auto">
@@ -110,9 +110,9 @@
           <div class="col-md-3 mt-4">
             <div class="nj-card mb-3">
               <div class="nj-card__body">
-                <h4 class="nj-card__title">Verizon Sourcing LLC</h4>
-                <div class="nj-card__number mt-5 mb-1">7,234,000</div>
-                <div class="nj-card__growth"><i class="material-icons md--green mr-1">check_circle</i> 1,6%</div>
+                <h4 class="nj-card__title"><i class="material-icons md--blue-engie">bolt</i>Verizon Sourcing LLC</h4>
+                
+                <div class="nj-card__growth"><div class="nj-badge nj-badge--blue-corporate">TP</div></div>
               </div>
             </div>
           </div>
@@ -120,7 +120,7 @@
             <div class="nj-card mb-3">
               <div class="nj-card__body">
                 <h4 class="nj-card__title">Contact</h4>
-                <div class="nj-card__number mt-5 mb-1">7,234,000</div>
+                
                 <div class="nj-card__growth"><i class="material-icons md--white mr-1">change_history</i> 1,6%</div>
               </div>
             </div>
@@ -129,8 +129,8 @@
             <div class="nj-card mb-3">
               <div class="nj-card__body">
                 <h4 class="nj-card__title">Account Settings</h4>
-                <div class="nj-card__number mt-5 mb-1">7,234,000</div>
-                <div class="nj-card__growth"><i class="material-icons md--white mr-1">change_history</i> 1,6%</div>
+                
+                
               </div>
               <!-- end card -->
             </div>
@@ -144,8 +144,14 @@
                 <div class="nj-card mb-3">
                   <div class="nj-card__body">
                     <h4 class="nj-card__title">Summary of Charges</h4>
-                    <div class="nj-card__number mt-5 mb-1">7,234,000</div>
-                    <div class="nj-card__growth"><i class="material-icons md--white mr-1">change_history</i> 1,6%</div>
+                    <div class="col-sm-5 pl-0">
+                    <ul class="nj-list-group nj-list-group--sm">
+                        <li class="nj-list-group__item"><i class="material-icons md-24 mr-1">keyboard_arrow_down</i>Lorem ipsum dolor sit amet</li>
+                        <li class="nj-list-group__item"><i class="material-icons md-24 mr-1">keyboard_arrow_down</i>Lorem ipsum dolor sit amet</li>
+                        <li class="nj-list-group__item"><i class="material-icons md-24 mr-1">keyboard_arrow_down</i>Lorem ipsum dolor sit amet</li>
+                        <li class="nj-list-group__item"><i class="material-icons md-24 mr-1">keyboard_arrow_down</i>Lorem ipsum dolor sit amet</li>
+                      </ul>
+                    </div>
                   </div>
                   <!-- end card -->
                 </div>
@@ -162,10 +168,10 @@
       NJ.AutoInit();
     });
   </script>
-  <script src="/js/fluid-design-system.js"></script>
-  <script src="/js/jquery.min.js"></script>
-  <script src="/js/popper.min.js"></script>
-  <script src="/js/custom.js"></script>
+  <script src="../js/fluid-design-system.js"></script>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/custom.js"></script>
   
 </body>
 </html>
