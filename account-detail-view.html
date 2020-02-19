@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Lato:300,400,700,900&display=swap" rel="stylesheet"/>
+    
+    <!-- app.css combines bootstrap, engie fluid design, and custom styles -->
+    <link rel="stylesheet" href="css/app.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" 
+    rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    
+    <title>My Account List</title>
+</head>
+<!-- NAVBAR -->
+<header>
+  <nj-navbar>
+    <nav class="nj-navbar nj-navbar--blue nj-navbar--expand-xl">
+      <a class="nj-navbar__brand" href="#"><svg class="nj-navbar__logo"><use href="/images/logo-engie-white.svg#logo-engie-white" /></svg></a>
+      <!-- HEADER LINKS -->
+      <div class="nj-navbar--collapse nj-collapse" id="navbarHeader">
+        <ul class="nj-navbar__nav ml-auto">
+          <!-- <li class="nj-navbar__nav-item">
+            <a class="nj-navbar__nav-link nj-navbar__nav-link--icon" href="#">
+              <i class="material-icons md--white">notifications</i>    
+            </a>
+          </li> -->
+          <!-- Language dropdown -->
+          <li class="nj-navbar__nav-item" >
+            <nj-collapse >
+              <nj-dropdown >
+            <a style="background-image:none;" href="#language-dropdown" class="nj-navbar__nav-link nj-navbar__nav-link--icon nj-dropdown" data-toggle="collapse">
+              <i class="material-icons md--white">language</i>
+            </a>
+            <div class="nj-dropdown__list nj-collapse" id="language-dropdown">
+              <div class="nj-card border">
+                <div class="nj-list-group nj-list-group--no-border nj-list-group--sm my-1">
+                  <button type="button" class="nj-list-group__item" data-value="login">English</button>
+                  <button type="button" class="nj-list-group__item" data-value="logout">Spanish</button>
+                </div>
+              </div>
+            </div>
+          </nj-dropdown>
+          </nj-collapse>
+          <!-- Login dropdown -->
+          </li>
+          <li class="nj-navbar__nav-item" >
+            <nj-collapse >
+              <nj-dropdown >
+            <a style="background-image:none;" href="#login-dropdown" class="nj-navbar__nav-link nj-navbar__nav-link--icon nj-dropdown" data-toggle="collapse">
+              <i class="material-icons md--white">person</i>
+            </a>
+            <div class="nj-dropdown__list nj-collapse" id="login-dropdown">
+              <div class="nj-card border">
+                <div class="nj-list-group nj-list-group--no-border nj-list-group--sm my-1">
+                  <button type="button" class="nj-list-group__item" data-value="login">My Profile & Preferences</button>
+                  <button type="button" class="nj-list-group__item" data-value="login">Admin Settings</button>
+                  <button type="button" class="nj-list-group__item" data-value="logout">Sign Out</button>
+                </div>
+              </div>
+            </div>
+          </nj-dropdown>
+          </nj-collapse>
+
+          </li>
+          <!-- <li class="nj-navbar__nav-item">
+            <a class="nj-navbar__nav-link nj-navbar__nav-link--icon" href="#">
+              <i class="material-icons md--white">person</i>
+              
+            </a>
+          </li> -->
+          <li class="nj-navbar__nav-item">
+            <a class="nj-navbar__nav-link nj-navbar__nav-link--icon" data-toggle="collapse" 
+            href="#collapse-search-bar-example" aria-expanded="false" aria-controls="collapse-search-bar-example">
+              <i class="material-icons md--white">search</i>
+            </a>
+          </li>
+          
+        </ul>
+        <form class="nj-navbar__search nj-collapse" id="collapse-search-bar-example">
+          <input class="nj-form-control mr-3" type="text" id="search-href" placeholder="Enter your query...">
+          <button type="submit" class="nj-btn nj-btn--primary flex-keep">Search</button>
+          <a href="#" class="nj-navbar__nav-link nj-navbar__nav-link--icon nj-collapse-inline__close" aria-label="Close"
+            data-dismiss="#collapse-search-bar-example">
+            <i class="material-icons md--blue-corporate">close</i>
+          </a>
+        </form>
+      </div>
+    </nav>
+  </nj-navbar>
+</header>
+<!-- end navbar -->
+
+<body id="detail-view-bg">
+    <div class="container" >
+        <div class="row">
+          <div class="col-md-3 mt-4">
+            <div class="nj-card mb-3">
+              <div class="nj-card__body">
+                <h4 class="nj-card__title">My Current Bill</h4>
+                <div class="nj-card__number mt-2 mb-3">$573.78</div>
+                <a href="#" class="nj-link">View Bill</a>
+                <button role="button" class="nj-btn nj-btn--outline-primary float-right">Pay Now</button>
+            
+            </div>
+            </div>
+          </div>
+          <div class="col-md-3 mt-4">
+            <div class="nj-card mb-3">
+              <div class="nj-card__body">
+                <h4 class="nj-card__title">Verizon Sourcing LLC</h4>
+                <div class="nj-card__number mt-5 mb-1">7,234,000</div>
+                <div class="nj-card__growth"><i class="material-icons md--green mr-1">check_circle</i> 1,6%</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mt-4">
+            <div class="nj-card mb-3">
+              <div class="nj-card__body">
+                <h4 class="nj-card__title">Contact</h4>
+                <div class="nj-card__number mt-5 mb-1">7,234,000</div>
+                <div class="nj-card__growth"><i class="material-icons md--white mr-1">change_history</i> 1,6%</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mt-4">
+            <div class="nj-card mb-3">
+              <div class="nj-card__body">
+                <h4 class="nj-card__title">Account Settings</h4>
+                <div class="nj-card__number mt-5 mb-1">7,234,000</div>
+                <div class="nj-card__growth"><i class="material-icons md--white mr-1">change_history</i> 1,6%</div>
+              </div>
+              <!-- end card -->
+            </div>
+            <!-- end column -->
+          </div>
+          <!-- end row -->
+        </div>
+        <!-- start row -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="nj-card mb-3">
+                  <div class="nj-card__body">
+                    <h4 class="nj-card__title">Summary of Charges</h4>
+                    <div class="nj-card__number mt-5 mb-1">7,234,000</div>
+                    <div class="nj-card__growth"><i class="material-icons md--white mr-1">change_history</i> 1,6%</div>
+                  </div>
+                  <!-- end card -->
+                </div>
+            <!-- end 2nd row -->
+        </div>
+        <!-- end container -->
+      </div>
+
+  
+  
+ <!-- Scripts -->
+ <script>
+    document.addEventListener('DOMContentLoaded', function(event) {
+      NJ.AutoInit();
+    });
+  </script>
+  <script src="/js/fluid-design-system.js"></script>
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/popper.min.js"></script>
+  <script src="/js/custom.js"></script>
+  
+</body>
+</html>

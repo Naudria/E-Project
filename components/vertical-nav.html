@@ -59,42 +59,109 @@
   <!-- end navbar -->
 
  <!-- Vertical navbar -->
- <div class="sidebar">
-
-  <ul class="sidebar-nav" >
-      <li id="navbar-toggle">
-          <a >Close <i class="material-icons" id="vert-nav-icons" >arrow_back_ios</i></a>
-      </li>
-      <li>
-          <a href="#">Dashboard <i class="material-icons" id="vert-nav-icons" >home</i></a>
-      </li>
-      <li>
-          <a href="#">Account History<i class="material-icons" id="vert-nav-icons" >history</i></a>
-      </li>
-      <li>
-          <a href="#">Billing Options<i class="material-icons" id="vert-nav-icons" >description</i></a>
-      </li>
-      <li>
-        <a href="#">Reporting<i class="material-icons" id="vert-nav-icons">insert_chart</i></a>
-    </li>
-      <nj-collapse>
-      <li>
-          <a data-toggle="collapse" href="#settingsDropdown">Settings<i class="material-icons" style="float:right">settings</i>
+ <!-- Bootstrap row -->
+<div class="row" id="body-row">
+  <!-- Sidebar -->
+  <div id="sidebar-container" class="sidebar-expanded d-none d-md-block"><!-- d-* hiddens the Sidebar in smaller devices. Its itens can be kept on the Navbar 'Menu' -->
+      <!-- Bootstrap List Group -->
+      <ul class="list-group">
+          <!-- Separator with title -->
+          <li class="list-group-item sidebar-separator-title text-muted d-flex align-items-center menu-collapsed">
+              <small>MAIN MENU</small>
+          </li>
+          <!-- /END Separator -->
+          <!-- Menu with submenu -->
+           <a href="#" data-toggle="sidebar-colapse" class="bg-light list-group-item list-group-item-action d-flex align-items-center">
+              <div class="d-flex w-100 justify-content-start align-items-center">
+                  <span id="collapse-icon" class="fa fa-2x mr-3"></span>
+                  <span id="collapse-text" class="menu-collapsed">Collapse</span>
+              </div>
+          </a>
+          <a href="#submenu1" data-toggle="collapse" aria-expanded="false" class="bg-light list-group-item list-group-item-action flex-column align-items-start">
+              <div class="d-flex w-100 justify-content-start align-items-center">
+                  <span class="fa fa-filter fa-fw mr-3"></span> 
+                  <span class="menu-collapsed">Filters</span>
+                  <span class="submenu-icon ml-auto"></span>
+              </div>
+          </a>
+          <!-- Submenu content -->
+          <div id='submenu1' class="collapse sidebar-submenu card">
+            <article class="card-group-item">
+              <header class="card-header">
+                <h6 class="title">Department </h6>
+              </header>
+              <div class="filter-content">
+                <div class="card-body">
+                <form>
+                  <label class="form-check">
+                    <input class="form-check-input" type="checkbox" value="">
+                    <span class="form-check-label">
+                      Mersedes Benz
+                    </span>
+                  </label> <!-- form-check.// -->
+                  <label class="form-check">
+                    <input class="form-check-input" type="checkbox" value="">
+                    <span class="form-check-label">
+                      Nissan Altima
+                    </span>
+                  </label>  <!-- form-check.// -->
+                  <label class="form-check">
+                    <input class="form-check-input" type="checkbox" value="">
+                    <span class="form-check-label">
+                      Another Brand
+                    </span>
+                  </label>  <!-- form-check.// -->
+                </form>
+                </div> <!-- card-body.// -->
+              </div>
+            </article> <!-- card-group-item.// -->
+          </div>
+          <a href="#submenu2" data-toggle="collapse" aria-expanded="false" class="bg-light list-group-item list-group-item-action flex-column align-items-start">
+              <div class="d-flex w-100 justify-content-start align-items-center">
+                  <span class="fal fa-sitemap fa-fw mr-3"></span>
+                  <span class="menu-collapsed">Layouts</span>
+                  <span class="submenu-icon ml-auto"></span>
+              </div>
+          </a>
+          <!-- Submenu content -->
+          <div id='submenu2' class="collapse sidebar-submenu">
+              <a href="#" class="list-group-item list-group-item-action bg-light">
+                  <span class="menu-collapsed">Settings</span>
               </a>
-      </li>
-      <div class="nj-collapse" id="settingsDropdown">
-        <ul class="sidebar-nav">
-          <li><a href="#" id="submenu">Personal Information</a></li>
-          <li><a href="#" id="submenu">Account Settings</a></li>
-          <li><a href="#" id="submenu">Payment Methods</a></li>
-          <li><a href="#" id="submenu">Notification Preferences</a></li>
-          <li><a href="#" id="submenu">Admin</a></li>
-        </ul>
-      </div>
-    </nj-collapse>
+              <a href="#" class="list-group-item list-group-item-action bg-light">
+                  <span class="menu-collapsed">Password</span>
+              </a>
+          </div>            
+          <a href="#" class="bg-light list-group-item list-group-item-action">
+              <div class="d-flex w-100 justify-content-start align-items-center">
+                  <span class="fa fa-tasks fa-fw mr-3"></span>
+                  <span class="menu-collapsed">Functions</span>    
+              </div>
+          </a>
+          <!-- Separator with title -->
+          <li class="list-group-item sidebar-separator-title text-muted d-flex align-items-center menu-collapsed">
+              <small>OPTIONS</small>
+          </li>
+          <!-- /END Separator -->
+          <a href="#" class="bg-light list-group-item list-group-item-action">
+              <div class="d-flex w-100 justify-content-start align-items-center">
+                  <span class="fa fa-edit fa-fw mr-3"></span>
+                  <span class="menu-collapsed">Edit Styles</span>
+              </div>
+          </a>
+          <!-- Separator without title -->
+          <li class="list-group-item sidebar-separator menu-collapsed"></li>            
+          <!-- /END Separator -->
+          <a href="#" class="bg-light list-group-item list-group-item-action">
+              <div class="d-flex w-100 justify-content-start align-items-center">
+                  <span class="fa fa-question fa-fw mr-3"></span>
+                  <span class="menu-collapsed">Help</span>
+              </div>
+          </a>
+         
+      </ul><!-- List Group END-->
+  </div><!-- sidebar-container END -->
 
-  </ul>
-</div>
 <!-- end vertical navbar -->
 
 <!-- placeholder container for content; please remove -->
