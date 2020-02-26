@@ -1221,6 +1221,16 @@ input[type="reset"].btn-block,
 input[type="button"].btn-block {
   width: 100%; }
 
+.nj-card-alt {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  border-radius: 0.25rem;
+}
+
 .nj-card {
   position: relative;
   display: flex;
