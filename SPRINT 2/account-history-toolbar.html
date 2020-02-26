@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Material+Icons|Lato:300,400,700,900&display=swap" rel="stylesheet"/>
     
     <!-- app.css combines bootstrap, engie fluid design, and custom styles -->
-    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="../css/app.css">
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.css">
     
     <title>Toolbar</title>
@@ -92,25 +92,40 @@
 
 <!-- end navbar -->
 
-<body id="detail-view-bg">
+<div class="container">
   <div class="row">
     <div class="col-md-12 mt-5">
-      <h4 class="ml-3">Verizon Sourcing LLC - 11 Accounts</h4>
+      <h4 class="ml-3">Account History</h4>
       <div class="nj-card m-3 mt-5">
         <div class="nj-card__body" id="no-top-padding">
           <div class="row">
-            <!-- column with search field -->
-          <div class="col-md-3">
-            <div class="nj-form-group nj-form-group--icon-right" id="no-top-padding">
-              <nj-form-input-text>
-                <label><i class="material-icons md">search</i></label>
-                <input type="text" class="nj-form-control" id="search" placeholder="Search by Account, name, address…">
-              </nj-form-input-text>
-            </div>
+            <!-- column with date field -->
+            <div class="col-md-3">
+              <form>
+                <div class="col">
+                  <div class="nj-form-group">
+                    <nj-collapse>
+                      <nj-dropdown>
+                        <div class="nj-dropdown" data-toggle="collapse" data-target="#dropdownPeriod" tabindex="0">
+                          <input type="hidden">
+                          <div class="nj-dropdown__label">Filter by Period</div>
+                          <div class="nj-dropdown__list nj-collapse" id="dropdownPeriod">
+                            <div class="nj-card border">
+                              <div class="nj-list-group nj-list-group--no-border nj-list-group--sm my-1">
+                                <button type="button" class="nj-list-group__item" data-value="ac">Last 12 Months</button>
+                                
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </nj-dropdown>
+                    </nj-collapse>
+                  </div>
+                </div>
+            </form>
           </div>
           <!-- end column with search field -->
-          <div class="col-md-2"></div>
-          <!-- end placeholder column -->
+          
           <div class="col-md-3">
             <form>
                 <div class="col">
@@ -118,8 +133,8 @@
                     <nj-collapse>
                       <nj-dropdown>
                         <div class="nj-dropdown" data-toggle="collapse" data-target="#dropdownSort" tabindex="0">
-                          <input type="hidden">
-                          <div class="nj-dropdown__label">Sort by:</div>
+                          <input type="hidden" placeholder="Status">
+                          <div class="nj-dropdown__label">Sort By</div>
                           <div class="nj-dropdown__list nj-collapse" id="dropdownSort">
                             <div class="nj-card border">
                               <div class="nj-list-group nj-list-group--no-border nj-list-group--sm my-1">
@@ -146,7 +161,7 @@
                     <nj-dropdown>
                       <div class="nj-dropdown" data-toggle="collapse" data-target="#dropdownShow" tabindex="0">
                         <input type="hidden">
-                        <div class="nj-dropdown__label">Show:</div>
+                        <div class="nj-dropdown__label">Show</div>
                         <div class="nj-dropdown__list nj-collapse" id="dropdownShow">
                           <div class="nj-card border">
                             <div class="nj-list-group nj-list-group--no-border nj-list-group--sm my-1">
@@ -165,6 +180,11 @@
           </form>
         </div>
         <!-- end show dropdown -->
+        <div class="col-md-3">
+          <div class="excel">
+            <a href="#" class="nj-link nj-link-icon nj-link-icon--before"><i class="material-icons">save_alt</i><span>Export to Excel</span></a>
+          </div>
+        </div>
           </div>
         </div>
         <!-- end second row -->
@@ -183,10 +203,10 @@
       NJ.AutoInit();
     });
   </script>
-  <script src="/js/fluid-design-system.js"></script>
-  <script src="/js/jquery.min.js"></script>
-  <script src="/js/popper.min.js"></script>
-  <script src="/js/custom.js"></script>
+  <script src="../js/fluid-design-system.js"></script>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/custom.js"></script>
   <!-- Bootstrap Tables -->
   <script src="/js/bootstrap-table.min.js"></script>
   

@@ -195,7 +195,13 @@ justify-content: space-between;
 	padding-top:.5rem;
 }
 
-
+.excel {
+	position: relative;
+	display: block;
+	height:2.5rem;
+	padding-top: 2.5rem;
+	padding-right:1rem;
+}
 #no-top-padding {
 	padding-top: 0;
 	padding-bottom:.5rem;
