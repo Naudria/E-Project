@@ -569,7 +569,7 @@ bottom: .5em;
 
 // Vertical Nav
 
-#sidebar {
+#sidebar.active {
 	min-width: 250px;
 	max-width: 250px;
 	// min-height: 100vh;
@@ -579,28 +579,20 @@ bottom: .5em;
 	box-shadow: 0 1px 5px 0 rgba(0,0,0,.1), 0 2px 2px 0 rgba(0,0,0,.06), 0 3px 1px -2px rgba(0,0,0,.06);
 }
 
-#sidebar.active {
+#sidebar {
     min-width: 80px;
-    max-width: 80px;
-    text-align: center;
+	max-width: 80px;
+	text-align: center;
+	position: fixed;
+	overflow-y:auto;
+    top: 0;
+    left: 0;
+    /* top layer */
+	z-index: 9999;
+	box-shadow: 0 1px 5px 0 rgba(0,0,0,.1), 0 2px 2px 0 rgba(0,0,0,.06), 0 3px 1px -2px rgba(0,0,0,.06);
 }
 
-// #sidebar ul li a {
-//     text-align: left;
-// }
 
-// #sidebar.active ul li a {
-//     padding: 20px 10px;
-//     text-align: center;
-//     font-size: 0.85em;
-// }
-
-// #sidebar.active ul li a i {
-//     margin-right:  0;
-//     display: block;
-//     font-size: 1.8em;
-// 	margin-bottom: 5px;
-// }
 
 i.reverse {
 	-ms-transform: rotate(180deg);
@@ -610,7 +602,7 @@ i.reverse {
 
 #no-styles {
 	background-color: transparent;
-	border: none;
+	border-bottom: none;
 	padding:0;
 }
 
@@ -618,11 +610,27 @@ i.reverse {
 	color:#757575;
 }
 
-
-.close-button {
-
+a[data-toggle="collapse"] {
+    position: relative;
 }
 
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+.close-button {
+	display:none;
+}
+
+@media (max-width: 768px) {
+    #sidebar {
+        max-width: 150px;
+    }
+}
 /* Same dropdown links padding*/
 #sidebar.active ul ul a {
     padding: 10px !important;
