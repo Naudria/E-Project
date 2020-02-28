@@ -10729,7 +10729,6 @@ table.dataTable thead .sorting_desc_disabled:before {
   max-width: 250px;
   height: 100%;
   background-color: #ffffff;
-  top: 0;
   overflow-y: auto;
   box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.1), 0 2px 2px 0 rgba(0, 0, 0, 0.06), 0 3px 1px -2px rgba(0, 0, 0, 0.06); }
 
@@ -10737,7 +10736,7 @@ table.dataTable thead .sorting_desc_disabled:before {
   min-width: 80px;
   max-width: 80px;
   text-align: center;
-  position: fixed;
+  position: absolute;
   overflow-y: auto;
   left: 0;
   /* top layer */
