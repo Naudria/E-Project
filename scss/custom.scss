@@ -572,9 +572,11 @@ bottom: .5em;
 #sidebar {
 	min-width: 250px;
 	max-width: 250px;
-	min-height: 100vh;
+	// min-height: 100vh;
+	height:100%;
 	background-color: #ffffff;
-	transition: all 0.3s;
+	// transition: all 0.3s;
+	box-shadow: 0 1px 5px 0 rgba(0,0,0,.1), 0 2px 2px 0 rgba(0,0,0,.06), 0 3px 1px -2px rgba(0,0,0,.06);
 }
 
 #sidebar.active {
@@ -583,22 +585,22 @@ bottom: .5em;
     text-align: center;
 }
 
-#sidebar ul li a {
-    text-align: left;
-}
+// #sidebar ul li a {
+//     text-align: left;
+// }
 
-#sidebar.active ul li a {
-    padding: 20px 10px;
-    text-align: center;
-    font-size: 0.85em;
-}
+// #sidebar.active ul li a {
+//     padding: 20px 10px;
+//     text-align: center;
+//     font-size: 0.85em;
+// }
 
-#sidebar.active ul li a i {
-    margin-right:  0;
-    display: block;
-    font-size: 1.8em;
-	margin-bottom: 5px;
-}
+// #sidebar.active ul li a i {
+//     margin-right:  0;
+//     display: block;
+//     font-size: 1.8em;
+// 	margin-bottom: 5px;
+// }
 
 i.reverse {
 	-ms-transform: rotate(180deg);
@@ -612,7 +614,14 @@ i.reverse {
 	padding:0;
 }
 
-.close-button {}
+#sidebarCollapse {
+	color:#757575;
+}
+
+
+.close-button {
+
+}
 
 /* Same dropdown links padding*/
 #sidebar.active ul ul a {

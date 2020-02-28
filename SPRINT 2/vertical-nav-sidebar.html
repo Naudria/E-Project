@@ -97,12 +97,13 @@
 <body id="detail-view-bg">
         <!-- Sidebar -->
         <nav id="sidebar">
-            <ul class="list-unstyled components p-3">
-                <li class="active nj-list-group__item" id="no-styles">
-                <i class="material-icons md-24 mr-1 reverse" id="sidebarCollapse" >keyboard_arrow_right</i>
-                <span class="close-button pb-1">Close</span>
+            <div class="nj-list-group" id="no-padding">
+            <ul class="list-unstyled components">
+                <li class="active nj-list-group__item " id="no-styles">
+                    <a href="#" class="nj-list-group__item"><i class="material-icons md-24 mr-1 reverse" id="sidebarCollapse" >keyboard_arrow_right</i>
+                <span class="close-button pb-1" id="sidebarClose" >Close</span></a>
                    </li>
-                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <!-- <ul class="collapse list-unstyled" id="homeSubmenu">
                         <li>
                             <a href="#">Home 1</a>
                         </li>
@@ -113,11 +114,32 @@
                             <a href="#">Home 3</a>
                         </li>
                     </ul>
+                </li> -->
+                <li class="active nj-list-group__item " id="no-styles">
+                    <a href="#" class="nj-list-group__item"> <i class="material-icons md-24 mr-1" id="sidebarCollapse" >home</i>
+                    <span class="close-button pb-1" id="sidebarClose" >Dashboard</span></a>
                 </li>
-                <li>
-                    <a href="#">About</a>
+                <li class="active nj-list-group__item" id="no-styles">
+                    <a href="#" class="nj-list-group__item"> <i class="material-icons md-24 mr-1" id="sidebarCollapse" >view_list</i>
+                    <span class="close-button pb-1" id="sidebarClose" >Account Details</span></a>
                 </li>
-                <li>
+                <li class="active nj-list-group__item " id="no-styles">
+                    <a href="#" class="nj-list-group__item"><i class="material-icons md-24 mr-1" id="sidebarCollapse" >calendar_today</i>
+                    <span class="close-button pb-1" id="sidebarClose" >Account History</span></a>
+                </li>
+                <li class="active nj-list-group__item " id="no-styles">
+                    <a href="#" class="nj-list-group__item"><i class="material-icons md-24 mr-1" id="sidebarCollapse" >attach_money</i>
+                    <span class="close-button pb-1" id="sidebarClose" >Payment Methods</span></a>
+                </li>
+                <li class="active nj-list-group__item" id="no-styles">
+                    <a href="#" class="nj-list-group__item"><i class="material-icons md-24 mr-1" id="sidebarCollapse" >insert_chart</i>
+                    <span class="close-button pb-1" id="sidebarClose" >Reporting</span></a>
+                </li>
+                <li class="active nj-list-group__item" id="no-styles">
+                    <a href="#" class="nj-list-group__item"><i class="material-icons md-24 mr-1" id="sidebarCollapse" >settings</i>
+                    <span class="close-button pb-1" id="sidebarClose" >Settings</span></a>
+                </li>
+                <!-- <li>
                     <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
                     <ul class="collapse list-unstyled" id="pageSubmenu">
                         <li>
@@ -136,8 +158,9 @@
                 </li>
                 <li>
                     <a href="#">Contact</a>
-                </li>
+                </li> -->
             </ul>
+        </div>
         </nav>
     <div class="container" >
     </div>
