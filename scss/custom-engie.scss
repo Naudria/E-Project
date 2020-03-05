@@ -3333,7 +3333,7 @@ textarea.nj-form-control {
     border-top: 0;
     border-right: 0;
     border-bottom: 1px solid #e0e0e0;
-    border-left: 2px solid transparent;
+    // border-left: 2px solid transparent;
     font-size: 1rem;
     transition: color 0.15s, background 0.15s, border-color 0.15s; }
     @media screen and (prefers-reduced-motion: reduce) {
@@ -3355,7 +3355,7 @@ textarea.nj-form-control {
       z-index: 2;
       font-weight: 700;
       background-color: #f5f5f5;
-      border-left-color: #0af; }
+      border-left: 2px solid #0af; }
       .nj-list-group__item.active :not(h5) {
         font-weight: 400; }
       .nj-list-group__item.active,

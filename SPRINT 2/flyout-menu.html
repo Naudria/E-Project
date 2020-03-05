@@ -8,16 +8,16 @@
     <link href="https://fonts.googleapis.com/css?family=Material+Icons|Lato:300,400,700,900&display=swap" rel="stylesheet"/>
     
     <!-- app.css combines bootstrap, engie fluid design, and custom styles -->
-    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="../css/app.css">
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.css">
     
-    <title>My Account List</title>
+    <title>Flyout Menu</title>
 </head>
 <!-- NAVBAR -->
 <header>
   <nj-navbar>
     <nav class="nj-navbar nj-navbar--blue nj-navbar--expand-xl">
-      <a class="nj-navbar__brand" href="#"><svg class="nj-navbar__logo"><use href="/images/logo-engie-white.svg#logo-engie-white" /></svg></a>
+      <a class="nj-navbar__brand" href="#"><svg class="nj-navbar__logo"><use href="../images/logo-engie-white.svg#logo-engie-white" /></svg></a>
       <!-- HEADER LINKS -->
       <div class="nj-navbar--collapse nj-collapse" id="navbarHeader">
         <ul class="nj-navbar__nav ml-auto">
@@ -136,7 +136,26 @@
           <td>$641.54</td>
           <td>02/29/2020</td>
           <td><button type="button" class="nj-btn nj-btn--primary">Pay</button></td>
-          <td><span href='#' style='font-size:xx-large;font-weight: bolder;flood-color: dimgrey; padding-left:1rem; padding-right:1rem;'>...</span></td>
+          <td>
+              <label class="dropdown">
+                <div class="dd-button" id="ellipses">
+                  ...
+                </div>
+                <input type="checkbox" class="dd-input" id="test">
+                <ul class="dd-menu">
+                  <li>Share Account</li>
+                  <li>Add Additional Account Owner</li>
+                  <li>Transfer Account</li>
+                  <li>Hide Account</li>
+                  <li>Release Account</li>
+                  <li>Enroll in AutoPay</li>
+                  <li>Enroll in Paperless Billing</li>
+                  <li>Export to Excel</li>
+                  <li>Add to Billing Group</li>
+                  <li>And Service/Drop Account</li>
+                </ul>    
+              </label>
+        </td>
         </tr>
         <tr>
           <td></td>
@@ -149,7 +168,20 @@
           <td>$386.52</td>
           <td>02/28/2020</td>
           <td><button type="button" class="nj-btn nj-btn--primary">Pay</button></td>
-          <td><span href='#' style='font-size:xx-large;font-weight: bolder;flood-color: dimgrey; padding-left:1rem; padding-right:1rem;'>...</span></td>
+          <td>
+            <label class="dropdown">
+                <div class="dd-button" id="ellipses">
+                  ...
+                </div>
+                <input type="checkbox" class="dd-input" id="test">
+              
+                <ul class="dd-menu">
+                  <li>Action</li>
+                  <li>Another action</li>
+                  <li>Something else here</li>
+                </ul>    
+              </label>
+          </td>
         </tr>
         <tr>
           <td></td>
@@ -162,7 +194,20 @@
           <td>$16,117.61</td>
           <td>02/17/2020</td>
           <td><button type="button" class="nj-btn nj-btn--primary">Pay</button></td>
-          <td><span href='#' style='font-size:xx-large;font-weight: bolder;flood-color: dimgrey; padding-left:1rem; padding-right:1rem;'>...</span></td>
+          <td>
+            <label class="dropdown">
+                <div class="dd-button" id="ellipses">
+                  ...
+                </div>
+                <input type="checkbox" class="dd-input" id="test">
+              
+                <ul class="dd-menu">
+                  <li>Action</li>
+                  <li>Another action</li>
+                  <li>Something else here</li>
+                </ul>    
+              </label>
+          </td>
         </tr>
         <tr>
           <td></td>
@@ -233,10 +278,10 @@
       NJ.AutoInit();
     });
   </script>
-  <script src="/js/fluid-design-system.js"></script>
-  <script src="/js/jquery.min.js"></script>
-  <script src="/js/popper.min.js"></script>
-  <script src="/js/custom.js"></script>
+  <script src="../js/fluid-design-system.js"></script>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/custom.js"></script>
   <!-- Bootstrap Tables -->
   <script src="/js/bootstrap-table.min.js"></script>
   
