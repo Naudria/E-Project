@@ -5101,7 +5101,7 @@ a:not(.nj-link):not(.nj-btn):not(.nj-tag):hover .material-icons.md--white {
   display: flex;
   flex-flow: row nowrap;
   align-items: flex-start;
-  padding: 1.5rem 1.5rem 1.5rem calc(1.5rem - 2px);
+  padding: 1rem 1rem 1rem calc(1.5rem - 2px);
   color: #212121;
   line-height: 1.5rem;
   background: #fff;
@@ -10318,6 +10318,12 @@ mark,
 
 /*# sourceMappingURL=fluid-design-system.css.map */
 /* Additional Styles */
+#circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  text-align: center; }
+
 #login {
   padding-right: 3rem;
   padding-left: 3rem;
@@ -10727,7 +10733,7 @@ table.dataTable thead .sorting_desc_disabled:before {
 #sidebar.active {
   min-width: 250px;
   max-width: 250px;
-  height: 100%;
+  height: auto;
   background-color: #ffffff;
   overflow-y: auto;
   box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.1), 0 2px 2px 0 rgba(0, 0, 0, 0.06), 0 3px 1px -2px rgba(0, 0, 0, 0.06); }
