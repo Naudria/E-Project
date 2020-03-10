@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Lato:300,400,700,900&display=swap" rel="stylesheet"/>
+    
+    <!-- app.css combines bootstrap, engie fluid design, and custom styles -->
+    <link rel="stylesheet" href="../css/app.css">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.css">
+    
+    <title>Share Account</title>
+</head>
+<!-- NAVBAR -->
+<header>
+  <nj-navbar>
+    <nav class="nj-navbar nj-navbar--blue nj-navbar--expand-xl">
+      <a class="nj-navbar__brand" href="#"><svg class="nj-navbar__logo"><use href="../images/logo-engie-white.svg#logo-engie-white" /></svg></a>
+      <!-- HEADER LINKS -->
+      <div class="nj-navbar--collapse nj-collapse" id="navbarHeader">
+        <ul class="nj-navbar__nav ml-auto">
+          <!-- <li class="nj-navbar__nav-item">
+            <a class="nj-navbar__nav-link nj-navbar__nav-link--icon" href="#">
+              <i class="material-icons md--white">notifications</i>    
+            </a>
+          </li> -->
+          <!-- Language dropdown -->
+          <li class="nj-navbar__nav-item" >
+            <nj-collapse >
+              <nj-dropdown >
+            <a style="background-image:none;" href="#language-dropdown" class="nj-navbar__nav-link nj-navbar__nav-link--icon nj-dropdown" data-toggle="collapse">
+              <i class="material-icons md--white">language</i>
+            </a>
+            <div class="nj-dropdown__list nj-collapse" id="language-dropdown">
+              <div class="nj-card border">
+                <div class="nj-list-group nj-list-group--no-border nj-list-group--sm my-1">
+                  <button type="button" class="nj-list-group__item" data-value="login">English</button>
+                  <button type="button" class="nj-list-group__item" data-value="logout">Spanish</button>
+                </div>
+              </div>
+            </div>
+          </nj-dropdown>
+          </nj-collapse>
+          <!-- Login dropdown -->
+          </li>
+          <li class="nj-navbar__nav-item" >
+            <nj-collapse >
+              <nj-dropdown >
+            <a style="background-image:none;" href="#login-dropdown" class="nj-navbar__nav-link nj-navbar__nav-link--icon nj-dropdown" data-toggle="collapse">
+              <i class="material-icons md--white">person</i>
+            </a>
+            <div class="nj-dropdown__list nj-collapse" id="login-dropdown">
+              <div class="nj-card border">
+                <div class="nj-list-group nj-list-group--no-border nj-list-group--sm my-1">
+                  <button type="button" class="nj-list-group__item" data-value="login">My Profile & Preferences</button>
+                  <button type="button" class="nj-list-group__item" data-value="login">Admin Settings</button>
+                  <button type="button" class="nj-list-group__item" data-value="logout">Sign Out</button>
+                </div>
+              </div>
+            </div>
+          </nj-dropdown>
+          </nj-collapse>
+
+          </li>
+          <!-- <li class="nj-navbar__nav-item">
+            <a class="nj-navbar__nav-link nj-navbar__nav-link--icon" href="#">
+              <i class="material-icons md--white">person</i>
+              
+            </a>
+          </li> -->
+          <li class="nj-navbar__nav-item">
+            <a class="nj-navbar__nav-link nj-navbar__nav-link--icon" data-toggle="collapse" 
+            href="#collapse-search-bar-example" aria-expanded="false" aria-controls="collapse-search-bar-example">
+              <i class="material-icons md--white">search</i>
+            </a>
+          </li>
+          
+        </ul>
+        <form class="nj-navbar__search nj-collapse" id="collapse-search-bar-example">
+          <input class="nj-form-control mr-3" type="text" id="search-href" placeholder="Enter your query...">
+          <button type="submit" class="nj-btn nj-btn--primary flex-keep">Search</button>
+          <a href="#" class="nj-navbar__nav-link nj-navbar__nav-link--icon nj-collapse-inline__close" aria-label="Close"
+            data-dismiss="#collapse-search-bar-example">
+            <i class="material-icons md--blue-corporate">close</i>
+          </a>
+        </form>
+      </div>
+    </nav>
+  </nj-navbar>
+</header>
+<!-- end navbar -->
+
+<!-- body -->
+<body id="detail-view-bg">
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-6 p-4 m-4">
+          <p class="t-mega">Share Accounts</p>
+          <p>Enter the email address of the person you would like to share the accounts with. This will 
+            allow the user to access the same account with limited permissions.</p>
+          <p class="mb-1">Accounts Selected:</p>
+          <p class="mb-1" style="color:#9e9e9e">3883741001</p>
+          <p class="mb-1" style="color:#9e9e9e">1234566789</p>
+          <form action="">
+            <div class="nj-form-group">
+              <nj-form-input-text>
+                <input type="text" class="nj-form-control" id="exampleInputFirstName" placeholder="test@engie.com">
+                <label for="exampleInputFirstName" class="nj-label-static">Email</label>
+              </nj-form-input-text>
+            </div>
+          <div class="mt-5">
+          <button type="submit" class="nj-btn nj-btn--outline-primary mr-3">Cancel</button>
+          <button type="submit" class="nj-btn nj-btn--primary">Share</button>
+        </form>
+          <p class="mt-4" style="color:#9e9e9e">If you need additional assistance visit our <a href="#">Help Center</a> for additional information how to get in touch with us.</p>
+        </div>
+        </div>
+    
+</div>
+</body>
+
+  <!-- Scripts -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function(event) {
+      NJ.AutoInit();
+    });
+  </script>
+  <script src="../js/fluid-design-system.js"></script>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/custom.js"></script>
+  
+</body>
+</html>
