@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Lato:300,400,700,900&display=swap" rel="stylesheet"/>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" 
+  rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    
+    <!-- app.css combines bootstrap, engie fluid design, and custom styles -->
+    <link rel="stylesheet" href="../css/app.css">
+    <title>Emulation Console</title><!-- Scripts -->
+    <script src="/js/fluid-design-system.js"></script>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <!-- Engie fluid design js -->
+      <script>
+        document.addEventListener('DOMContentLoaded', function(event) {
+          NJ.AutoInit();
+        });
+      </script>
+    </body>
+    </html>
+</head>
+
+<!-- BODY -->
+<body>
+  <div class="console">
+    <div class="container" style="width:50%;">
+      <div class="col pt-3">
+        <div class="row justify-content-center" >
+      <h4 style="color:#757575">Emulation Console</h4>
+        </div>
+        <div class="row justify-content-between" style="line-height: 3rem;">
+          <p style="color:#757575"><span style="color:#9e9e9e">Emulator:</span> ENGIE /NWHATLEY1</p>
+          <p style="color:#757575"><span style="color:#9e9e9e">Emulated User:</span> ENGIE /0020667</p>
+          <p class="mt-0"><button class="nj-btn nj-btn--light">Stop Emulation</button></p>
+            </div>
+      </div>
+    </div>
+  </div>
+  <!-- NAVBAR -->
+  <nj-navbar>
+    <nav class="nj-navbar nj-navbar--blue nj-navbar--expand-xl">
+        <a class="nj-navbar__brand" href="#"><svg class="nj-navbar__logo"><use href="../images/logo-engie.svg#logo-engie" /></svg></a>
+        <button class="nj-navbar__toggler" type="button" data-toggle="collapse" data-target="#cpNavbar">
+          <i class="nj-navbar__toggler-icon material-icons">menu</i>
+        </button>
+        <div class="nj-navbar--collapse nj-collapse" id="cpNavbar">
+            <ul class="nj-navbar__nav ml-auto">
+              <!-- Toggle language -->
+              <!-- <button (click)="UseLanguage('en')">en</button>
+              <button (click)="UseLanguage('es')">es</button> -->
+
+            <!-- Language dropdown -->
+            <li class="nj-navbar__nav-item" >
+              <nj-collapse >
+                <nj-dropdown >
+              <a style="background-image:none;" href="#language-dropdown" class="nj-navbar__nav-link nj-navbar__nav-link--icon nj-dropdown" data-toggle="collapse">
+                <i class="material-icons md--white">language</i>
+              </a>
+              <div class="nj-dropdown__list nj-collapse" id="language-dropdown">
+                <div class="nj-card border">
+                  <div class="nj-list-group nj-list-group--no-border nj-list-group--sm my-1">
+                    <button type="button" class="nj-list-group__item" data-value="login">English</button>
+                    <button type="button" class="nj-list-group__item" data-value="logout">Spanish</button>
+                  </div>
+                </div>
+              </div>
+            </nj-dropdown>
+            </nj-collapse>
+            </li>
+            <!-- Login dropdown -->
+  
+          <li class="nj-navbar__nav-item" >
+            <nj-collapse >
+              <nj-dropdown >
+            <a style="background-image:none;" href="#login-dropdown" class="nj-navbar__nav-link nj-navbar__nav-link--icon nj-dropdown" data-toggle="collapse">
+              <i class="material-icons md--white">person</i>
+            </a>
+            <div class="nj-dropdown__list nj-collapse" id="login-dropdown">
+              <div class="nj-card border">
+                <div class="nj-list-group nj-list-group--no-border nj-list-group--sm my-1">
+                  <button type="button" class="nj-list-group__item" data-value="login">My Profile & Preferences</button>
+                  <button type="button" class="nj-list-group__item" data-value="login">Admin Settings</button>
+                  <button type="button" class="nj-list-group__item" data-value="logout" *ngIf="isAuthenticated" (click)="authService.logout()">Sign Out</button>
+                </div>
+              </div>
+            </div>
+          </nj-dropdown>
+          </nj-collapse>
+  
+          </li>
+            <!--<li class="nj-navbar__nav-item"><a class="nj-navbar__nav-link" *ngIf="isAuthenticated" routerLink="/product">{{ 'DYNAMITE CURVE' | translate }}</a></li>-
+            <li class="nj-navbar__nav-item"><a class="nj-navbar__nav-link" *ngIf="isAuthenticated" routerLink="/profile">{{ 'PROFILE' | translate }}</a></li>-->
+            <!-- <li class="nj-navbar__nav-item"><a class="nj-navbar__nav-link" *ngIf="!isAuthenticated" routerLink="/login">Login</a></li> -->
+            <!-- <li class="nj-navbar__nav-item"><a class="nj-navbar__nav-link" *ngIf="isAuthenticated" routerLink="/logout">{{ 'LOGOUT' | translate }}</a></li>-->
+          </ul>
+        </div>
+    </nav>
+  </nj-navbar>
+  <!-- end navbar -->
+
+  <!-- Scripts -->
+<script src="../js/fluid-design-system.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/popper.min.js"></script>
+<!-- Engie fluid design js -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function(event) {
+      NJ.AutoInit();
+    });
+  </script>
+</body>
+</html>
