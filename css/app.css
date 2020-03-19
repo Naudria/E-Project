@@ -10848,3 +10848,42 @@ a[data-toggle="collapse"] {
   border-bottom: 1px solid #cccccc; }
 
 /*# sourceMappingURL=app.css.map */
+
+#box {
+  background-color:white;
+  padding:1rem;
+  width:20%;
+  text-align: center;
+  margin:0 auto;
+  border:2px solid #e0e0e0;
+}
+
+#box-2 {
+  background-color:white;
+  width:30%;
+  height:100%;
+  text-align: center;
+  margin:0 auto;
+  border:2px solid #e0e0e0;
+}
+
+#box-3 {
+  height:100%;
+  border-left:2px solid #e0e0e0;
+}
+
+#box-4 {
+  border:1px solid #009de9;
+  color: #009de9;
+  border-radius:6px;
+  background-color:rgba(0, 156, 235, 0.05);
+  width:30%;
+  text-align: center;
+  margin:0 auto;
+}
+
+#box-text {
+  width:30%;
+  font-size:.8rem;
+  text-align:center;
+}
