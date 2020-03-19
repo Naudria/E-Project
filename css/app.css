@@ -10887,3 +10887,12 @@ a[data-toggle="collapse"] {
   font-size:.8rem;
   text-align:center;
 }
+
+/* emulation console */
+
+.console {
+  background-color: #eeeeee;
+  box-shadow: 
+  inset 0px 11px 8px -10px #CCC,
+  inset 0px -11px 8px -5px #CCC; 
+}
