@@ -9,7 +9,8 @@
     
     <!-- app.css combines bootstrap, engie fluid design, and custom styles -->
     <link rel="stylesheet" href="../css/app.css">
-    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="../js/jquery.min.js"></script>
     
     <title>Select Payment Amount</title>
 </head>
@@ -116,28 +117,67 @@
       
     </div>
     <!-- end column -->
-    <div class="d-flex mb-3" id="box-2">
+    <!-- <div class="d-flex mb-3" id="box-2">
         <div class="d-flex justify-content-between" style="width:100%;">
             <div class="p-2">Payment Amount</div>
             <div class="p-2">Total Balance $20.89</div>
         </div>
         <div class="ml-auto p-1" id="box-3"><a class="nj-link" href="#"><i class="material-icons md-18 md--blue-engie">edit</i>Edit</a></div>
-    </div>
+    </div> -->
+    <div id="box-2">
+      <form>
+            <div class="col-md-5"></div>
+              <div class="nj-form-group pt-1 pr-1 pl-1">
+                <nj-collapse>
+                  <nj-dropdown>
+                    <div class="nj-dropdown" data-toggle="collapse" data-target="#paymentAmount" tabindex="0">
+                      <input type="hidden">
+                      <div class="nj-dropdown__label">Payment Amount</div>
+                      <div class="nj-dropdown__list nj-collapse" id="paymentAmount">
+                        <div class="nj-card border">
+                          <div class="nj-list-group nj-list-group--no-border nj-list-group--sm my-1">
+                            <button type="button" class="nj-list-group__item" data-value="total">Total Balance $20.89</button>
+                            <button type="button" class="nj-list-group__item" data-value="past">Past Due Amount $5.00</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </nj-dropdown>
+                </nj-collapse>
+              </div>
+            
+          </div>
+        </form>
+      </div>
    <!-- end payment amount field -->
-   <div class="d-flex mb-3" id="box-4">
+   <div class="d-flex mb-3 mt-3" id="box-4">
     <p class="pt-1 pr-1 pl-2 pb-0" style="font-size:.8rem; text-align: left;">Payments can be scheduled up to and including your due date.
         Please select a date between today and your next due date.
     </p>
    </div>
    <!-- end info box -->
-   <div class="d-flex mb-3" id="box-2">
+   <div class="d-flex mb-3" id="box-5">
     <div class="d-flex justify-content-between" style="width:100%;">
-        <div class="p-2">Payment Date</div>
-        <div class="p-2">02/24/2020</div>
+      
+            <div class="form-group mb-0" style="width:100%;">
+                <div class='input-group date' id='datetimepicker1'>
+                    <input type='text' placeholder="Payment Date" class="form-control" style="border:none;"/>
+                    <span class="input-group-addon">
+                      <span class="material-icons md-24 md--blue-engie p-1">date_range</span>
+                    </span>
+                </div>
+            
+        </div>
+        <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker1').datepicker();
+            });
+        </script>
     </div>
-    <div class="ml-auto p-1" id="box-3"><a class="nj-link" href="#"><i class="material-icons md-18 md--blue-engie">date_range</i>Edit</a></div>
-</div>
+  </div>
+   
 <!-- end payment date -->
+
     <div id="box-2">
         <form>
               <div class="col-md-5"></div>
@@ -201,6 +241,11 @@
   <script src="../js/jquery.min.js"></script>
   <script src="../js/popper.min.js"></script>
   <script src="../js/custom.js"></script>
+  <script src="../js/bootstrap-datepicker.js"></script>
+  <!-- bootstrap -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+  integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" 
+  crossorigin="anonymous"></script>
   
 </body>
 </html>
