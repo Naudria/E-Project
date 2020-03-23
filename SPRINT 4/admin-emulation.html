@@ -13,6 +13,11 @@
 
     <title>Admin Settings</title>
     <style>
+        table {
+          overflow-y:visible;
+          overflow-x:visible;
+        }
+
         th {
             font-size:.75rem;
             text-transform: uppercase;
@@ -155,20 +160,21 @@
       <table class="nj-table nj-table--striped no-border"
       id="table"
       data-toggle="table"
-      data-page-size="25"
+      data-height="460"
       >
           <thead>
             <tr>
               <th data-sortable="true" data-field="name" data-width="10" data-width-unit="%">Name</th>
-              <th data-sortable="true" data-field="email"data-width="10" data-width-unit="%">Email</th>
-              <th data-sortable="true"data-field="account role"data-width="10" data-width-unit="%">account role</th>
+              <th data-sortable="true" data-field="email"data-width="15" data-width-unit="%">Email</th>
+              <th data-sortable="true"data-field="account role"data-width="15" data-width-unit="%">account role</th>
               <th data-sortable="true"data-field="creation date" data-width="15" data-width-unit="%">Creation date</th>
               <th data-sortable="true"data-field="last login" data-width="15" data-width-unit="%">Last Login</th>
-              <th data-sortable="true"data-field="active user" data-width="10" data-width-unit="%">active user</th>
-              <th data-sortable="true"data-field="locked out" data-width="10" data-width-unit="%">locked out</th>
+              <th data-sortable="true"data-field="active user" data-width="15" data-width-unit="%">active user</th>
+              <th data-sortable="true"data-field="locked out" data-width="15" data-width-unit="%">locked out</th>
               <th data-field="comments" data-width="10" data-width-unit="%">comments</th>
-              <th data-field="emulate" data-width="10" data-width-unit="%"></th>
-              <th data-field="edit" data-width="10" data-width-unit="%"></th>
+              <th></th>
+              <!-- <th data-field="emulate" data-width="10" data-width-unit="%"></th>
+              <th data-field="edit" data-width="10" data-width-unit="%"></th> -->
             </tr>
           </thead>
           <tbody>
@@ -181,8 +187,24 @@
                 <td>Yes</td>
                 <td>No</td>
                 <td>No</td>
-                <td><button type="button" class="nj-btn nj-btn--primary">Emulate</button></td>
-                <td><a class="nj-link" href="#"><i class="material-icons md-18 md--blue-engie">edit</i></a></td>
+                <td>
+                  <div class="edit">
+                    <label class="dropdown">
+                      <div class="dd-button">
+                        <i class="material-icons md-36 md--blue-engie">more_horiz</i>
+                      </div>
+                      <input type="checkbox" class="dd-input" id="test">
+                    
+                      <ul class="dd-menu">
+                        <li>Emulate User</li>
+                        <!-- <li>Unlock User</li>
+                        <li>Edit Role</li> -->
+                      </ul>    
+                    </label>
+                  </div>
+                </td>
+                <!-- <td><button type="button" class="nj-btn nj-btn--primary">Emulate</button></td>
+                <td><a class="nj-link" href="#"><i class="material-icons md-18 md--blue-engie">edit</i></a></td> -->
             </tr>
             <tr>
                 <td>Bob Smith</td>
@@ -193,8 +215,24 @@
                 <td>No</td>
                 <td>No</td>
                 <td>No</td>
-                <td><button type="button" class="nj-btn nj-btn--primary">Emulate</button></td> 
-                <td><a class="nj-link" href="#"><i class="material-icons md-18 md--blue-engie">edit</i></a></td>     
+                <td>
+                  <div class="edit">
+                    <label class="dropdown">
+                      <div class="dd-button">
+                        <i class="material-icons md-36 md--blue-engie">more_horiz</i>
+                      </div>
+                      <input type="checkbox" class="dd-input" id="test">
+                    
+                      <ul class="dd-menu">
+                        <li>Emulate User</li>
+                        <!-- <li>Unlock User</li>
+                        <li>Edit Role</li> -->
+                      </ul>    
+                    </label>
+                  </div>
+                </td>
+                <!-- <td><button type="button" class="nj-btn nj-btn--primary">Emulate</button></td> 
+                <td><a class="nj-link" href="#"><i class="material-icons md-18 md--blue-engie">edit</i></a></td>      -->
             </tr>
             <tr>
                 <td>Norma Benavides</td>
@@ -205,9 +243,25 @@
                 <td>No</td>
                 <td>Yes</td>
                 <td>Yes</td>
-                <td><button type="button" class="nj-btn nj-btn--primary">Emulate</button></td> 
-                <td><a class="nj-link" href="#"><i class="material-icons md-18 md--blue-engie">edit</i></a></td>     
-            </tr>
+                <td>
+                <div class="edit">
+                  <label class="dropdown">
+                    <div class="dd-button">
+                      <i class="material-icons md-36 md--blue-engie">more_horiz</i>
+                    </div>
+                    <input type="checkbox" class="dd-input" id="test">
+                  
+                    <ul class="dd-menu">
+                      <li>Emulate User</li>
+                        <!-- <li>Unlock User</li>
+                        <li>Edit Role</li> -->
+                    </ul>    
+                  </label>
+                </div>
+                <!-- <td><button type="button" class="nj-btn nj-btn--primary">Emulate</button></td> 
+                <td><a class="nj-link" href="#"><i class="material-icons md-18 md--blue-engie">edit</i></a></td>      -->
+              </td>
+              </tr>
             </tbody>
         </table>
 
