@@ -10324,6 +10324,15 @@ mark,
   border-radius: 50%;
   text-align: center; }
 
+#triangle {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid #cc0033;
+
+}
+
 #login {
   padding-right: 3rem;
   padding-left: 3rem;
