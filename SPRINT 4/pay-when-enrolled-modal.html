@@ -19,7 +19,7 @@
         Pay
       </button>
       <nj-modal>
-        <div class="nj-modal  fade" tabindex="-1" id="exampleModal" role="dialog">
+        <div class="nj-modal fade" tabindex="-1" id="exampleModal" role="dialog">
           <div class="nj-modal__dialog" style="border-bottom: 8px solid #009de9;" role="document">
             <div class="nj-modal__content">
               <div class="nj-modal__header">
@@ -33,7 +33,7 @@
               </div>
               <div class="nj-modal__footer pt-0">
                 <button type="button" class="nj-btn nj-btn--outline-primary" data-dismiss="modal">Cancel</button>
-                <button type="button" class="nj-btn nj-btn--primary">Continue</button>
+                <button type="button" class="nj-btn nj-btn--primary" onclick='gotoAutoPay()' data-backdrop="false" data-dismiss="modal">Continue</button>
               </div>
             </div>
           </div>
@@ -45,6 +45,11 @@
     document.addEventListener('DOMContentLoaded', function(event) {
       NJ.AutoInit();
     });
+  </script>
+  <script>
+    function gotoAutoPay() {
+      window.location.href = "https://google.com";
+  }
   </script>
   <script src="../js/fluid-design-system.js"></script>
   <script src="../js/jquery.min.js"></script>

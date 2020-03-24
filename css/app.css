@@ -10333,6 +10333,18 @@ mark,
 
 }
 
+.sp-link {
+  position: relative;
+    padding-bottom: 3px;
+    color: #009de9;
+}
+
+.sp-link:hover {
+  text-decoration: none;
+  color:#0490d6;
+}
+
+
 #login {
   padding-right: 3rem;
   padding-left: 3rem;
