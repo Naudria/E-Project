@@ -11,8 +11,16 @@
     <link rel="stylesheet" href="../css/app.css">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" 
     rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    
+    <style>
+     .inline-dropdown-menu {
+      position: relative;
+      }
+    </style>
     <title>My Account List</title>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+    crossorigin="anonymous"></script>
 </head>
 <!-- NAVBAR -->
 
@@ -95,10 +103,22 @@
 
 <body id="detail-view-bg">
     <div class="container" >
-        <div class="row">
+      <!-- account name heading card -->
+      <div class="row" >
+        <div class="col">
+        <div class="nj-card mt-3 pt-1 pl-1" >
+          <h4 class="nj-card__title"><i class="material-icons md-36 md--blue-engie" style="vertical-align: -5px;">bolt</i>Verizon Sourcing LLC</h4>
+            <!-- end card -->
+        </div>
+          <!-- end col -->
+      </div>
+      <!-- end row -->
+      </div>
+      <!-- begin multi-card row -->
+        <div class="row" >
           <div class="col-md-3 mt-4">
-            <div class="nj-card mb-3">
-              <div class="edit">
+            <div class="nj-card mb-3" style="min-height:411px;">
+              <!-- <div class="edit">
                 <label class="dropdown">
                   <div class="dd-button">
                     <i class="material-icons md-36 md--blue-engie">more_horiz</i>
@@ -110,7 +130,7 @@
                     <li>Enroll in Paperless Billing</li>
                   </ul>    
                 </label>
-              </div>
+              </div> -->
               <div class="nj-card__body" id="no-top-padding">
                 <h4 class="nj-card__title">My Current Bill</h4>
                 <p class="received">We received your most recent payment of $878.50 on January 07, 2020.</p>
@@ -123,24 +143,26 @@
             </div>
           </div>
           <div class="col-md-3 mt-4">
-            <div class="nj-card mb-3">
+            <div class="nj-card mb-3" style="min-height:411px;">
               <div class="edit">
-                <label class="dropdown">
+                <!-- <label class="dropdown"> -->
+                  <span class="inline-dropdown-menu">
                   <div class="dd-button">
-                    <i class="material-icons md-36 md--blue-engie">more_horiz</i>
+                    <a href=""><i class="material-icons md-36 md--blue-engie">more_horiz</i></a>
                   </div>
                   <input type="checkbox" class="dd-input" id="test">
                 
-                  <ul class="dd-menu">
+                  <ul class="dd-menu inline-dropdown-menu-list">
                     <li>Share Account</li>
                     <li>Add Additional Account Owner</li>
                     <li>Transfer Account</li>
                     <li>Release Account</li>
-                  </ul>    
-                </label>
+                  </ul>   
+                </span> 
+                <!-- </label> -->
               </div>
               <div class="nj-card__body" id="no-top-padding">
-                <h4 class="nj-card__title" ><i class="material-icons md--blue-engie">bolt</i>Verizon Sourcing LLC</h4>
+                <h4 class="nj-card__title" >Account Info</h4>
                 <p class="mini-title">Billing Account</p>
                 <p>0834112006</p>
                 <p class="mini-title">Utility Account</p>
@@ -154,9 +176,9 @@
             </div>
           </div>
           <div class="col-md-3 mt-4">
-            <div class="nj-card mb-3">
+            <div class="nj-card mb-3" style="min-height:411px;">
               <div class="edit">
-                <a href="#"><i class="material-icons md--blue-engie">edit</i></a>
+                <a href="#"><i class="material-icons md--blue-engie" style="padding-bottom: 1.5rem;">edit</i></a>
                 
               </div>
               <div class="nj-card__body" id="no-top-padding">
@@ -177,9 +199,9 @@
             </div>
           </div>
           <div class="col-md-3 mt-4">
-            <div class="nj-card mb-3">
+            <div class="nj-card mb-3" style="min-height:411px;">
               <div class="edit">
-                <a href="#"><i class="material-icons md--blue-engie">edit</i></a>
+                <a href="#"><i class="material-icons md--blue-engie" style="padding-bottom: 1.5rem;"">edit</i></a>
               </div>
               <div class="nj-card__body" id="no-top-padding">
                 <h4 class="nj-card__title">Account Settings</h4>
@@ -323,6 +345,23 @@
     document.addEventListener('DOMContentLoaded', function(event) {
       NJ.AutoInit();
     });
+  </script>
+  <script>
+    $(function () {
+    $(".inline-dropdown-menu").click(function (e) {
+        $(".inline-dropdown-menu-list").hide();
+        $(this).find(".inline-dropdown-menu-list:first").toggle();
+
+        e.preventDefault(); // Stop navigation
+    });
+});
+
+$(document).click(function (e) {
+    var container = $(".inline-dropdown-menu");
+    if (!container.is(e.target) && container.has(e.target).length === 0) {
+        $(".inline-dropdown-menu-list").hide();
+    }
+});
   </script>
   <script src="../js/fluid-design-system.js"></script>
   <script src="../js/jquery.min.js"></script>

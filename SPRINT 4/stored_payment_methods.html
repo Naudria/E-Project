@@ -122,18 +122,18 @@
         <div class="container">
          
             <div class="col">
-              <ul class="nj-list-group nj-list-group--sm">
+         
                 
-                <li class="nj-list-group__item justify-content-between align-items-center">Chase Checking 
-                  <i class="material-icons md-18 pr-3 trash">delete</i>
-                </li>
-                <li class="nj-list-group__item justify-content-between align-items-center">Compass Savings  
-                  <i class="material-icons md-18 pr-3 trash">delete</i>
-                </li>
-                <li class="nj-list-group__item justify-content-between align-items-center">Credit Card 
-                  <i class="material-icons md-18 pr-3 trash">delete</i>
-                </li>
-              </ul>
+                <a href="#" class="nj-list-group__item active justify-content-between align-items-center">
+                  <span><i class="material-icons md-18 pr-3" style="color:#009de9">star</i><i class="material-icons md-18 pr-3" style="color:#bcbcbc">account_balance</i>Chase Checking </span>
+                  <span><i class="material-icons md-18 pr-3" style="color:green">autorenew</i><i class="material-icons md-18 pr-3">edit</i><i class="material-icons md-18 pr-3 trash">delete</i></span>
+                </a>
+                <a href="#" class="nj-list-group__item justify-content-between align-items-center">Compass Savings  
+                  <span><i class="material-icons md-18 pr-3">edit</i><i class="material-icons md-18 pr-3 trash">delete</i></span>
+                </a>
+                <a href="#" class="nj-list-group__item justify-content-between align-items-center">Credit Card 
+                  <span><i class="material-icons md-18 pr-3">edit</i><i class="material-icons md-18 pr-3 trash">delete</i></span>
+                </a>
                 <p class="mt-4"><a class="nj-link" href="#">To start any of your accounts in AutoPay, click here</a></p>
               <!-- end autopay link column -->
               </div>
@@ -150,19 +150,12 @@ var remove = document.getElementsByClassName("trash");
 var i;
 for (i = 0; i < remove.length; i++) {
   remove[i].onclick = function() {
-    var listItem = this.parentElement;
+    var span = this.parentElement;
+    var listItem = span.parentElement;
     listItem.remove();
   }
 }
   </script>
-  <!-- <script>
-  $("ul").on("click", "span", function(event){
-    $(this).parent().fadeOut(500, function(){
-      $(this).remove();
-    });
-    event.stopPropagation();
-  });
-</script> -->
   <script>
     document.addEventListener('DOMContentLoaded', function(event) {
       NJ.AutoInit();
