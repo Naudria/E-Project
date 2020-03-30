@@ -10322,7 +10322,8 @@ mark,
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  text-align: center; }
+  text-align: center;
+justify-content: middle; }
 
 #triangle {
   width: 0;
@@ -10880,6 +10881,11 @@ a[data-toggle="collapse"] {
   text-align: center;
   margin:0 auto;
   border:2px solid #e0e0e0;
+}
+
+#box-6 {
+  width:45%;
+  margin:0 auto;
 }
 
 #box-2 {
