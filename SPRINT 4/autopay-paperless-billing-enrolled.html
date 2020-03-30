@@ -10,7 +10,7 @@
     <!-- app.css combines bootstrap, engie fluid design, and custom styles -->
     <link rel="stylesheet" href="../css/app.css">
     
-    <title>Horizontal Nav - Account Details</title>
+    <title>AutoPay & Paperless Billing - Customer Enrolled</title>
 </head>
 <!-- NAVBAR -->
 
@@ -20,12 +20,12 @@
       <!-- HEADER LINKS -->
       <div class="nj-navbar--collapse nj-collapse" id="navbarHeader">
         <ul class="nj-navbar__nav ml-auto">
-            <li class="nj-navbar__nav-item active"><a class="nj-navbar__nav-link" href="#">Dashboard</a></li>
+            <!-- <li class="nj-navbar__nav-item active"><a class="nj-navbar__nav-link" href="#">Dashboard</a></li>
             <li class="nj-navbar__nav-item active"><a class="nj-navbar__nav-link" href="#">Account Details</a></li>
             <li class="nj-navbar__nav-item active"><a class="nj-navbar__nav-link" href="#">Account History</a></li>
             <li class="nj-navbar__nav-item active"><a class="nj-navbar__nav-link" href="#">Payment Methods</a></li>
             <li class="nj-navbar__nav-item"><a class="nj-navbar__nav-link" href="#">AutoPay & Paperless Billing</a></li>
-            <li class="nj-navbar__nav-item"><a class="nj-navbar__nav-link" href="#">Reporting</a></li>
+            <li class="nj-navbar__nav-item"><a class="nj-navbar__nav-link" href="#">Reporting</a></li> -->
             
 
           <!-- <li class="nj-navbar__nav-item">
@@ -76,43 +76,91 @@
           </nj-collapse>
 
           </li>
-          <!-- <li class="nj-navbar__nav-item">
-            <a class="nj-navbar__nav-link nj-navbar__nav-link--icon" href="#">
-              <i class="material-icons md--white">person</i>
-              
-            </a>
-          </li> -->
-          <!-- <li class="nj-navbar__nav-item">
-            <a class="nj-navbar__nav-link nj-navbar__nav-link--icon" data-toggle="collapse" 
-            href="#collapse-search-bar-example" aria-expanded="false" aria-controls="collapse-search-bar-example">
-              <i class="material-icons md--white">search</i>
-            </a>
-          </li> -->
           
         </ul>
-        <!-- <form class="nj-navbar__search nj-collapse" id="collapse-search-bar-example">
-          <input class="nj-form-control mr-3" type="text" id="search-href" placeholder="Enter your query...">
-          <button type="submit" class="nj-btn nj-btn--primary flex-keep">Search</button>
-          <a href="#" class="nj-navbar__nav-link nj-navbar__nav-link--icon nj-collapse-inline__close" aria-label="Close"
-            data-dismiss="#collapse-search-bar-example">
-            <i class="material-icons md--blue-corporate">close</i>
-          </a>
-        </form> -->
       </div>
     </nav>
   </nj-navbar>
 
 <!-- end navbar -->
+<div class="container p-3 mt-3" style="width:60%;">
+        <div class="row justify-content-md-center">
+            <div class="col">
+                <h4>AutoPay & Paperless Billing</h4>
+            </div>
+            <div class="col">
+                
+            </div>
+            
+        </div>
+    
+        <div class="row justify-content-md-center" >
+            <div class="col">
+                <p class="mt-2 mb-1 font-weight-bold">Account number: 0834112006</p> 
+            </div>
+      
+            <div class="col">
+            </div>            
+        </div>
+        <hr style="border:1px solid black;">
+        <div class="row justify-content-md-center mt-3">
+            <div class="col">
+                <h5>AutoPay</h5>
+                <p class="font-weight-bold">Status</p>
+                <p>Active. AutoPay applied on Feb 21, 2020.</p>
+                <h5>Payment method</h5>
+                <p>Bank account ending in XXXX</p>
+                <a href="" class="nj-link">Change payment method</a>
+            </div>
+            <div class="col-md-auto text-right">
+                <form>
+                    <nj-toggle>
+                        <div class="nj-toggle">
+                            <label>
+                              <input type="checkbox" checked>
+                            </label>
+                          </div>
+                        </nj-toggle>
+                    </nj-toggle>
+                </form>
+            </div>
+        </div>
+<!-- paperless -->
+
+<hr class="mt-5" style="border:1px solid black;">
+<div class="row justify-content-md-center mt-3">
+    <div class="col">
+        <h5>Paperless billing</h5>
+        <p>View your bill details anytime. We'll send you notices when your bill is ready.</p>
+        <h5>Billing email address</h5>
+        <p>name@gmail.com</p>
+        <a href="" class="nj-link">Update billing email address</a>
+    </div>
+    <div class="col-md-auto text-right">
+        <form>
+            <nj-toggle>
+                <div class="nj-toggle">
+                    <label>
+                      <input type="checkbox" checked>
+                    </label>
+                  </div>
+                </nj-toggle>
+            </nj-toggle>
+        </form>
+    </div>
+</div>
+</div>
+
  <!-- Scripts -->
  <script>
     document.addEventListener('DOMContentLoaded', function(event) {
       NJ.AutoInit();
     });
   </script>
-  <script src="/js/fluid-design-system.js"></script>
-  <script src="/js/jquery.min.js"></script>
-  <script src="/js/popper.min.js"></script>
-  <script src="/js/custom.js"></script>
+  <script src="../js/fluid-design-system.js"></script>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/custom.js"></script>
   
 </body>
 </html>

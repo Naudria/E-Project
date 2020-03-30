@@ -10397,12 +10397,14 @@ a.remove-underline:hover {
 #languageSelectIcon {
   padding-bottom: 1rem; }
 
-#login-dropdown {
-  width: auto;
-  margin-top: 1rem; }
+  #login-dropdown {
+    width: 6.875rem;
+    margin-top: 1rem;
+    right: 10px;}
 
 #language-dropdown {
   width: auto;
+  right: 150px;
   margin-top: 1rem; }
 
 #lang {
