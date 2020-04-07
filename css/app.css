@@ -11410,3 +11410,56 @@ a[data-toggle="collapse"] {
   margin-left: -5px;
   margin-right: -5px;
 }
+
+/* tabs in Summary of Charges  */
+.tabs {
+  width:100%;
+  list-style: none;
+  text-align: left;
+}
+  li {
+    float: right;
+    display: block;
+  }
+  input[type="radio"] {
+    position: absolute;
+    top: 0;
+    left: -9999px;
+  }
+  label {
+    display: block;
+    padding: 14px 21px;
+    border-radius: 2px 2px 0 0;
+    font-size: 20px;
+    font-weight: normal;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+    top: 4px; 
+
+  }
+  .tab-content{
+    z-index: 2;
+    display: none; 
+    overflow: hidden;
+    width: 100%;
+    font-size: 17px;
+    line-height: 25px;
+    padding: 25px;  
+    position: absolute;
+    top: 53px;
+    left: 0; 
+  }
+
+
+  [id^="tab"]:checked + label { 
+    top: 0;
+    font-weight: bold;
+    padding-top: 17px; 
+    border-bottom:2px solid #0af;
+    
+  }
+  [id^="tab"]:checked ~ [id^="tab-content"] {
+    display: block;
+  }
+
