@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Lato:300,400,700,900&display=swap" rel="stylesheet"/>
+    
+    <!-- app.css combines bootstrap, engie fluid design, and custom styles -->
+    <link rel="stylesheet" href="../css/app.css">
+    
+    <title>Generate Report</title>
+</head>
+<!-- NAVBAR -->
+
+  <nj-navbar>
+    <nav class="nj-navbar nj-navbar--blue nj-navbar--expand-xl">
+      <a class="nj-navbar__brand" href="#"><svg class="nj-navbar__logo"><use href="/images/logo-engie-white.svg#logo-engie-white" /></svg></a>
+      <!-- HEADER LINKS -->
+      <div class="nj-navbar--collapse nj-collapse" id="navbarHeader">
+        <ul class="nj-navbar__nav ml-auto">
+            <!-- <li class="nj-navbar__nav-item active"><a class="nj-navbar__nav-link" href="#">Dashboard</a></li>
+            <li class="nj-navbar__nav-item active"><a class="nj-navbar__nav-link" href="#">Account Details</a></li>
+            <li class="nj-navbar__nav-item active"><a class="nj-navbar__nav-link" href="#">Account History</a></li>
+            <li class="nj-navbar__nav-item active"><a class="nj-navbar__nav-link" href="#">Payment Methods</a></li>
+            <li class="nj-navbar__nav-item"><a class="nj-navbar__nav-link" href="#">AutoPay & Paperless Billing</a></li>
+            <li class="nj-navbar__nav-item"><a class="nj-navbar__nav-link" href="#">Reporting</a></li> -->
+            
+
+          <!-- <li class="nj-navbar__nav-item">
+            <a class="nj-navbar__nav-link nj-navbar__nav-link--icon" href="#">
+              <i class="material-icons md--white">notifications</i>    
+            </a>
+          </li> -->
+          <!-- Language dropdown -->
+          <li class="nj-navbar__nav-item" >
+            <nj-collapse >
+              <nj-dropdown >
+                <div class="row">
+            <a style="background-image:none;" href="#language-dropdown" class="nj-navbar__nav-link nj-navbar__nav-link--icon nj-dropdown" data-toggle="collapse">
+              <div class="col mr-0 pr-0"><i class="material-icons md--white" style="vertical-align:-5px;">language</i></div>
+              <div class="col ml-0 pl-1 pr-1">English </div>
+              <div class="col ml-0 pl-0 "><i class="material-icons md--white" style="vertical-align:-5px;">keyboard_arrow_down</i></div>
+            </a>
+          </div>
+            <div class="nj-dropdown__list nj-collapse" id="language-dropdown">
+              <div class="nj-card border">
+                <div class="nj-list-group nj-list-group--no-border nj-list-group--sm my-1">
+                  <button type="button" class="nj-list-group__item" data-value="login">English</button>
+                  <button type="button" class="nj-list-group__item" data-value="logout">Spanish</button>
+                </div>
+              </div>
+            </div>
+          </nj-dropdown>
+          </nj-collapse>
+          <!-- Login dropdown -->
+          </li>
+          <li class="nj-navbar__nav-item" >
+            <nj-collapse >
+              <nj-dropdown >
+            <a style="background-image:none;" href="#login-dropdown" class="nj-navbar__nav-link nj-navbar__nav-link--icon nj-dropdown" data-toggle="collapse">
+              <i class="material-icons md--white">person</i>
+            </a>
+            <div class="nj-dropdown__list nj-collapse" id="login-dropdown">
+              <div class="nj-card border">
+                <div class="nj-list-group nj-list-group--no-border nj-list-group--sm my-1">
+                  <button type="button" class="nj-list-group__item t-deci" data-value="login">My Profile & Preferences</button>
+                  <button type="button" class="nj-list-group__item t-deci" data-value="admin">Admin Settings</button>
+                  <button type="button" class="nj-list-group__item t-deci" data-value="reset-pwd">Reset Password</button>
+                  <button type="button" class="nj-list-group__item t-deci" data-value="logout">Sign Out</button>
+                </div>
+              </div>
+            </div>
+          </nj-dropdown>
+          </nj-collapse>
+
+          </li>
+          
+        </ul>
+      </div>
+    </nav>
+  </nj-navbar>
+
+<!-- end navbar -->
+<div class="container p-3 mt-3" style="width:60%;">
+        <div class="row justify-content-md-center">
+            <div class="col">
+                <h4>Generate Report</h4>
+                <p>Create a custom report by selecting a date range and selecting specific billing/metering information.</p>
+                <p class="mt-2 mb-1 font-weight-bold">Select Billed Dates</p> 
+            </div>
+            <div class="col-md-auto">
+                
+            </div>
+            
+        </div>
+        <form>
+            <div class="row">
+                <div class="col-3">
+                    <nj-form-input-text>
+                        <div class="nj-form-group nj-form-group--icon-right">
+                            <label for="dateFrom" class="nj-label-floating">From</label>
+                        <input type="text" class="nj-form-control">
+                        <i class="material-icons">today</i>
+                        </div>
+                    </nj-form-input-text>
+                  </div>
+                  <div class="col-3">
+                    <nj-form-input-text>
+                        <div class="nj-form-group nj-form-group--icon-right">
+                        <label for="dateTo" class="nj-label-floating">To</label>
+                      <input type="text" class="nj-form-control">
+                      <i class="material-icons">today</i>
+                        </div>
+                    </nj-form-input-text>
+                  </div>
+            </div>
+        </form>
+    
+        <hr style="border:1px solid black;">
+        <div class="row mt-3">
+            <div class="col-12 mb-1">
+            <h5>Select Report Data Fields</h5>
+            </div>  
+            <div class="col-4">
+                <p style="font-size: .8rem; color:#757575">Billing Information</p>
+                <form>
+                    <div class="nj-form-group pt-1">
+                        <nj-checkbox>
+                            <div class="nj-checkbox">
+                                <label class="font-italic">
+                                    <input type="checkbox" onClick="toggle(this)" />Select All
+                                </label>
+                            </div>
+                        </nj-checkbox>
+                      <nj-checkbox>
+                        <div class="nj-checkbox">
+                          <label>
+                            <input type="checkbox" > Contract Name
+                          </label>
+                        </div>
+                      </nj-checkbox>
+                      <nj-checkbox>
+                      <div class="nj-checkbox">
+                        <label>
+                          <input type="checkbox" > Customer Name
+                        </label>
+                      </div>
+                      </nj-checkbox>
+                      <nj-checkbox>
+                        <div class="nj-checkbox">
+                          <label>
+                            <input type="checkbox" > Supplier Account Name
+                          </label>
+                        </div>
+                      </nj-checkbox>
+                      <nj-checkbox>
+                      <div class="nj-checkbox">
+                        <label>
+                          <input type="checkbox" > Utility Account Number
+                        </label>
+                      </div>
+                      </nj-checkbox>
+                      <nj-checkbox>
+                        <div class="nj-checkbox">
+                          <label>
+                            <input type="checkbox" > Client ID
+                          </label>
+                        </div>
+                      </nj-checkbox>
+                      <nj-checkbox>
+                      <div class="nj-checkbox">
+                        <label>
+                          <input type="checkbox" > Billing Address
+                        </label>
+                      </div>
+                      </nj-checkbox>
+                      <nj-checkbox>
+                        <div class="nj-checkbox">
+                          <label>
+                            <input type="checkbox" > Service Address
+                          </label>
+                        </div>
+                      </nj-checkbox>
+                      <nj-checkbox>
+                      <div class="nj-checkbox">
+                        <label>
+                          <input type="checkbox" > Transaction Type
+                        </label>
+                      </div>
+                      </nj-checkbox>
+                      <nj-checkbox>
+                        <div class="nj-checkbox">
+                          <label>
+                            <input type="checkbox" > From Date
+                          </label>
+                        </div>
+                      </nj-checkbox>
+                      <nj-checkbox>
+                      <div class="nj-checkbox">
+                        <label>
+                          <input type="checkbox" > To Date
+                        </label>
+                      </div>
+                      </nj-checkbox>
+                      <nj-checkbox>
+                        <div class="nj-checkbox">
+                          <label>
+                            <input type="checkbox" > kWh Usage
+                          </label>
+                        </div>
+                      </nj-checkbox>
+                      <nj-checkbox>
+                      <div class="nj-checkbox">
+                        <label>
+                          <input type="checkbox" > Total Due
+                        </label>
+                      </div>
+                      </nj-checkbox>
+                      <nj-checkbox>
+                        <div class="nj-checkbox">
+                          <label>
+                            <input type="checkbox" > Prior Balance
+                          </label>
+                        </div>
+                      </nj-checkbox>
+                      <nj-checkbox>
+                      <div class="nj-checkbox">
+                        <label>
+                          <input type="checkbox" > Current Charges
+                        </label>
+                      </div>
+                      </nj-checkbox>
+                      <nj-checkbox>
+                        <div class="nj-checkbox">
+                          <label>
+                            <input type="checkbox" > Supply Charges
+                          </label>
+                        </div>
+                      </nj-checkbox>
+                      <nj-checkbox>
+                      <div class="nj-checkbox">
+                        <label>
+                          <input type="checkbox" > Monthly Band Adjustments
+                        </label>
+                      </div>
+                      </nj-checkbox>
+                      <nj-checkbox>
+                        <div class="nj-checkbox">
+                          <label>
+                            <input type="checkbox" > Congestion Charges
+                          </label>
+                        </div>
+                      </nj-checkbox>
+                      <nj-checkbox>
+                      <div class="nj-checkbox">
+                        <label>
+                          <input type="checkbox" > Monthly Flat Fee
+                        </label>
+                      </div>
+                      </nj-checkbox>
+                      <nj-checkbox>
+                        <div class="nj-checkbox">
+                          <label>
+                            <input type="checkbox" > Transmission Obligation
+                          </label>
+                        </div>
+                      </nj-checkbox>
+                      <nj-checkbox>
+                      <div class="nj-checkbox">
+                        <label>
+                          <input type="checkbox" > Capacity Obligation
+                        </label>
+                      </div>
+                      </nj-checkbox>
+                      <nj-checkbox>
+                        <div class="nj-checkbox">
+                          <label>
+                            <input type="checkbox" > T & D Charges
+                          </label>
+                        </div>
+                      </nj-checkbox>
+                      <nj-checkbox>
+                      <div class="nj-checkbox">
+                        <label>
+                          <input type="checkbox" > Gross Receipts Tax
+                        </label>
+                      </div>
+                      </nj-checkbox>
+                      <nj-checkbox>
+                        <div class="nj-checkbox">
+                          <label>
+                            <input type="checkbox" > PUC Excise Tax
+                          </label>
+                        </div>
+                      </nj-checkbox>
+                      <nj-checkbox>
+                      <div class="nj-checkbox">
+                        <label>
+                          <input type="checkbox" > Sales Tax
+                        </label>
+                      </div>
+                      </nj-checkbox>
+                      <nj-checkbox>
+                        <div class="nj-checkbox">
+                          <label>
+                            <input type="checkbox" > BPT Tax
+                          </label>
+                        </div>
+                      </nj-checkbox>
+                      <nj-checkbox>
+                      <div class="nj-checkbox">
+                        <label>
+                          <input type="checkbox" > Late Payment Charge
+                        </label>
+                      </div>
+                      </nj-checkbox>
+                      <nj-checkbox>
+                        <div class="nj-checkbox">
+                          <label>
+                            <input type="checkbox" > Returned CHeck Charge
+                        </div>
+                      </nj-checkbox>
+                      <nj-checkbox>
+                      <div class="nj-checkbox">
+                        <label>
+                          <input type="checkbox" > Bill Date
+                        </label>
+                      </div>
+                      </nj-checkbox>
+                      <nj-checkbox>
+                        <div class="nj-checkbox">
+                          <label>
+                            <input type="checkbox" > Bill Due Date
+                          </label>
+                        </div>
+                        </nj-checkbox>
+                    </div>
+                </form>
+                <button type="button" class="nj-btn nj-btn--outline-primary mr-2">Cancel</button>
+                <button type="button" class="nj-btn nj-btn--primary">Generate Report</button>
+                <form class="mt-3">
+                    <nj-toggle>
+                      <div class="nj-toggle">
+                        <label style="font-size: .8rem; color:#757575">
+                          <input type="checkbox" checked>Save Preferences
+                        </label>
+                      </div>
+                    </nj-toggle>
+                </form>
+            </div>
+            
+            <div class="col-4">
+                <p style="font-size: .8rem; color:#757575">Meter Information</p>
+                <form>
+                    <div class="nj-form-group pt-1">
+                        <nj-checkbox>
+                            <div class="nj-checkbox">
+                                <label class="font-italic">
+                                    <input type="checkbox"  />Select All
+                                </label>
+                            </div>
+                        </nj-checkbox>
+                      <nj-checkbox>
+                        <div class="nj-checkbox">
+                          <label>
+                            <input type="checkbox" > Contract Name
+                          </label>
+                        </div>
+                      </nj-checkbox>
+                      <nj-checkbox>
+                      <div class="nj-checkbox">
+                        <label>
+                          <input type="checkbox" > Customer Name
+                        </label>
+                      </div>
+                      </nj-checkbox>
+                      <nj-checkbox>
+                        <div class="nj-checkbox">
+                          <label>
+                            <input type="checkbox" > Supplier Account Number
+                          </label>
+                        </div>
+                      </nj-checkbox>
+                      <nj-checkbox>
+                      <div class="nj-checkbox">
+                        <label>
+                          <input type="checkbox" > Utility Account Number
+                        </label>
+                      </div>
+                      </nj-checkbox>
+                      <nj-checkbox>
+                        <div class="nj-checkbox">
+                          <label>
+                            <input type="checkbox" > Client ID
+                          </label>
+                        </div>
+                      </nj-checkbox>
+                      <nj-checkbox>
+                      <div class="nj-checkbox">
+                        <label>
+                          <input type="checkbox" > Meter Number
+                        </label>
+                      </div>
+                      </nj-checkbox>
+                      <nj-checkbox>
+                        <div class="nj-checkbox">
+                          <label>
+                            <input type="checkbox" > Meter Multiplier
+                          </label>
+                        </div>
+                      </nj-checkbox>
+                      <nj-checkbox>
+                      <div class="nj-checkbox">
+                        <label>
+                          <input type="checkbox" > Beginning Meter Read
+                        </label>
+                      </div>
+                      </nj-checkbox>
+                      <nj-checkbox>
+                        <div class="nj-checkbox">
+                          <label>
+                            <input type="checkbox" > End Meter Read
+                          </label>
+                        </div>
+                      </nj-checkbox>
+                      <nj-checkbox>
+                      <div class="nj-checkbox">
+                        <label>
+                          <input type="checkbox" > Start Date
+                        </label>
+                      </div>
+                      </nj-checkbox>
+                      <nj-checkbox>
+                        <div class="nj-checkbox">
+                          <label>
+                            <input type="checkbox" > End Date
+                          </label>
+                        </div>
+                      </nj-checkbox>
+                      <nj-checkbox>
+                      <div class="nj-checkbox">
+                        <label>
+                          <input type="checkbox" > Quantity
+                        </label>
+                      </div>
+                      </nj-checkbox>
+                      <nj-checkbox>
+                        <div class="nj-checkbox">
+                          <label>
+                            <input type="checkbox" > Measurement Unit
+                          </label>
+                        </div>
+                      </nj-checkbox>
+                      <nj-checkbox>
+                      <div class="nj-checkbox">
+                        <label>
+                          <input type="checkbox" > Bill Date
+                        </label>
+                      </div>
+                      </nj-checkbox>
+                    </form>
+            </div>
+        </div>
+<!-- paperless -->
+
+<hr class="mt-5" style="border:1px solid black;">
+<div class="row justify-content-md-center mt-3">
+    <div class="col">
+        
+    </div>
+    <div class="col">
+        
+    </div>
+</div>
+</div>
+
+ <!-- Scripts -->
+ <script>
+    document.addEventListener('DOMContentLoaded', function(event) {
+      NJ.AutoInit();
+    });
+  </script>
+  <script>
+    function toggle(source) {
+    checkboxes = document.getElementsByName('foo');
+    for(var i=0, n=checkboxes.length;i<n;i++) {
+    checkboxes[i].checked = source.checked;
+        }
+    }
+    function toggle(source) {
+    checkboxes = document.getElementsByName('bar');
+    for(var i=0, n=checkboxes.length;i<n;i++) {
+    checkboxes[i].checked = source.checked;
+        }
+    }
+  </script>
+  <script src="../js/fluid-design-system.js"></script>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/custom.js"></script>
+  
+</body>
+</html>
