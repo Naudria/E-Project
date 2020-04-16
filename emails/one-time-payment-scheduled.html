@@ -1,172 +1,642 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Lato:300,400,700,900&display=swap" rel="stylesheet"/>
-    <script src="https://kit.fontawesome.com/5d0d55aa82.js"></script>
-   <!-- ENGIE core CSS -->
-    <link rel="stylesheet" href="https://assets.design.digital.engie.com/fluid/latest/fluid-design-system.css" crossorigin="anonymous">
-    <title>One-Time EFT Payment(s) Scheduled</title>
+<html
+	lang="en"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:v="urn:schemas-microsoft-com:vml"
+	xmlns:o="urn:schemas-microsoft-com:office:office"
+>
+	<head>
+		<meta charset="utf-8" />
+		<!-- utf-8 works for most cases -->
+		<meta name="viewport" content="width=device-width" />
+		<!-- Forcing initial-scale shouldn't be necessary -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<!-- Use the latest (edge) version of IE rendering engine -->
+		<meta name="x-apple-disable-message-reformatting" />
+		<!-- Disable auto-scale in iOS 10 Mail entirely -->
+		<meta
+			name="format-detection"
+			content="telephone=no,address=no,email=no,date=no,url=no"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css?family=Material+Icons|Lato:300,400,700,900&display=swap"
+			rel="stylesheet"
+		/>
+		<title>One-Time Payment Scheduled</title>
 
-    <!-- Email Styles -->
-    <style>
+		<!-- Email Styles -->
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				line-height: 1.65;
+				-ms-text-size-adjust: 100%;
+				-webkit-text-size-adjust: 100%;
+			}
 
-        * { margin: 0; padding: 0;  line-height: 1.65; }
+			html,
+			body {
+				margin: 0 auto !important;
+				padding: 0 !important;
+				height: 100% !important;
+				width: 100% !important;
+				background-color: #fff;
+			}
 
-        .email { max-width: 100%; margin: 0 auto; display: block; }
+			#MessageViewBody,
+			#MessageWebViewDiv {
+				width: 100% !important;
+			}
 
-        body, .body-wrap { width: 100% !important; height: 100%; background: #f8f8f8; }
+			/* What it does: Stops Outlook from adding extra spacing to tables. */
+			table,
+			td {
+				mso-table-lspace: 0pt !important;
+				mso-table-rspace: 0pt !important;
+			}
 
-        /* a:hover { text-decoration: underline; } */
+			th {
+				font-weight: normal;
+			}
 
-        .text-center { text-align: center; }
+			a {
+				text-decoration: none;
+				color: #009de9;
+			}
 
-        .text-right { text-align: right; }
+			img {
+				-ms-interpolation-mode: bicubic;
+			}
 
-        .text-left { text-align: left; }
+			/* What it does: A work-around for email clients meddling in triggered links. */
+			a[x-apple-data-detectors],  /* iOS */
+        .unstyle-auto-detected-links a,
+        .aBn {
+				border-bottom: 0 !important;
+				cursor: default !important;
+				color: inherit !important;
+				text-decoration: none !important;
+				font-size: inherit !important;
+				font-family: inherit !important;
+				font-weight: inherit !important;
+				line-height: inherit !important;
+			}
 
-        .blue { color: #0af; }
+			.im {
+				color: inherit !important;
+			}
 
-        h1, h2, h3, h4, h5, h6 { margin-bottom: 20px; line-height: 1.25; }
+			.a6S {
+				display: none !important;
+				opacity: 0.01 !important;
+			}
 
-        h1 { font-size: 32px; }
+			img.g-img + div {
+				display: none !important;
+			}
 
-        h2 { font-size: 28px; }
+			/* iPhone 4, 4S, 5, 5S, 5C, and 5SE */
+			@media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+				u ~ div .email-container {
+					min-width: 320px !important;
+				}
+			}
+			/* iPhone 6, 6S, 7, 8, and X */
+			@media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+				u ~ div .email-container {
+					min-width: 375px !important;
+				}
+			}
+			/* iPhone 6+, 7+, and 8+ */
+			@media only screen and (min-device-width: 414px) {
+				u ~ div .email-container {
+					min-width: 414px !important;
+				}
+			}
+		</style>
+		<!-- CSS Reset : END -->
 
-        h3 { font-size: 24px; }
+		<!-- Progressive Enhancements : BEGIN -->
+		<style>
+			/* What it does: Hover styles for buttons */
+			.button-td,
+			.button-a {
+				transition: all 100ms ease-in;
+			}
+			.button-td-primary:hover,
+			.button-a-primary:hover {
+				background: #009de9 !important;
+				border-color: #009de9 !important;
+			}
 
-        h4 { font-size: 20px; }
+			/* Media Queries */
+			@media screen and (max-width: 600px) {
+				.email-container {
+					width: 100% !important;
+					margin: auto !important;
+				}
 
-        h5 { font-size: 16px; }
+				/* What it does: Forces table cells into full-width rows. */
+				.stack-column,
+				.stack-column-center {
+					display: block !important;
+					width: 100% !important;
+					max-width: 100% !important;
+					direction: ltr !important;
+				}
+				/* And center justify these ones. */
+				.stack-column-center {
+					text-align: center !important;
+				}
 
-        p, ul, ol { font-size: 16px; font-weight: normal; margin-bottom: 20px; }
+				/* What it does: Generic utility class for centering. Useful for images, buttons, and nested tables. */
+				.center-on-narrow {
+					text-align: center !important;
+					display: block !important;
+					margin-left: auto !important;
+					margin-right: auto !important;
+					float: none !important;
+				}
+				table.center-on-narrow {
+					display: inline-block !important;
+				}
 
-        .container { display: block !important; clear: both !important; margin: 0 auto !important; max-width: 580px !important; }
+				/* What it does: Adjust typography on small screens to improve readability */
+				.email-container p {
+					font-size: 17px !important;
+				}
+			}
+		</style>
+		<!-- Progressive Enhancements : END -->
+	</head>
 
-        .container table { width: 100% !important; border-collapse: collapse; }
+	<body
+		width="100%"
+		style="
+			margin: 0;
+			padding: 0 !important;
+			mso-line-height-rule: exactly;
+			background-color: #fff;
+		"
+	>
+		<center
+			role="article"
+			aria-roledescription="email"
+			lang="en"
+			style="width: 100%; background-color: white;"
+		>
+			<!--[if mso | IE]>
+	  <table role='presentation' border='0' cellpadding='0' cellspacing='0' width='100%' style='background-color: #ffffff;'>
+	  <tr>
+	  <td>
+	  <![endif]-->
 
-        .container .masthead { padding: 40px 0; background: #fff; border-bottom: 1px solid #eee }
+			<!-- Create white space after the desired preview text so email clients don’t pull other distracting text into the inbox preview. Extend as necessary. -->
+			<!-- Preview Text Spacing Hack : BEGIN -->
+			<div
+				style="
+					display: none;
+					font-size: 1px;
+					line-height: 1px;
+					max-height: 0px;
+					max-width: 0px;
+					opacity: 0;
+					overflow: hidden;
+					mso-hide: all;
+					font-family: sans-serif;
+				"
+			>
+				&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+			</div>
+			<!-- Preview Text Spacing Hack : END -->
 
-        .container .content { background: white; padding: 30px 35px; border-bottom: 1px solid #eee  }
+			<!-- Email Body : BEGIN -->
+			<table
+				align="center"
+				role="presentation"
+				cellspacing="0"
+				cellpadding="0"
+				border="0"
+				width="600"
+				style="margin: auto;"
+				class="email-container"
+			>
+				<!-- Email Header : BEGIN -->
+				<tr>
+					<td
+						style="
+							padding: 30px 0;
+							text-align: center;
+							border-bottom: 1px solid #cccccc;
+						"
+					>
+						<img
+							src="https://titancpweb.blob.core.windows.net/%24web/assets/brand/logo-engie-blue.png"
+							width="200"
+							height="50"
+							alt="engie_logo"
+							border="0"
+							style="
+								height: auto;
+								font-family: sans-serif;
+								font-size: 15px;
+								line-height: 15px;
+								color: #0af;
+							"
+						/>
+					</td>
+				</tr>
+				<!-- Email Header : END -->
 
-        .container .social { background: white; padding: 30px 35px; }
+				<!-- 1 Column Text + Button : BEGIN -->
+				<tr>
+					<td style="background-color: white; padding: 30px 0;">
+						<table
+							role="presentation"
+							cellspacing="0"
+							cellpadding="0"
+							border="0"
+							width="100%"
+						>
+							<tr>
+								<td
+									style="
+										padding: 20px;
+										font-family: sans-serif;
+										font-size: 15px;
+										line-height: 20px;
+										color: #555555;
+									"
+								>
+									<h1
+										style="
+											margin: 0 0 10px;
+											font-size: 25px;
+											line-height: 30px;
+											color: #333;
+											font-weight: normal;
+										"
+									>
+                  One-Time EFT Payment(s) Scheduled
+									</h1>
+									<p style="margin: 0 0 20px;">
+										This message is confirmation that the following payment(s) has/have been scheduled for the following ENGIE Resources account(s).
+									</p>
+                  <table
+										role="presentation"
+										cellspacing="0"
+										cellpadding="0"
+										border="0"
+										width="100%"
+									>
+										<tr>
+											<th
+												style="
+													background-color: #eee;
+													font-size: 0.8rem;
+													line-height: 1rem;
+													padding: 5px;
+													border-bottom: 1px solid #ccc;
+													border-left: 1px solid #ccc;
+													border-top: 1px solid #ccc;
+													border-right: 1px solid #ccc;
+												"
+											>
+												Bill Account
+											</th>
+											<th
+												style="
+													background-color: #eee;
+													font-size: 0.8rem;
+													line-height: 1rem;
+													padding: 5px;
+													border-bottom: 1px solid #ccc;
+													border-right: 1px solid #ccc;
+													border-top: 1px solid #ccc;
+												"
+											>
+												Payment Amount
+											</th>
+											<th
+												style="
+													background-color: #eee;
+													font-size: 0.8rem;
+													line-height: 1rem;
+													padding: 5px;
+													border-bottom: 1px solid #ccc;
+													border-right: 1px solid #ccc;
+													border-top: 1px solid #ccc;
+												"
+											>
+												Payment Effective Date
+											</th>
+											<th
+												style="
+													background-color: #eee;
+													font-size: 0.8rem;
+													line-height: 1rem;
+													padding: 5px;
+													border-bottom: 1px solid #ccc;
+													border-right: 1px solid #ccc;
+													border-top: 1px solid #ccc;
+												"
+											>
+												Confirmation Number
+											</th>
+										</tr>
+										<tr>
+											<td
+												style="
+													font-size: 0.8rem;
+													line-height: 1rem;
+													padding: 5px;
+													border-bottom: 1px solid #ccc;
+													border-left: 1px solid #ccc;
+													border-right: 1px solid #ccc;
+												"
+											>
+                      5357745008
+											</td>
+											<td
+												style="
+													font-size: 0.8rem;
+													line-height: 1rem;
+													padding: 5px;
+													border-bottom: 1px solid #ccc;
+													border-right: 1px solid #ccc;
+												"
+											>
+												$1,457.56
+											</td>
+											<td
+												style="
+													font-size: 0.8rem;
+													line-height: 1rem;
+													padding: 5px;
+													border-bottom: 1px solid #ccc;
+													border-right: 1px solid #ccc;
+												"
+											>
+                      9/13/2019
+											</td>
+											<td
+												style="
+													font-size: 0.8rem;
+													line-height: 1rem;
+													padding: 5px;
+													border-bottom: 1px solid #ccc;
+													border-right: 1px solid #ccc;
+												"
+											>
+											51008949
+											</td>
 
-        .social-icons a { text-align: center; margin-bottom: 20px; color: #bdbdbd;}
+										</tr>
+									</table>
+								</td>
+							</tr>
 
-        .social-icons a:hover { text-decoration: none; color:#D3D3D3 ;}
+						</table>
+					</td>
+				</tr>
+				<!-- 1 Column Text + Button : END -->
+			</table>
 
-        .container .content.footer { background: none; }
+			<!-- Email Footer : BEGIN -->
+			<table
+				align="center"
+				role="presentation"
+				cellspacing="0"
+				cellpadding="0"
+				border="0"
+				width="600"
+				style="margin: auto;"
+				class="email-container"
+			>
+				<tr>
+					<td
+						style="
+							padding: 20px;
+							font-family: sans-serif;
+							font-size: 12px;
+							line-height: 15px;
+							text-align: center;
+							color: #888888;
+							border-bottom: 1px solid #cccccc;
+						"
+					>
+						<!-- <webversion style='color: #cccccc; text-decoration: underline; font-weight: bold;'>View as a Web Page</webversion> -->
 
-        .container .content.footer p { margin-bottom: 0; color: #888; text-align: center; font-size: 14px; }
+						<br />
+						<span class="unstyle-auto-detected-links"
+							>Sent by <a class="nj-link" href="#">ENGIE NA</a>, 1360 Post Oak
+							Suite 400 Houston, TX 77056</span
+						><br />
+						<span
+							><a href="mailto:care@engieresources.com">Contact Us</a> •
+							<a href="#">Terms and Conditions</a> •
+							<a href="#">Privacy Policy</a></span
+						>
 
-        #blue-logo { max-width:150px; margin: auto; padding-bottom:2rem; }
+						<!-- <unsubscribe style='color: #888888; text-decoration: underline;'>unsubscribe</unsubscribe> -->
+					</td>
+				</tr>
+			</table>
+			<!-- Email Footer : END -->
 
-        th { font-size:.8rem; text-align:center; background-color: #eeeeee; border:1px solid #888}
+			<!-- Full Bleed Background Section : BEGIN -->
 
-        td.table { font-size:.8rem; text-align: center; border:1px solid #888}
-    </style>
+			<table
+				role="presentation"
+				cellspacing="0"
+				cellpadding="0"
+				border="0"
+				width="100%"
+				style="background-color: white;"
+			>
+				<tr>
+					<td>
+						<div
+							align="center"
+							style="max-width: 200px; margin: auto;"
+							class="email-container"
+						>
+							<!--[if mso]>
+	                    <table role='presentation' cellspacing='0' cellpadding='0' border='0' width='600' align='center'>
+	                    <tr>
+	                    <td>
+	                    <![endif]-->
+							<table
+								role="presentation"
+								cellspacing="0"
+								cellpadding="0"
+								border="0"
+								width="100%"
+							>
+								<tr>
+									<td style="padding: 10px; background-color: white;">
+										<table
+											role="presentation"
+											cellspacing="0"
+											cellpadding="0"
+											border="0"
+											width="100%"
+										>
+											<tr>
+												<!-- Column : BEGIN -->
+												<th
+													valign="top"
+													width="25%"
+													class="stack-column-center"
+												>
+													<table
+														role="presentation"
+														cellspacing="0"
+														cellpadding="0"
+														border="0"
+														width="100%"
+													>
+														<tr>
+															<td style="padding: 10px; text-align: center;">
+																<a
+																	href="https://www.facebook.com/ENGIENorthAmerica/"
+																>
+																	<img
+																		src="https://titancpweb.blob.core.windows.net/%24web/assets/brand/facebook-f.png"
+																		width=""
+																		height="30"
+																		alt="alt_text"
+																		border="0"
+																		style="opacity: 0.7;"
+																/></a>
+															</td>
+														</tr>
+													</table>
+												</th>
+												<!-- Column : END -->
+												<!-- Column : BEGIN -->
+												<th
+													valign="top"
+													width="25%"
+													class="stack-column-center"
+												>
+													<table
+														role="presentation"
+														cellspacing="0"
+														cellpadding="0"
+														border="0"
+														width="100%"
+													>
+														<tr>
+															<td style="padding: 10px; text-align: center;">
+																<a href="https://twitter.com/EngieNorthAM"
+																	><img
+																		src="https://titancpweb.blob.core.windows.net/%24web/assets/brand/twitter.png"
+																		width=""
+																		height="30"
+																		alt="alt_text"
+																		border="0"
+																		style="opacity: 0.7;"
+																/></a>
+															</td>
+														</tr>
+													</table>
+												</th>
+												<!-- Column : END -->
+												<!-- Column : BEGIN -->
+												<th
+													valign="top"
+													width="25%"
+													class="stack-column-center"
+												>
+													<table
+														role="presentation"
+														cellspacing="0"
+														cellpadding="0"
+														border="0"
+														width="100%"
+													>
+														<tr>
+															<td style="padding: 10px; text-align: center;">
+																<a
+																	href="https://www.linkedin.com/company/engie-north-america-inc"
+																	><img
+																		src="https://titancpweb.blob.core.windows.net/%24web/assets/brand/linkedin.png"
+																		width=""
+																		height="30"
+																		alt="alt_text"
+																		border="0"
+																		style="opacity: 0.7;"
+																/></a>
+															</td>
+														</tr>
+													</table>
+												</th>
+												<!-- Column : END -->
+												<!-- Column : BEGIN -->
+												<th
+													valign="top"
+													width="25%"
+													class="stack-column-center"
+												>
+													<table
+														role="presentation"
+														cellspacing="0"
+														cellpadding="0"
+														border="0"
+														width="100%"
+													>
+														<tr>
+															<td style="padding: 10px; text-align: center;">
+																<a
+																	href="https://titancpweb.blob.core.windows.net/%24web/assets/brand/instagram.png"
+																	><img
+																		src="https://titancpweb.blob.core.windows.net/%24web/assets/brand/instagram.png"
+																		width=""
+																		height="30"
+																		alt="alt_text"
+																		border="0"
+																		style="opacity: 0.7;"
+																/></a>
+															</td>
+														</tr>
+													</table>
+												</th>
+												<!-- Column : END -->
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+							<!--[if mso]>
+	                    </td>
+	                    </tr>
+	                    </table>
+	                    <![endif]-->
+						</div>
+					</td>
+				</tr>
+			</table>
+			<!-- Full Bleed Background Section : END -->
 
-</head>
-
-<body>
-    <table class="body-wrap">
-        <tr>
-            <td class="container">
-    
-                <!-- Message start -->
-                <table>
-                    <tr>
-                        <td align="center" class="masthead">
-    
-                          <div class="engie-logo"><a href="#"><img class="email" alt="engie logo" id="blue-logo" src="https://assets.design.digital.engie.com/brand/logo-engie-blue.svg"></a></div>
-    
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="content">
-    
-                            <p>This message is confirmation that the following payment(s) has/have been scheduled for the following ENGIE Resources account(s).</p>
-                            <table>
-                              <tr>
-                                <th>Bill Account</th>
-                                <th>Payment Amount</th>
-                                <th>Payment Effective Date</th>
-                                <th>Confirmation Number</th>
-                              </tr>
-                              <tr>
-                                <td class="table">5357745008 </td>
-                                <td class="table">$1,457.56 </td>
-                                <td class="table">9/13/2019</td>
-                                <td class="table">51008949</td>
-                              </tr>
-                              
-                            </table>
-                        </td>
-                    </tr>
-                    <tr>
-                      <td class="social">
-                          <table>
-                              <tr>
-                                  <td align="center">
-                                    <div class="social-icons"> 
-                                      <a href="https://twitter.com/EngieNorthAM">
-                                        <span class="fa-stack fa-lg">
-                                        <i class="fab fa-twitter"></i>
-                                        </span>
-                                      </a>
-                                      <a href="https://www.linkedin.com/company/engie-north-america-inc">
-                                        <span class="fa-stack fa-lg">
-                                          <i class="fab fa-linkedin"></i>
-                                        </span>
-                                      </a>
-                                      <a href="https://www.instagram.com/engienortham/">
-                                        <span class="fa-stack fa-lg">
-                                          <i class="fab fa-instagram "></i>
-                                        </span>
-                                      </a>
-                                      <a href="https://www.facebook.com/ENGIENorthAmerica/">
-                                        <span class="fa-stack fa-lg">
-                                          <i class="fab fa-facebook-f "></i>
-                                        </span>
-                                      </a>
-                                    </div>  
-                                    </td>
-                              </tr>
-                          </table>
-  
-                      </td>
-                  </tr>
-                </table>
-    
-            </td>
-        </tr>
-        <tr>
-            <td class="container">
-    
-                <!-- Message start -->
-                <table>
-                  <tr>
-                      <td class="content footer" align="center">
-                          <p>Sent by <a class="nj-link" href="#">ENGIE NA</a>, 1360 Post Oak Suite 400 Houston, TX 77056</p>
-                          <p><a href="mailto:care@engieresources.com">Contact Us</a> • <a href="#">Terms and Conditions</a> • <a href="#">Privacy Policy</a> </p>
-                      </td>
-                  </tr>
-              </table>
-    
-            </td>
-        </tr>
+			<!--[if mso | IE]>
+    </td>
+    </tr>
     </table>
-    <!-- end tables -->
+    <![endif]-->
+		</center>
 
-    <!-- Scripts -->
-<script src="https://assets.design.digital.engie.com/fluid/latest/fluid-design-system.js" crossorigin="anonymous"></script>
-<script>
-document.addEventListener('DOMContentLoaded', function(event) {
-  NJ.AutoInit();
-});
-</script>
+		<!-- end tables -->
 
-</body>
+		<!-- Scripts -->
+		<script
+			src="https://assets.design.digital.engie.com/fluid/latest/fluid-design-system.js"
+			crossorigin="anonymous"
+		></script>
+		<script>
+			document.addEventListener('DOMContentLoaded', function (event) {
+				NJ.AutoInit();
+			});
+		</script>
+	</body>
 </html>
