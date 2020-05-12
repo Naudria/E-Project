@@ -9,40 +9,56 @@
 
     <!-- app.css combines bootstrap, engie fluid design, and custom styles -->
     <link rel="stylesheet" href="https://assets.design.digital.engie.com/fluid/latest/fluid-design-system.css" crossorigin="anonymous">
+  <style>
+    @media (max-width: 1268px) {
+  #landing {
+      max-width: 300px;
+  }
+}
 
+  </style>
     <title>Billing Portals Landing Page</title>
 </head>
 <!-- NAVBAR -->
-
+<body>
+  <!-- <div class="col-md-12 m-0 p-0" style="width:100%"> -->
   <nj-navbar>
-    <nav class="nj-navbar nj-navbar--blue nj-navbar--sm">
+    <nav class="nj-navbar  nj-navbar--sm nj-navbar--blue nj-navbar--expand-xl ">
       <a class="nj-navbar__brand" href="#"><svg class="nj-navbar__logo"><use href="/images/logo-engie-white.svg#logo-engie-white" /></svg></a>
       <!-- HEADER LINKS -->
 
     </nav>
   </nj-navbar>
-
+<!-- </div> -->
 <!-- end navbar -->
-<body>
+
   <div class="col-md-12 ml-4 mr-4">
+    <div class="row justify-content-center">
+      <div class="col-md-5 mr-1">
     <h3 class="pt-3 font-weight-bold">Access Your Portal</h3>
     <h4>Please select your service area below.</h4>
-    <div class="row">
+      </div>
+      <div class="col-md-5 ml-1">
+
+      </div>
+    </div>
+    <div class="row justify-content-center">
       <!-- card 1 -->
-      <div class="col">
-        <div class="nj-card">
+      <div class="col-md-5 mr-1">
+        <div class="nj-card mb-2">
           <div class="nj-card__header mb-0" style="justify-content:space-between;">
-            <div class="col">MISO</div>
-            <div class="col">NYISO</div>
+            <div class="col-5">MISO</div>
+            <div class="col-5">NYISO</div>
           </div>
           <div class="nj-card__header mb-2 mt-0 pt-1" style="justify-content:space-between; color:#212121; background-color: white;">
-            <div class="col">• Illinois - Ameren</div>
-            <div class="col">• New York</div>
+            <div class="col-5 t-deci">• Illinois - Ameren</div>
+            <div class="col-5 t-deci">• New York</div>
           </div>
-          <div class="nj-card_body">
+          <div class="nj-card_body text-center">
+
             <div class="row">
               <div class="col">
-
+                  <img id="landing" src="../images/ServiceAreasPhase1-Image1.jpg" />
               </div>
             </div>
             <button role="button" class="nj-btn nj-btn--primary d-block mx-auto mb-2">Sign in</button>
@@ -50,8 +66,42 @@
         </div>
       </div>
       <!-- card 2 -->
-      <div class="col-md-6">
-
+      <div class="col-md-5 ml-1">
+        <div class="nj-card mb-2">
+          <div class="nj-card__header mb-0" style="justify-content:space-between;">
+            <div class="col-4">ERCOT</div>
+            <div class="col-4">ISO-NE</div>
+            <div class="col-4">PJM</div>
+          </div>
+          <div class="nj-card__header mb-2 mt-0 pt-1" style="justify-content:space-between; color:#212121; background-color: white;">
+            <div class="row align-items-start">
+            <div class="col-4 t-deci"><p >• Texas</p></div>
+            <div class="col-4 t-deci">
+              <p class="m-0 p-0">• Connecticut</p>
+              <p class="m-0 p-0">• Maine </p>
+              <p class="m-0 p-0">• Massachusetts</p>
+            </div>
+            <div class="col-4 t-deci">
+              <p class="m-0 p-0">• Delaware</p>
+              <p class="m-0 p-0">• Illinois - Commonwealth Edison (ComEd)</p>
+              <p class="m-0 p-0">• Maryland</p>
+              <p class="m-0 p-0">• New Jersey</p>
+              <p class="m-0 p-0">• Ohio</p>
+              <p class="m-0 p-0">• Pennsylvania</p>
+              <p class="m-0 p-0">• Washington D.C.</p>
+            </div>
+            </div>
+          </div>
+          <div class="nj-card_body text-center">
+            <div class="row">
+              <div class="col">
+                  <img id="landing" src="../images/ServiceAreasPhase1-Image2.jpg" />
+              </div>
+            </div>
+            <button role="button" class="nj-btn nj-btn--primary d-block mx-auto mb-2">Sign in</button>
+          </div>
+        </div>
+      </div>
       </div>
     </div>
   </div>
