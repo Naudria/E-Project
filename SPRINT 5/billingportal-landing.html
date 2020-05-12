@@ -10,6 +10,17 @@
     <!-- app.css combines bootstrap, engie fluid design, and custom styles -->
     <link rel="stylesheet" href="https://assets.design.digital.engie.com/fluid/latest/fluid-design-system.css" crossorigin="anonymous">
   <style>
+ .landing1 {
+   margin-bottom: 2.8rem;
+ }
+
+  .smlr-crd {
+    justify-content:space-between;
+    color:#212121;
+    background-color: white;
+    margin-bottom: 7rem;
+  }
+
     @media (max-width: 1268px) {
   #landing {
       max-width: 300px;
@@ -17,6 +28,23 @@
 
   .crd {
     font-size: .75rem;
+  }
+
+  .smlr-crd {
+    margin-bottom: 5rem;
+  }
+
+  .landing1 {
+    margin-bottom: 2rem;
+  }
+}
+
+  @media (max-width: 768px) {
+  .smlr-crd {
+    margin-bottom:0;
+  }
+  .landing1 {
+    margin-bottom:0;
   }
 }
 
@@ -27,7 +55,7 @@
 <body>
   <!-- <div class="col-md-12 m-0 p-0" style="width:100%"> -->
     <nj-navbar>
-      <nav class="nj-navbar nj-navbar--sm nj-navbar--blue nj-navbar--expand-xl fixed-top">
+      <nav class="nj-navbar nj-navbar--sm nj-navbar--blue nj-navbar--expand-xl ">
         <a class="nj-navbar__brand" href="#">
             <img src="https://design.digital.engie.com/assets/brand/logo-engie-white.svg" alt="" class="nj-navbar__logo">
         </a>
@@ -36,7 +64,7 @@
     </nj-navbar>
 <!-- end navbar -->
 
-  <div class="col-md-12 pt-7">
+  <div class="col-md-12 pt-2">
     <div class="row justify-content-center">
       <div class="col-md-5 mr-1">
     <h3 class="font-weight-bold">Access Your Portal</h3>
@@ -49,12 +77,12 @@
     <div class="row justify-content-center">
       <!-- card 1 -->
       <div class="col-md-5 mr-1">
-        <div class="nj-card mb-2 crd">
+        <div class="nj-card mb-2">
           <div class="nj-card__header mb-0" style="justify-content:space-between;">
             <div class="col-5">MISO</div>
             <div class="col-5">NYISO</div>
           </div>
-          <div class="nj-card__header mb-2 mt-0 pt-1" style="justify-content:space-between; color:#212121; background-color: white;">
+          <div class="nj-card__header mt-0 pt-1 smlr-crd">
             <div class="col-5 t-deci">• Illinois - Ameren</div>
             <div class="col-5 t-deci">• New York</div>
           </div>
@@ -62,7 +90,7 @@
 
             <div class="row">
               <div class="col">
-                  <img id="landing" src="../images/ServiceAreasPhase1-Image1.jpg" />
+                  <img class="landing1" id="landing" src="../images/ServiceAreasPhase1-Image1.jpg" />
               </div>
             </div>
             <button role="button" class="nj-btn nj-btn--primary d-block mx-auto mb-2">Sign in</button>
