@@ -5,11 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Material+Icons|Lato:300,400,700,900&display=swap" rel="stylesheet"/>
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" 
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
   rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    
+
     <!-- app.css combines bootstrap, engie fluid design, and custom styles -->
     <link rel="stylesheet" href="../css/app.css">
+    <style>
+      .console {
+        height:10rem;
+        width: 100%;
+        background-color:#eee;
+        -moz-box-shadow: inset 0 -10px 10px -10px #000000;
+        -webkit-box-shadow: inset 0 -10px 10px -10px #000000;
+        box-shadow: inset 0 -10px 10px -10px #000000;
+      }
+    </style>
     <title>Emulation Console</title><!-- Scripts -->
     <script src="/js/fluid-design-system.js"></script>
     <script src="/js/jquery.min.js"></script>
@@ -27,19 +37,19 @@
 <!-- BODY -->
 <body>
   <div class="console">
-    <div class="container" >
+
       <div class="col pt-3">
         <div class="row justify-content-center" >
       <h4 style="color:#757575; padding-bottom:1rem;">Emulation Console</h4>
         </div>
-        <div class="row justify-content-center" style="line-height: 2rem; text-align: center; padding-bottom:2rem;">
+        <div class="row justify-content-center" style="line-height: 2rem; text-align: center; padding-bottom:1rem;">
           <div class="col-sm" style="color:#757575"><span style="color:#9e9e9e">Emulator:</span> ENGIE /NWHATLEY1</div>
           <div class="col-sm mb-1" style="color:#757575"><span style="color:#9e9e9e">Emulated User:</span> ENGIE /0020667</div>
             <div class="col-sm"><button class="nj-btn nj-btn--light">Stop Emulation</button></div>
             </div>
       </div>
     </div>
-  </div>
+
   <!-- NAVBAR -->
   <nj-navbar>
     <nav class="nj-navbar nj-navbar--blue nj-navbar--expand-xl">
@@ -72,7 +82,7 @@
             </nj-collapse>
             </li>
             <!-- Login dropdown -->
-  
+
           <li class="nj-navbar__nav-item" >
             <nj-collapse >
               <nj-dropdown >
@@ -90,7 +100,7 @@
             </div>
           </nj-dropdown>
           </nj-collapse>
-  
+
           </li>
             <!--<li class="nj-navbar__nav-item"><a class="nj-navbar__nav-link" *ngIf="isAuthenticated" routerLink="/product">{{ 'DYNAMITE CURVE' | translate }}</a></li>-
             <li class="nj-navbar__nav-item"><a class="nj-navbar__nav-link" *ngIf="isAuthenticated" routerLink="/profile">{{ 'PROFILE' | translate }}</a></li>-->
