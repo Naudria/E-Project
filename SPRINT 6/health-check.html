@@ -20,27 +20,64 @@
 
       .border {
         border:1px solid #ccc;
-        height: 3rem;
-        line-height: 3rem;
+        height: 2rem;
       }
+
+      .box {
+        padding-top:.2rem;
+        padding-left:.3rem;
+      }
+
+      .indicator {
+        position: relative;
+        z-index: 1;
+        display: inline-block;
+        width: 1.25rem;
+        height: 1.25rem;
+        overflow: hidden;
+        border: 0.125rem solid #757575;
+        border-radius: 0.25rem;
+        margin-right:1rem;
+        margin-top: .1rem;
+      }
+
+      .green {
+        background-color: greenyellow;
+      }
+
+      .red {
+        background-color:red;
+      }
+
+
     </style>
-    <title>Dynamite API Calls</title>
+    <title>Health Check</title>
 </head>
 
 <body>
     <div class="container mt-5 p-5">
         <h4 class="text-uppercase">Services: {number} </h4>
         <div class="row justify-content-start">
-            <div class="col-4 border">
-              API 1
+          <div class="col-4 border">
+            <div class="row justify-content-between box">
+              <p>API 1</p>
+              <div class="indicator green"></div>
             </div>
-            <div class="col-4 border">
-              API 2
-            </div>
-            <div class="col-4 border">
-                API 3
-              </div>
           </div>
+          <div class="col-4 border">
+            <div class="row justify-content-between box">
+              <p>API 2</p>
+              <div class="indicator green"></div>
+            </div>
+          </div>
+          <div class="col-4 border">
+            <div class="row justify-content-between box">
+              <p>API 3</p>
+              <div class="indicator red"></div>
+
+            </div>
+          </div>
+        </div>
     </div>
 
 </body>
