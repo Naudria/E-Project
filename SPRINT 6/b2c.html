@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Customer Portal</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- TODO: favicon -->
+    <link href="https://accounts-test.engieresources.com/assets/b2c/css/global.css" rel="stylesheet" type="text/css" >
+    <!-- app.css combines bootstrap, engie fluid design, and custom styles -->
+    <link href="https://accounts-test.engieresources.com/assets/b2c/css/app.css" rel="stylesheet" type="text/css" >
+    <style>
+        @media (max-width: 576px) {
+ #login-bg {
+    display: none;
+  }
+}
+    </style>
+    <!-- Scripts -->
+    <script src="https://assets.design.digital.engie.com/fluid/latest/fluid-design-system.js" data-preload="true"></script>
+    <script src="https://accounts-test.engieresources.com/assets/b2c/jscript/setupForgotPassword.js" data-preload="true"></script>
+
+    <script src="https://kit.fontawesome.com/5d0d55aa82.js" data-preload="true"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function(event) {
+        NJ.AutoInit();
+      });
+    </script>
+</head>
+
+<!-- BODY -->
+<body>
+  <script>
+    $(document).ready(function(){
+      setupForgotPassword();
+      applyStyles();
+    });
+  </script>
+  <!-- NAVBAR -->
+  <header>
+    <nav class="nj-navbar nj-navbar--blue nj-navbar--expand-xl">
+      <a class="nj-navbar__brand" href="#">
+        <img src="https://assets.design.digital.engie.com/brand/logo-engie-white.svg" class="nj-navbar__logo" alt="ENGIE"/>
+      </a>
+      </div>
+    </nav>
+  </header>
+  <!-- end navbar -->
+  <div class="container-fluid unified_container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6" id="login">
+        <!-- Column with login form -->
+        <div class="col">
+          <div class="nj-card p-5">
+            <!-- B2C tag for login user flow  -->
+            <span id="passwordheadertxt">
+            <h4>Let's find your password</h4>
+						<h2 style="font-size:1rem;">Enter the email address you used for registration.</h2>
+						</span>
+            <div id="api"></div>
+
+          </div>
+        </div>
+        <!-- end first column -->
+      </div>
+       <!-- end login container -->
+       <!-- begin second column -->
+      <div class="col" id="login-bg" style="background-image: url('https://accounts-test.engieresources.com/assets/brand/login-bg.jpg');"></div>
+    </div>
+    <!-- end row -->
+    <!-- begin footer -->
+    <div class="container">
+      <footer class="nj-footer">
+        <hr id="no-padding">
+        <div class="row nj-footer__content">
+          <div class="col-md">
+          <h5 class="nj-footer__title">Help Center</h5>
+            <ul class="list-unstyled">
+              <li><a href="https://accounts-test.engieresources.com/help" class="nj-footer__link">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="col-md">
+            <h5 class="nj-footer__title">Company</h5>
+            <ul class="list-unstyled">
+              <li><a href="https://www.engieresources.com/about" class="nj-footer__link">About Us</a></li>
+              <li><a href="https://www.engieresources.com/news-and-events" class="nj-footer__link">News & Events</a></li>
+              <li><a href="https://www.engieresources.com/blog" class="nj-footer__link">Market Monitor Blog</a></li>
+            </ul>
+          </div>
+          <div class="col-md">
+            <h5 class="nj-footer__title">Resources</h5>
+            <ul class="list-unstyled">
+              <li><a href="http://www.ercot.com/" target=_blank class="nj-footer__link" target=_blank>ERCOT</a></li>
+              <li><a href="https://www.pjm.com/" target=_blank class="nj-footer__link">PJM</a></li>
+              <li><a href="https://www.nyiso.com/" target=_blank class="nj-footer__link">NYISO</a></li>
+              <li><a href="https://www.iso-ne.com/" target=_blank class="nj-footer__link">ISO-NE</a></li>
+              <li><a href="http://nepool.com/" target=_blank class="nj-footer__link">NEPOOL</a></li>
+              <li><a href="https://www.misoenergy.org/" target=_blank class="nj-footer__link">MISO</a></li>
+            </ul>
+          </div>
+          <div class="col-md">
+            <h5 class="nj-footer__title">Connect with Us</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a class="remove-underline" href="https://www.facebook.com/ENGIENorthAmerica/" target=_blank>
+                  <span style="font-size: 1.5rem; margin-right:1rem; color:#0af">
+                    <i class="fab fa-facebook-f"></i>
+                  </span>
+                </a>
+                <a class="remove-underline" href="https://twitter.com/EngieNorthAM" target=_blank>
+                  <span style="font-size: 1.5rem; margin-right:1rem; color:#0af">
+                    <i class="fab fa-twitter"></i>
+                    </span>
+                </a>
+                <a class="remove-underline" href="https://www.linkedin.com/company/engie-north-america-inc" target=_blank>
+                  <span style="font-size: 1.5rem; margin-right:1rem; color:#0af">
+                    <i class="fab fa-linkedin"></i>
+                  </span>
+                </a>
+              </li>
+              <li><a class="nj-footer__link">Customer Care</a></li>
+              <li><a class="nj-footer__link">M-F 8 a.m. - 7 p.m. EST</a></li>
+              <li><a class="nj-footer__link">866-MyENGIE (866-693-6443)</a></li>
+              <li><a href="mailto:care@engieresources.com" class="nj-footer__link">care@engieresources.com</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+          <div class="row nj-footer__bottom">
+            <div class="col"  >
+                <span class="nj-footer__corp" id="copyright" style="font-size: .75rem; justify-content: start; color:#757575">&copy; 2020 ENGIE Resources. All rights reserved.</span>
+
+            </div>
+            <div class="col">
+              <ul class="list-unstyled nj-footer__corp">
+                <li><a href="#" class="nj-footer__corp-link">Terms</a></li>
+                <li><a href="#" class="nj-footer__corp-link">Privacy</a></li>
+              </ul>
+            </div>
+          </div>
+      </footer>
+          <!-- end footer -->
+    </div>
+
+  </div>
+  <!-- end page container -->
+</body>
+</html>

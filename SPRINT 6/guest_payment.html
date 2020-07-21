@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Lato:300,400,700,900&display=swap" rel="stylesheet"/>
+
+    <!-- app.css combines bootstrap, engie fluid design, and custom styles -->
+    <link rel="stylesheet" href="../css/app.css">
+</head>
+<!-- NAVBAR -->
+<header>
+	<nav
+		class="nj-navbar nj-navbar--blue nj-navbar--expand-xl"
+		style="margin-top: -5rem;"
+	>
+		<a class="nj-navbar__brand" href="#">
+			<img
+				src="https://assets.design.digital.engie.com/brand/logo-engie-white.svg"
+				class="nj-navbar__logo"
+				alt="ENGIE"
+			/>
+		</a>
+	</nav>
+</header>
+<!-- end navbar -->
+<body style="font-family: 'Lato';">
+	<div class="row" id="login-row">
+		<div class="col-xs-12 col-sm-6" id="login">
+			<!-- Column with login form -->
+			<div class="col mt-5">
+				<div id="hosted" class="nj-card-alt p-5">
+					<h4 class="login-header mb-4">Activate your account</h4>
+
+					<form>
+						<div class="nj-form-group pb-3">
+							<nj-form-input-text>
+								<input
+									type="text"
+									class="nj-form-control"
+								/>
+								<label for="Email" class="nj-label-floating"
+									>Email Address</label
+								>
+							</nj-form-input-text>
+
+						</div>
+							<div class="nj-form-group text-left">
+								<button
+									id="submit-button"
+									class="nj-btn nj-btn--primary"
+								>
+									Activate
+								</button>
+							</div>
+					</form>
+				</div>
+				<div class="small-stuff pl-5">
+					Want to manage your account instead?
+					<a href="javascript:void(0);" (click)="goBack()">Sign in</a>
+				</div>
+				<!-- end card -->
+			</div>
+			<!-- end first column -->
+		</div>
+		<!-- end login container -->
+		<!-- begin second column -->
+		<div
+			class="col"
+			id="login-bg"
+			style="background-image: url('assets/brand/login-bg.jpg');"
+		></div>
+	</div>
+
+	<!-- begin footer -->
+	<div style="background-color: white;">
+		<div class="container pt-3">
+			<footer class="nj-footer">
+				<div class="row nj-footer__content" id="footer">
+					<div class="col-md">
+						<h5 class="nj-footer__title" id="footer-title-margin">
+							Help Center
+						</h5>
+						<ul class="list-unstyled">
+							<li>
+								<a
+									routerLink="/help"
+									href="#"
+									class="nj-footer__link"
+									id="footer-list-items"
+									>Contact Us</a
+								>
+							</li>
+							<!-- <li ><a href="../../assets/SampleBill.pdf" class="nj-footer__link" id="footer-list-items" target="_blank">How to Read Your Bill</a></li> -->
+						</ul>
+					</div>
+					<div class="col-md">
+						<h5 class="nj-footer__title" id="footer-title-margin">Company</h5>
+						<ul class="list-unstyled">
+							<li>
+								<a
+									href="https://www.engieresources.com/about"
+									class="nj-footer__link"
+									id="footer-list-items"
+									target="_blank"
+									>About Us</a
+								>
+							</li>
+							<li>
+								<a
+									href="https://www.engieresources.com/news-and-events"
+									class="nj-footer__link"
+									id="footer-list-items"
+									target="_blank"
+									>News & Events</a
+								>
+							</li>
+							<li>
+								<a
+									href="https://www.engieresources.com/blog"
+									class="nj-footer__link"
+									id="footer-list-items"
+									target="_blank"
+									>Market Monitor Blog</a
+								>
+							</li>
+						</ul>
+					</div>
+					<div class="col-md">
+						<h5 class="nj-footer__title" id="footer-title-margin">Resources</h5>
+						<ul class="list-unstyled">
+							<li>
+								<a
+									href="http://www.ercot.com/"
+									class="nj-footer__link"
+									id="footer-list-items"
+									target="_blank"
+									>ERCOT</a
+								>
+							</li>
+							<li>
+								<a
+									href="https://www.pjm.com/"
+									class="nj-footer__link"
+									id="footer-list-items"
+									target="_blank"
+									>PJM</a
+								>
+							</li>
+							<li>
+								<a
+									href="https://www.nyiso.com/"
+									class="nj-footer__link"
+									id="footer-list-items"
+									target="_blank"
+									>NYISO</a
+								>
+							</li>
+							<li>
+								<a
+									href="https://www.iso-ne.com/"
+									class="nj-footer__link"
+									id="footer-list-items"
+									target="_blank"
+									>ISO-NE</a
+								>
+							</li>
+							<li>
+								<a
+									href="http://nepool.com/"
+									class="nj-footer__link"
+									id="footer-list-items"
+									target="_blank"
+									>NEPOOL</a
+								>
+							</li>
+							<li>
+								<a
+									href="https://www.misoenergy.org/"
+									class="nj-footer__link"
+									id="footer-list-items"
+									target="_blank"
+									>MISO</a
+								>
+							</li>
+						</ul>
+					</div>
+					<div class="col-md">
+						<h5 class="nj-footer__title">Connect with Us</h5>
+						<ul class="list-unstyled">
+							<li>
+								<a
+									class="remove-underline"
+									href="https://www.facebook.com/ENGIENorthAmerica/"
+									target="_blank"
+								>
+									<span
+										style="font-size: 1.5rem; margin-right: 1rem; color: #0af;"
+									>
+										<i class="fab fa-facebook-f"></i>
+									</span>
+								</a>
+								<a
+									class="remove-underline"
+									href="https://twitter.com/EngieNorthAM"
+									target="_blank"
+								>
+									<span
+										style="font-size: 1.5rem; margin-right: 1rem; color: #0af;"
+									>
+										<i class="fab fa-twitter"></i>
+									</span>
+								</a>
+								<a
+									class="remove-underline"
+									href="https://www.linkedin.com/company/engie-north-america-inc"
+									target="_blank"
+								>
+									<span
+										style="font-size: 1.5rem; margin-right: 1rem; color: #0af;"
+									>
+										<i class="fab fa-linkedin"></i>
+									</span>
+								</a>
+							</li>
+							<li><a class="nj-footer__link">Customer Care</a></li>
+							<li><a class="nj-footer__link">M-F 8 a.m. - 7 p.m. EST</a></li>
+							<li><a class="nj-footer__link">866-MyENGIE (866-693-6443)</a></li>
+							<li>
+								<a href="mailto:care@engieresources.com" class="nj-footer__link"
+									>care@engieresources.com</a
+								>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<hr style="margin-top: 0; margin-bottom: 0;" />
+				<div class="row nj-footer__bottom" style="background-color: white;">
+					<div class="col">
+						<ng-container *ngIf="!isAuthenticated">
+							<span
+								class="nj-footer__corp"
+								id="copyright"
+								style="
+									font-size: 0.75rem;
+									justify-content: start;
+									color: #757575;
+								"
+								><a
+									href="javascript:void(0);"
+									routerLink="/dashboard"
+									style="color: inherit; text-decoration: none; cursor: auto;"
+									>&copy;</a
+								>
+								2020 ENGIE Resources. All rights reserved.</span
+							>
+						</ng-container>
+						<ng-container *ngIf="isAuthenticated">
+							<span
+								class="nj-footer__corp"
+								id="copyright"
+								style="
+									font-size: 0.75rem;
+									justify-content: start;
+									color: #757575;
+								"
+								>&copy; 2020 ENGIE Resources. All rights reserved.</span
+							>
+						</ng-container>
+					</div>
+					<div class="col">
+						<ul class="list-unstyled nj-footer__corp">
+							<li>
+								<a
+									href="https://www.engieresources.com/terms-and-conditions"
+									target="_blank"
+									class="nj-footer__corp-link"
+									>Terms</a
+								>
+							</li>
+							<li>
+								<a
+									href="https://www.engieresources.com/privacy-policy"
+									target="_blank"
+									class="nj-footer__corp-link"
+									>Privacy</a
+								>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</footer>
+			<!-- end footer -->
+		</div>
+	</div>
+</body>
+
+<!-- Scripts -->
+<script>
+    document.addEventListener('DOMContentLoaded', function(event) {
+      NJ.AutoInit();
+    });
+  </script>
+  <script src="../js/fluid-design-system.js"></script>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/custom.js"></script>
+</html>
